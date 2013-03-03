@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+	<property>
+        <name>fs.file.impl</name>
+        <value>com.conga.services.hadoop.patch.HADOOP_7682.WinLocalFileSystem</value>
+        <description>Enables patch for issue HADOOP-7682 on Windows</description>
+    </property>
+    
+	<property>
+	 <name>http.agent.name</name>
+	 <value>Opera Mini</value>
+	</property>
+
+	<property>
+	  <name>plugin.includes</name>
+	  <value>protocol-httpclient|urlfilter-regex|parse-(html|tika)|index-(basic|anchor)|scoring-opic|urlnormalizer-(pass|regex|basic)</value>
+	  <description>Regular expression naming plugin directory names to
+	  include.  Any plugin not matching this expression is excluded.
+	  In any case you need at least include the nutch-extensionpoints plugin. By
+	  default Nutch includes crawling just HTML and plain text via HTTP,
+	  and basic indexing and search plugins. In order to use HTTPS please enable 
+	  protocol-httpclient, but be aware of possible intermittent problems with the 
+	  underlying commons-httpclient library.
+	  </description>
+	</property>
+
+
+	<property>
+	   <name>http.redirect.max</name>
+	   <value>4</value>
+	   <description>The maximum number of redirects the fetcher will follow when
+	   trying to fetch a page. If set to negative or 0, fetcher won't 
+	immediately
+	   follow redirected URLs, instead it will record them for later fetching.
+	   </description>
+	</property>
+	
+	<property>
+	  <name>plugin.folders</name>
+	  <value>./src/plugin</value>
+	  <description>Directories where nutch plugins are located.  Each
+	  element may be a relative or absolute path.  If absolute, it is used
+	  as is.  If relative, it is searched for on the classpath.</description>
+	</property>
+
+</configuration>

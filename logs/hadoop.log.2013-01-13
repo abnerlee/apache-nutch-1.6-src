@@ -1,0 +1,2135 @@
+2013-01-13 18:36:31,402 INFO  crawl.Crawl - crawl started in: crawl
+2013-01-13 18:36:31,516 INFO  crawl.Crawl - rootUrlDir = urls
+2013-01-13 18:36:31,516 INFO  crawl.Crawl - threads = 10
+2013-01-13 18:36:31,516 INFO  crawl.Crawl - depth = 3
+2013-01-13 18:36:31,516 INFO  crawl.Crawl - solrUrl=http://localhost:8983/solr/
+2013-01-13 18:36:31,516 INFO  crawl.Crawl - topN = 50
+2013-01-13 18:36:31,843 INFO  crawl.Injector - Injector: starting at 2013-01-13 18:36:31
+2013-01-13 18:36:31,843 INFO  crawl.Injector - Injector: crawlDb: crawl/crawldb
+2013-01-13 18:36:31,843 INFO  crawl.Injector - Injector: urlDir: urls
+2013-01-13 18:36:31,876 INFO  crawl.Injector - Injector: Converting injected urls to crawl db entries.
+2013-01-13 18:36:32,404 WARN  util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2013-01-13 18:36:32,690 WARN  snappy.LoadSnappy - Snappy native library not loaded
+2013-01-13 18:36:34,090 INFO  plugin.PluginRepository - Plugins: looking in: C:\cygwin\home\Abner\stuff\apache-nutch-1.6-src\.\src\plugin
+2013-01-13 18:36:34,801 INFO  plugin.PluginRepository - Plugin Auto-activation mode: [true]
+2013-01-13 18:36:34,801 INFO  plugin.PluginRepository - Registered Plugins:
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	the nutch core extension points (nutch-extensionpoints)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	Basic URL Normalizer (urlnormalizer-basic)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	Html Parse Plug-in (parse-html)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	Basic Indexing Filter (index-basic)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	Http / Https Protocol Plug-in (protocol-httpclient)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	HTTP Framework (lib-http)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	Regex URL Filter (urlfilter-regex)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	Pass-through URL Normalizer (urlnormalizer-pass)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	Regex URL Normalizer (urlnormalizer-regex)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	Tika Parser Plug-in (parse-tika)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	OPIC Scoring Plug-in (scoring-opic)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	CyberNeko HTML Parser (lib-nekohtml)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	Anchor Indexing Filter (index-anchor)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	Regex URL Filter Framework (lib-regex-filter)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - Registered Extension-Points:
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	Nutch URL Normalizer (org.apache.nutch.net.URLNormalizer)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	Nutch Protocol (org.apache.nutch.protocol.Protocol)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	Nutch Segment Merge Filter (org.apache.nutch.segment.SegmentMergeFilter)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	Nutch URL Filter (org.apache.nutch.net.URLFilter)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	Nutch Indexing Filter (org.apache.nutch.indexer.IndexingFilter)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	HTML Parse Filter (org.apache.nutch.parse.HtmlParseFilter)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	Nutch Content Parser (org.apache.nutch.parse.Parser)
+2013-01-13 18:36:34,802 INFO  plugin.PluginRepository - 	Nutch Scoring (org.apache.nutch.scoring.ScoringFilter)
+2013-01-13 18:36:35,233 INFO  regex.RegexURLNormalizer - can't find rules for scope 'inject', using default
+2013-01-13 18:36:40,240 INFO  crawl.Injector - Injector: total number of urls rejected by filters: 0
+2013-01-13 18:36:40,240 INFO  crawl.Injector - Injector: total number of urls injected after normalization and filtering: 1
+2013-01-13 18:36:40,240 INFO  crawl.Injector - Injector: Merging injected urls into crawl db.
+2013-01-13 18:36:47,746 INFO  crawl.Injector - Injector: finished at 2013-01-13 18:36:47, elapsed: 00:00:15
+2013-01-13 18:36:47,768 INFO  crawl.Generator - Generator: starting at 2013-01-13 18:36:47
+2013-01-13 18:36:47,768 INFO  crawl.Generator - Generator: Selecting best-scoring urls due for fetch.
+2013-01-13 18:36:47,768 INFO  crawl.Generator - Generator: filtering: true
+2013-01-13 18:36:47,769 INFO  crawl.Generator - Generator: normalizing: true
+2013-01-13 18:36:47,769 INFO  crawl.Generator - Generator: topN: 50
+2013-01-13 18:36:47,769 INFO  crawl.Generator - Generator: jobtracker is 'local', generating exactly one partition.
+2013-01-13 18:36:52,222 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:36:52,222 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:36:52,222 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:36:52,512 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 18:36:54,621 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:36:54,621 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:36:54,621 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:36:54,651 INFO  regex.RegexURLNormalizer - can't find rules for scope 'generate_host_count', using default
+2013-01-13 18:36:58,505 INFO  crawl.Generator - Generator: Partitioning selected urls for politeness.
+2013-01-13 18:36:59,505 INFO  crawl.Generator - Generator: segment: crawl/segments/20130113183659
+2013-01-13 18:36:59,813 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 18:37:06,706 INFO  crawl.Generator - Generator: finished at 2013-01-13 18:37:06, elapsed: 00:00:18
+2013-01-13 18:37:06,707 WARN  fetcher.Fetcher - Fetcher: Your 'http.agent.name' value should be listed first in 'http.robots.agents' property.
+2013-01-13 18:37:06,707 INFO  fetcher.Fetcher - Fetcher: starting at 2013-01-13 18:37:06
+2013-01-13 18:37:06,707 INFO  fetcher.Fetcher - Fetcher: segment: crawl/segments/20130113183659
+2013-01-13 18:37:09,179 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:37:09,179 INFO  fetcher.Fetcher - Fetcher: threads: 10
+2013-01-13 18:37:09,179 INFO  fetcher.Fetcher - Fetcher: time-out divisor: 2
+2013-01-13 18:37:09,329 INFO  fetcher.Fetcher - QueueFeeder finished: total 1 records + hit by time limit :0
+2013-01-13 18:37:10,094 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:37:10,096 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:37:10,096 INFO  fetcher.Fetcher - fetching http://www.sina.com.cn/
+2013-01-13 18:37:10,097 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:37:10,109 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:37:10,111 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:37:10,112 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:37:10,113 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:37:10,114 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:37:10,115 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:37:10,117 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:37:10,117 INFO  fetcher.Fetcher - Fetcher: throughput threshold: -1
+2013-01-13 18:37:10,117 INFO  fetcher.Fetcher - Fetcher: throughput threshold retries: 5
+2013-01-13 18:37:10,118 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=2
+2013-01-13 18:37:10,118 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=2
+2013-01-13 18:37:10,119 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:37:10,119 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:37:10,119 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:37:10,119 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=2
+2013-01-13 18:37:10,119 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:37:10,120 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:37:10,120 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:37:10,622 INFO  mortbay.log - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2013-01-13 18:37:10,622 INFO  mortbay.log - running Httpclient
+2013-01-13 18:37:10,622 INFO  httpclient.Http - http.proxy.host = null
+2013-01-13 18:37:10,622 INFO  httpclient.Http - http.proxy.port = 8080
+2013-01-13 18:37:10,622 INFO  httpclient.Http - http.timeout = 10000
+2013-01-13 18:37:10,622 INFO  httpclient.Http - http.content.limit = 65536
+2013-01-13 18:37:10,623 INFO  httpclient.Http - http.agent = WeiboIndexProject/Nutch-1.6
+2013-01-13 18:37:10,623 INFO  httpclient.Http - http.accept.language = en-us,en-gb,en;q=0.7,*;q=0.3
+2013-01-13 18:37:10,623 INFO  httpclient.Http - http.accept = text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+2013-01-13 18:37:11,122 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:37:12,123 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:37:12,993 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=0
+2013-01-13 18:37:13,123 INFO  fetcher.Fetcher - -activeThreads=0, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:37:13,123 INFO  fetcher.Fetcher - -activeThreads=0
+2013-01-13 18:37:17,309 INFO  fetcher.Fetcher - Fetcher: finished at 2013-01-13 18:37:17, elapsed: 00:00:10
+2013-01-13 18:37:17,309 INFO  parse.ParseSegment - ParseSegment: starting at 2013-01-13 18:37:17
+2013-01-13 18:37:17,309 INFO  parse.ParseSegment - ParseSegment: segment: crawl/segments/20130113183659
+2013-01-13 18:37:20,085 INFO  crawl.SignatureFactory - Using Signature impl: org.apache.nutch.crawl.MD5Signature
+2013-01-13 18:37:20,095 INFO  parse.ParseSegment - Parsed (76ms):http://www.sina.com.cn/
+2013-01-13 18:37:21,117 INFO  regex.RegexURLNormalizer - can't find rules for scope 'outlink', using default
+2013-01-13 18:37:24,582 INFO  parse.ParseSegment - ParseSegment: finished at 2013-01-13 18:37:24, elapsed: 00:00:07
+2013-01-13 18:37:24,600 INFO  crawl.CrawlDb - CrawlDb update: starting at 2013-01-13 18:37:24
+2013-01-13 18:37:24,601 INFO  crawl.CrawlDb - CrawlDb update: db: crawl/crawldb
+2013-01-13 18:37:24,601 INFO  crawl.CrawlDb - CrawlDb update: segments: [crawl/segments/20130113183659]
+2013-01-13 18:37:24,601 INFO  crawl.CrawlDb - CrawlDb update: additions allowed: true
+2013-01-13 18:37:24,601 INFO  crawl.CrawlDb - CrawlDb update: URL normalizing: true
+2013-01-13 18:37:24,601 INFO  crawl.CrawlDb - CrawlDb update: URL filtering: true
+2013-01-13 18:37:24,601 INFO  crawl.CrawlDb - CrawlDb update: 404 purging: false
+2013-01-13 18:37:24,603 INFO  crawl.CrawlDb - CrawlDb update: Merging segment data into db.
+2013-01-13 18:37:25,687 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:37:28,456 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:37:31,488 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:37:34,502 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:37:34,502 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:37:34,502 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:37:37,760 INFO  crawl.CrawlDb - CrawlDb update: finished at 2013-01-13 18:37:37, elapsed: 00:00:13
+2013-01-13 18:37:37,767 INFO  crawl.Generator - Generator: starting at 2013-01-13 18:37:37
+2013-01-13 18:37:37,767 INFO  crawl.Generator - Generator: Selecting best-scoring urls due for fetch.
+2013-01-13 18:37:37,767 INFO  crawl.Generator - Generator: filtering: true
+2013-01-13 18:37:37,767 INFO  crawl.Generator - Generator: normalizing: true
+2013-01-13 18:37:37,767 INFO  crawl.Generator - Generator: topN: 50
+2013-01-13 18:37:37,768 INFO  crawl.Generator - Generator: jobtracker is 'local', generating exactly one partition.
+2013-01-13 18:37:38,389 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:37:38,389 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:37:38,389 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:37:38,390 DEBUG crawl.Generator - -shouldFetch rejected 'http://www.sina.com.cn/', fetchTime=1360665432991, curTime=1358073457760
+2013-01-13 18:37:41,175 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:37:41,175 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:37:41,175 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:37:42,108 WARN  crawl.Generator - Generator: 0 records selected for fetching, exiting ...
+2013-01-13 18:37:42,112 INFO  crawl.Crawl - Stopping at depth=1 - no more URLs to fetch.
+2013-01-13 18:37:42,177 INFO  crawl.LinkDb - LinkDb: starting at 2013-01-13 18:37:42
+2013-01-13 18:37:42,177 INFO  crawl.LinkDb - LinkDb: linkdb: crawl/linkdb
+2013-01-13 18:37:42,177 INFO  crawl.LinkDb - LinkDb: URL normalize: true
+2013-01-13 18:37:42,177 INFO  crawl.LinkDb - LinkDb: URL filter: true
+2013-01-13 18:37:42,177 INFO  crawl.LinkDb - LinkDb: internal links will be ignored.
+2013-01-13 18:37:42,177 INFO  crawl.LinkDb - LinkDb: adding segment: file:/C:/cygwin/home/Abner/stuff/apache-nutch-1.6-src/crawl/segments/20130113183659
+2013-01-13 18:37:42,700 INFO  regex.RegexURLNormalizer - can't find rules for scope 'linkdb', using default
+2013-01-13 18:38:09,471 INFO  crawl.Crawl - crawl started in: crawl
+2013-01-13 18:38:09,472 INFO  crawl.Crawl - rootUrlDir = urls
+2013-01-13 18:38:09,472 INFO  crawl.Crawl - threads = 10
+2013-01-13 18:38:09,472 INFO  crawl.Crawl - depth = 3
+2013-01-13 18:38:09,472 INFO  crawl.Crawl - solrUrl=http://localhost:8983/solr/
+2013-01-13 18:38:09,472 INFO  crawl.Crawl - topN = 50
+2013-01-13 18:38:09,494 INFO  crawl.Injector - Injector: starting at 2013-01-13 18:38:09
+2013-01-13 18:38:09,494 INFO  crawl.Injector - Injector: crawlDb: crawl/crawldb
+2013-01-13 18:38:09,494 INFO  crawl.Injector - Injector: urlDir: urls
+2013-01-13 18:38:09,527 INFO  crawl.Injector - Injector: Converting injected urls to crawl db entries.
+2013-01-13 18:38:09,667 WARN  util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2013-01-13 18:38:09,733 WARN  snappy.LoadSnappy - Snappy native library not loaded
+2013-01-13 18:38:10,207 INFO  plugin.PluginRepository - Plugins: looking in: C:\cygwin\home\Abner\stuff\apache-nutch-1.6-src\.\src\plugin
+2013-01-13 18:38:10,391 INFO  plugin.PluginRepository - Plugin Auto-activation mode: [true]
+2013-01-13 18:38:10,391 INFO  plugin.PluginRepository - Registered Plugins:
+2013-01-13 18:38:10,391 INFO  plugin.PluginRepository - 	the nutch core extension points (nutch-extensionpoints)
+2013-01-13 18:38:10,391 INFO  plugin.PluginRepository - 	Basic URL Normalizer (urlnormalizer-basic)
+2013-01-13 18:38:10,391 INFO  plugin.PluginRepository - 	Html Parse Plug-in (parse-html)
+2013-01-13 18:38:10,391 INFO  plugin.PluginRepository - 	Basic Indexing Filter (index-basic)
+2013-01-13 18:38:10,391 INFO  plugin.PluginRepository - 	Http / Https Protocol Plug-in (protocol-httpclient)
+2013-01-13 18:38:10,391 INFO  plugin.PluginRepository - 	HTTP Framework (lib-http)
+2013-01-13 18:38:10,392 INFO  plugin.PluginRepository - 	Regex URL Filter (urlfilter-regex)
+2013-01-13 18:38:10,392 INFO  plugin.PluginRepository - 	Pass-through URL Normalizer (urlnormalizer-pass)
+2013-01-13 18:38:10,392 INFO  plugin.PluginRepository - 	Regex URL Normalizer (urlnormalizer-regex)
+2013-01-13 18:38:10,392 INFO  plugin.PluginRepository - 	Tika Parser Plug-in (parse-tika)
+2013-01-13 18:38:10,392 INFO  plugin.PluginRepository - 	OPIC Scoring Plug-in (scoring-opic)
+2013-01-13 18:38:10,392 INFO  plugin.PluginRepository - 	CyberNeko HTML Parser (lib-nekohtml)
+2013-01-13 18:38:10,392 INFO  plugin.PluginRepository - 	Anchor Indexing Filter (index-anchor)
+2013-01-13 18:38:10,392 INFO  plugin.PluginRepository - 	Regex URL Filter Framework (lib-regex-filter)
+2013-01-13 18:38:10,392 INFO  plugin.PluginRepository - Registered Extension-Points:
+2013-01-13 18:38:10,392 INFO  plugin.PluginRepository - 	Nutch URL Normalizer (org.apache.nutch.net.URLNormalizer)
+2013-01-13 18:38:10,392 INFO  plugin.PluginRepository - 	Nutch Protocol (org.apache.nutch.protocol.Protocol)
+2013-01-13 18:38:10,392 INFO  plugin.PluginRepository - 	Nutch Segment Merge Filter (org.apache.nutch.segment.SegmentMergeFilter)
+2013-01-13 18:38:10,392 INFO  plugin.PluginRepository - 	Nutch URL Filter (org.apache.nutch.net.URLFilter)
+2013-01-13 18:38:10,392 INFO  plugin.PluginRepository - 	Nutch Indexing Filter (org.apache.nutch.indexer.IndexingFilter)
+2013-01-13 18:38:10,392 INFO  plugin.PluginRepository - 	HTML Parse Filter (org.apache.nutch.parse.HtmlParseFilter)
+2013-01-13 18:38:10,392 INFO  plugin.PluginRepository - 	Nutch Content Parser (org.apache.nutch.parse.Parser)
+2013-01-13 18:38:10,392 INFO  plugin.PluginRepository - 	Nutch Scoring (org.apache.nutch.scoring.ScoringFilter)
+2013-01-13 18:38:10,482 INFO  regex.RegexURLNormalizer - can't find rules for scope 'inject', using default
+2013-01-13 18:38:17,062 INFO  crawl.Injector - Injector: total number of urls rejected by filters: 0
+2013-01-13 18:38:17,062 INFO  crawl.Injector - Injector: total number of urls injected after normalization and filtering: 1
+2013-01-13 18:38:17,062 INFO  crawl.Injector - Injector: Merging injected urls into crawl db.
+2013-01-13 18:38:24,642 INFO  crawl.Injector - Injector: finished at 2013-01-13 18:38:24, elapsed: 00:00:15
+2013-01-13 18:38:24,653 INFO  crawl.Generator - Generator: starting at 2013-01-13 18:38:24
+2013-01-13 18:38:24,653 INFO  crawl.Generator - Generator: Selecting best-scoring urls due for fetch.
+2013-01-13 18:38:24,653 INFO  crawl.Generator - Generator: filtering: true
+2013-01-13 18:38:24,653 INFO  crawl.Generator - Generator: normalizing: true
+2013-01-13 18:38:24,653 INFO  crawl.Generator - Generator: topN: 50
+2013-01-13 18:38:24,654 INFO  crawl.Generator - Generator: jobtracker is 'local', generating exactly one partition.
+2013-01-13 18:38:24,958 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:38:24,958 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:38:24,958 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:38:24,968 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 18:38:27,946 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:38:27,947 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:38:27,947 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:38:27,949 INFO  regex.RegexURLNormalizer - can't find rules for scope 'generate_host_count', using default
+2013-01-13 18:38:31,862 INFO  crawl.Generator - Generator: Partitioning selected urls for politeness.
+2013-01-13 18:38:32,862 INFO  crawl.Generator - Generator: segment: crawl/segments/20130113183832
+2013-01-13 18:38:33,066 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 18:38:39,992 INFO  crawl.Generator - Generator: finished at 2013-01-13 18:38:39, elapsed: 00:00:15
+2013-01-13 18:38:39,993 WARN  fetcher.Fetcher - Fetcher: Your 'http.agent.name' value should be listed first in 'http.robots.agents' property.
+2013-01-13 18:38:39,993 INFO  fetcher.Fetcher - Fetcher: starting at 2013-01-13 18:38:39
+2013-01-13 18:38:39,994 INFO  fetcher.Fetcher - Fetcher: segment: crawl/segments/20130113183832
+2013-01-13 18:38:40,314 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:38:40,351 INFO  fetcher.Fetcher - Fetcher: threads: 10
+2013-01-13 18:38:40,352 INFO  fetcher.Fetcher - Fetcher: time-out divisor: 2
+2013-01-13 18:38:40,395 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:38:40,400 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:38:40,401 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:38:40,402 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:38:40,402 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:38:40,403 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:38:40,403 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:38:40,403 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:38:40,404 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:38:40,404 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:38:40,405 INFO  fetcher.Fetcher - Fetcher: throughput threshold: -1
+2013-01-13 18:38:40,405 INFO  fetcher.Fetcher - Fetcher: throughput threshold retries: 5
+2013-01-13 18:38:40,447 INFO  fetcher.Fetcher - QueueFeeder finished: total 1 records + hit by time limit :0
+2013-01-13 18:38:40,906 INFO  fetcher.Fetcher - fetching http://www.sina.com.cn/
+2013-01-13 18:38:40,910 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=9
+2013-01-13 18:38:40,912 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=8
+2013-01-13 18:38:40,914 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=7
+2013-01-13 18:38:40,916 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=6
+2013-01-13 18:38:40,916 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=5
+2013-01-13 18:38:40,916 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=4
+2013-01-13 18:38:40,917 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=2
+2013-01-13 18:38:40,917 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:38:40,917 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=3
+2013-01-13 18:38:40,983 INFO  mortbay.log - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2013-01-13 18:38:40,984 INFO  mortbay.log - running Httpclient
+2013-01-13 18:38:40,984 INFO  httpclient.Http - http.proxy.host = null
+2013-01-13 18:38:40,984 INFO  httpclient.Http - http.proxy.port = 8080
+2013-01-13 18:38:40,984 INFO  httpclient.Http - http.timeout = 10000
+2013-01-13 18:38:40,984 INFO  httpclient.Http - http.content.limit = 65536
+2013-01-13 18:38:40,984 INFO  httpclient.Http - http.agent = WeiboIndexProject/Nutch-1.6
+2013-01-13 18:38:40,984 INFO  httpclient.Http - http.accept.language = en-us,en-gb,en;q=0.7,*;q=0.3
+2013-01-13 18:38:40,984 INFO  httpclient.Http - http.accept = text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+2013-01-13 18:38:41,413 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:38:42,423 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:38:42,491 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=0
+2013-01-13 18:38:43,423 INFO  fetcher.Fetcher - -activeThreads=0, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:38:43,423 INFO  fetcher.Fetcher - -activeThreads=0
+2013-01-13 18:38:50,153 INFO  fetcher.Fetcher - Fetcher: finished at 2013-01-13 18:38:50, elapsed: 00:00:10
+2013-01-13 18:38:50,154 INFO  parse.ParseSegment - ParseSegment: starting at 2013-01-13 18:38:50
+2013-01-13 18:38:50,154 INFO  parse.ParseSegment - ParseSegment: segment: crawl/segments/20130113183832
+2013-01-13 18:39:20,705 WARN  parse.ParseUtil - Error parsing http://www.sina.com.cn/ with org.apache.nutch.parse.html.HtmlParser@2d71a8f6
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask$Sync.innerGet(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at org.apache.nutch.parse.ParseUtil.runParser(ParseUtil.java:162)
+	at org.apache.nutch.parse.ParseUtil.parse(ParseUtil.java:93)
+	at org.apache.nutch.parse.ParseSegment.map(ParseSegment.java:97)
+	at org.apache.nutch.parse.ParseSegment.map(ParseSegment.java:1)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:50)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:436)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:372)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:212)
+2013-01-13 18:39:20,737 WARN  parse.ParseUtil - Unable to successfully parse content http://www.sina.com.cn/ of type application/xhtml+xml
+2013-01-13 18:39:20,778 WARN  parse.ParseSegment - Error parsing: http://www.sina.com.cn/: failed(2,200): org.apache.nutch.parse.ParseException: Unable to successfully parse content
+2013-01-13 18:39:20,789 INFO  crawl.SignatureFactory - Using Signature impl: org.apache.nutch.crawl.MD5Signature
+2013-01-13 18:39:20,806 INFO  parse.ParseSegment - Parsed (35ms):http://www.sina.com.cn/
+2013-01-13 18:39:27,447 INFO  parse.ParseSegment - ParseSegment: finished at 2013-01-13 18:39:27, elapsed: 00:00:37
+2013-01-13 18:39:27,454 INFO  crawl.CrawlDb - CrawlDb update: starting at 2013-01-13 18:39:27
+2013-01-13 18:39:27,454 INFO  crawl.CrawlDb - CrawlDb update: db: crawl/crawldb
+2013-01-13 18:39:27,454 INFO  crawl.CrawlDb - CrawlDb update: segments: [crawl/segments/20130113183832]
+2013-01-13 18:39:27,454 INFO  crawl.CrawlDb - CrawlDb update: additions allowed: true
+2013-01-13 18:39:27,454 INFO  crawl.CrawlDb - CrawlDb update: URL normalizing: true
+2013-01-13 18:39:27,454 INFO  crawl.CrawlDb - CrawlDb update: URL filtering: true
+2013-01-13 18:39:27,454 INFO  crawl.CrawlDb - CrawlDb update: 404 purging: false
+2013-01-13 18:39:27,455 INFO  crawl.CrawlDb - CrawlDb update: Merging segment data into db.
+2013-01-13 18:39:27,836 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:39:30,940 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:39:33,816 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:39:36,820 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:39:36,820 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:39:36,820 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:39:40,675 INFO  crawl.CrawlDb - CrawlDb update: finished at 2013-01-13 18:39:40, elapsed: 00:00:13
+2013-01-13 18:39:40,689 INFO  crawl.Generator - Generator: starting at 2013-01-13 18:39:40
+2013-01-13 18:39:40,690 INFO  crawl.Generator - Generator: Selecting best-scoring urls due for fetch.
+2013-01-13 18:39:40,690 INFO  crawl.Generator - Generator: filtering: true
+2013-01-13 18:39:40,690 INFO  crawl.Generator - Generator: normalizing: true
+2013-01-13 18:39:40,690 INFO  crawl.Generator - Generator: topN: 50
+2013-01-13 18:39:40,690 INFO  crawl.Generator - Generator: jobtracker is 'local', generating exactly one partition.
+2013-01-13 18:39:40,920 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:39:40,920 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:39:40,920 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:39:40,921 DEBUG crawl.Generator - -shouldFetch rejected 'http://www.sina.com.cn/', fetchTime=1360665522490, curTime=1358073580675
+2013-01-13 18:39:43,908 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:39:43,909 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:39:43,909 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:39:47,825 WARN  crawl.Generator - Generator: 0 records selected for fetching, exiting ...
+2013-01-13 18:39:47,838 INFO  crawl.Crawl - Stopping at depth=1 - no more URLs to fetch.
+2013-01-13 18:39:47,862 INFO  crawl.LinkDb - LinkDb: starting at 2013-01-13 18:39:47
+2013-01-13 18:39:47,862 INFO  crawl.LinkDb - LinkDb: linkdb: crawl/linkdb
+2013-01-13 18:39:47,862 INFO  crawl.LinkDb - LinkDb: URL normalize: true
+2013-01-13 18:39:47,862 INFO  crawl.LinkDb - LinkDb: URL filter: true
+2013-01-13 18:39:47,862 INFO  crawl.LinkDb - LinkDb: internal links will be ignored.
+2013-01-13 18:39:47,862 INFO  crawl.LinkDb - LinkDb: adding segment: file:/C:/cygwin/home/Abner/stuff/apache-nutch-1.6-src/crawl/segments/20130113183832
+2013-01-13 18:39:48,075 INFO  regex.RegexURLNormalizer - can't find rules for scope 'linkdb', using default
+2013-01-13 18:39:54,982 INFO  crawl.LinkDb - LinkDb: finished at 2013-01-13 18:39:54, elapsed: 00:00:07
+2013-01-13 18:39:55,049 INFO  solr.SolrIndexer - SolrIndexer: starting at 2013-01-13 18:39:55
+2013-01-13 18:39:55,050 INFO  solr.SolrIndexer - SolrIndexer: deleting gone documents: false
+2013-01-13 18:39:55,050 INFO  solr.SolrIndexer - SolrIndexer: URL filtering: false
+2013-01-13 18:39:55,050 INFO  solr.SolrIndexer - SolrIndexer: URL normalizing: false
+2013-01-13 18:39:55,087 INFO  indexer.IndexerMapReduce - IndexerMapReduce: crawldb: crawl/crawldb
+2013-01-13 18:39:55,087 INFO  indexer.IndexerMapReduce - IndexerMapReduce: linkdb: crawl/linkdb
+2013-01-13 18:39:55,087 INFO  indexer.IndexerMapReduce - IndexerMapReduces: adding segment: file:/C:/cygwin/home/Abner/stuff/apache-nutch-1.6-src/crawl/segments/20130113183832
+2013-01-13 18:39:55,466 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:39:55,480 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:39:55,480 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:39:58,400 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:39:58,401 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:39:58,401 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:40:01,417 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:40:01,417 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:40:01,417 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:40:04,585 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:40:04,586 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:40:04,586 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:40:07,480 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:40:07,481 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:40:07,481 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:40:10,474 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:40:10,474 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:40:10,474 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:44:22,203 INFO  crawl.Crawl - crawl started in: crawl
+2013-01-13 18:44:22,203 INFO  crawl.Crawl - rootUrlDir = urls
+2013-01-13 18:44:22,203 INFO  crawl.Crawl - threads = 10
+2013-01-13 18:44:22,203 INFO  crawl.Crawl - depth = 3
+2013-01-13 18:44:22,203 INFO  crawl.Crawl - solrUrl=http://localhost:8983/solr/
+2013-01-13 18:44:22,203 INFO  crawl.Crawl - topN = 50
+2013-01-13 18:44:22,224 INFO  crawl.Injector - Injector: starting at 2013-01-13 18:44:22
+2013-01-13 18:44:22,224 INFO  crawl.Injector - Injector: crawlDb: crawl/crawldb
+2013-01-13 18:44:22,224 INFO  crawl.Injector - Injector: urlDir: urls
+2013-01-13 18:44:22,255 INFO  crawl.Injector - Injector: Converting injected urls to crawl db entries.
+2013-01-13 18:44:22,360 WARN  util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2013-01-13 18:44:22,418 WARN  snappy.LoadSnappy - Snappy native library not loaded
+2013-01-13 18:44:22,875 INFO  plugin.PluginRepository - Plugins: looking in: C:\cygwin\home\Abner\stuff\apache-nutch-1.6-src\.\src\plugin
+2013-01-13 18:44:23,145 INFO  plugin.PluginRepository - Plugin Auto-activation mode: [true]
+2013-01-13 18:44:23,145 INFO  plugin.PluginRepository - Registered Plugins:
+2013-01-13 18:44:23,145 INFO  plugin.PluginRepository - 	the nutch core extension points (nutch-extensionpoints)
+2013-01-13 18:44:23,145 INFO  plugin.PluginRepository - 	Basic URL Normalizer (urlnormalizer-basic)
+2013-01-13 18:44:23,145 INFO  plugin.PluginRepository - 	Html Parse Plug-in (parse-html)
+2013-01-13 18:44:23,145 INFO  plugin.PluginRepository - 	Basic Indexing Filter (index-basic)
+2013-01-13 18:44:23,145 INFO  plugin.PluginRepository - 	Http / Https Protocol Plug-in (protocol-httpclient)
+2013-01-13 18:44:23,145 INFO  plugin.PluginRepository - 	HTTP Framework (lib-http)
+2013-01-13 18:44:23,145 INFO  plugin.PluginRepository - 	Regex URL Filter (urlfilter-regex)
+2013-01-13 18:44:23,145 INFO  plugin.PluginRepository - 	Pass-through URL Normalizer (urlnormalizer-pass)
+2013-01-13 18:44:23,145 INFO  plugin.PluginRepository - 	Regex URL Normalizer (urlnormalizer-regex)
+2013-01-13 18:44:23,145 INFO  plugin.PluginRepository - 	Tika Parser Plug-in (parse-tika)
+2013-01-13 18:44:23,145 INFO  plugin.PluginRepository - 	OPIC Scoring Plug-in (scoring-opic)
+2013-01-13 18:44:23,145 INFO  plugin.PluginRepository - 	CyberNeko HTML Parser (lib-nekohtml)
+2013-01-13 18:44:23,145 INFO  plugin.PluginRepository - 	Anchor Indexing Filter (index-anchor)
+2013-01-13 18:44:23,145 INFO  plugin.PluginRepository - 	Regex URL Filter Framework (lib-regex-filter)
+2013-01-13 18:44:23,146 INFO  plugin.PluginRepository - Registered Extension-Points:
+2013-01-13 18:44:23,146 INFO  plugin.PluginRepository - 	Nutch URL Normalizer (org.apache.nutch.net.URLNormalizer)
+2013-01-13 18:44:23,146 INFO  plugin.PluginRepository - 	Nutch Protocol (org.apache.nutch.protocol.Protocol)
+2013-01-13 18:44:23,146 INFO  plugin.PluginRepository - 	Nutch Segment Merge Filter (org.apache.nutch.segment.SegmentMergeFilter)
+2013-01-13 18:44:23,146 INFO  plugin.PluginRepository - 	Nutch URL Filter (org.apache.nutch.net.URLFilter)
+2013-01-13 18:44:23,146 INFO  plugin.PluginRepository - 	Nutch Indexing Filter (org.apache.nutch.indexer.IndexingFilter)
+2013-01-13 18:44:23,146 INFO  plugin.PluginRepository - 	HTML Parse Filter (org.apache.nutch.parse.HtmlParseFilter)
+2013-01-13 18:44:23,146 INFO  plugin.PluginRepository - 	Nutch Content Parser (org.apache.nutch.parse.Parser)
+2013-01-13 18:44:23,146 INFO  plugin.PluginRepository - 	Nutch Scoring (org.apache.nutch.scoring.ScoringFilter)
+2013-01-13 18:44:23,217 INFO  regex.RegexURLNormalizer - can't find rules for scope 'inject', using default
+2013-01-13 18:44:26,751 INFO  crawl.Injector - Injector: total number of urls rejected by filters: 0
+2013-01-13 18:44:26,751 INFO  crawl.Injector - Injector: total number of urls injected after normalization and filtering: 1
+2013-01-13 18:44:26,751 INFO  crawl.Injector - Injector: Merging injected urls into crawl db.
+2013-01-13 18:44:33,982 INFO  crawl.Injector - Injector: finished at 2013-01-13 18:44:33, elapsed: 00:00:11
+2013-01-13 18:44:33,993 INFO  crawl.Generator - Generator: starting at 2013-01-13 18:44:33
+2013-01-13 18:44:33,993 INFO  crawl.Generator - Generator: Selecting best-scoring urls due for fetch.
+2013-01-13 18:44:33,993 INFO  crawl.Generator - Generator: filtering: true
+2013-01-13 18:44:33,993 INFO  crawl.Generator - Generator: normalizing: true
+2013-01-13 18:44:33,993 INFO  crawl.Generator - Generator: topN: 50
+2013-01-13 18:44:33,994 INFO  crawl.Generator - Generator: jobtracker is 'local', generating exactly one partition.
+2013-01-13 18:44:34,253 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:44:34,253 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:44:34,253 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:44:34,262 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 18:44:37,267 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:44:37,267 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:44:37,267 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:44:37,273 INFO  regex.RegexURLNormalizer - can't find rules for scope 'generate_host_count', using default
+2013-01-13 18:44:41,212 INFO  crawl.Generator - Generator: Partitioning selected urls for politeness.
+2013-01-13 18:44:42,213 INFO  crawl.Generator - Generator: segment: crawl/segments/20130113184442
+2013-01-13 18:44:42,454 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 18:44:49,399 INFO  crawl.Generator - Generator: finished at 2013-01-13 18:44:49, elapsed: 00:00:15
+2013-01-13 18:44:49,399 WARN  fetcher.Fetcher - Fetcher: Your 'http.agent.name' value should be listed first in 'http.robots.agents' property.
+2013-01-13 18:44:49,399 INFO  fetcher.Fetcher - Fetcher: starting at 2013-01-13 18:44:49
+2013-01-13 18:44:49,399 INFO  fetcher.Fetcher - Fetcher: segment: crawl/segments/20130113184442
+2013-01-13 18:44:49,659 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:44:49,659 INFO  fetcher.Fetcher - Fetcher: threads: 10
+2013-01-13 18:44:49,659 INFO  fetcher.Fetcher - Fetcher: time-out divisor: 2
+2013-01-13 18:44:49,907 INFO  fetcher.Fetcher - QueueFeeder finished: total 1 records + hit by time limit :0
+2013-01-13 18:44:49,938 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:44:49,939 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:44:49,939 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:44:49,940 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:44:49,940 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:44:49,940 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:44:49,941 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:44:49,941 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:44:49,941 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:44:49,942 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:44:49,942 INFO  fetcher.Fetcher - Fetcher: throughput threshold: -1
+2013-01-13 18:44:49,942 INFO  fetcher.Fetcher - Fetcher: throughput threshold retries: 5
+2013-01-13 18:44:49,942 INFO  fetcher.Fetcher - fetching http://www.sina.com.cn/
+2013-01-13 18:44:49,967 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:44:49,967 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:44:49,968 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:44:49,968 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:44:49,968 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=2
+2013-01-13 18:44:49,968 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:44:49,968 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:44:49,968 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:44:49,968 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:44:50,001 INFO  mortbay.log - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2013-01-13 18:44:50,001 INFO  mortbay.log - running Httpclient
+2013-01-13 18:44:50,002 INFO  httpclient.Http - http.proxy.host = null
+2013-01-13 18:44:50,002 INFO  httpclient.Http - http.proxy.port = 8080
+2013-01-13 18:44:50,002 INFO  httpclient.Http - http.timeout = 10000
+2013-01-13 18:44:50,002 INFO  httpclient.Http - http.content.limit = 65536
+2013-01-13 18:44:50,002 INFO  httpclient.Http - http.agent = WeiboIndexProject/Nutch-1.6
+2013-01-13 18:44:50,002 INFO  httpclient.Http - http.accept.language = en-us,en-gb,en;q=0.7,*;q=0.3
+2013-01-13 18:44:50,002 INFO  httpclient.Http - http.accept = text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+2013-01-13 18:44:50,944 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:44:51,757 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=0
+2013-01-13 18:44:51,944 INFO  fetcher.Fetcher - -activeThreads=0, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:44:51,944 INFO  fetcher.Fetcher - -activeThreads=0
+2013-01-13 18:44:56,700 INFO  fetcher.Fetcher - Fetcher: finished at 2013-01-13 18:44:56, elapsed: 00:00:07
+2013-01-13 18:44:56,700 INFO  parse.ParseSegment - ParseSegment: starting at 2013-01-13 18:44:56
+2013-01-13 18:44:56,701 INFO  parse.ParseSegment - ParseSegment: segment: crawl/segments/20130113184442
+2013-01-13 18:44:57,350 WARN  parse.ParseUtil - Error parsing http://www.sina.com.cn/ with org.apache.nutch.parse.html.HtmlParser@79641ab1
+java.util.concurrent.ExecutionException: java.lang.ClassCastException: org.apache.nutch.parse.ParseResult cannot be cast to org.apache.nutch.parse.Parse
+	at java.util.concurrent.FutureTask$Sync.innerGet(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at org.apache.nutch.parse.ParseUtil.runParser(ParseUtil.java:162)
+	at org.apache.nutch.parse.ParseUtil.parse(ParseUtil.java:93)
+	at org.apache.nutch.parse.ParseSegment.map(ParseSegment.java:97)
+	at org.apache.nutch.parse.ParseSegment.map(ParseSegment.java:1)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:50)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:436)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:372)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:212)
+Caused by: java.lang.ClassCastException: org.apache.nutch.parse.ParseResult cannot be cast to org.apache.nutch.parse.Parse
+	at org.apache.nutch.parse.html.HtmlParser.getParse(HtmlParser.java:198)
+	at org.apache.nutch.parse.ParseCallable.call(ParseCallable.java:35)
+	at org.apache.nutch.parse.ParseCallable.call(ParseCallable.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2013-01-13 18:44:57,352 WARN  parse.ParseUtil - Unable to successfully parse content http://www.sina.com.cn/ of type application/xhtml+xml
+2013-01-13 18:44:57,355 WARN  parse.ParseSegment - Error parsing: http://www.sina.com.cn/: failed(2,200): org.apache.nutch.parse.ParseException: Unable to successfully parse content
+2013-01-13 18:44:57,359 INFO  crawl.SignatureFactory - Using Signature impl: org.apache.nutch.crawl.MD5Signature
+2013-01-13 18:44:57,369 INFO  parse.ParseSegment - Parsed (16ms):http://www.sina.com.cn/
+2013-01-13 18:45:03,880 INFO  parse.ParseSegment - ParseSegment: finished at 2013-01-13 18:45:03, elapsed: 00:00:07
+2013-01-13 18:45:03,886 INFO  crawl.CrawlDb - CrawlDb update: starting at 2013-01-13 18:45:03
+2013-01-13 18:45:03,886 INFO  crawl.CrawlDb - CrawlDb update: db: crawl/crawldb
+2013-01-13 18:45:03,886 INFO  crawl.CrawlDb - CrawlDb update: segments: [crawl/segments/20130113184442]
+2013-01-13 18:45:03,886 INFO  crawl.CrawlDb - CrawlDb update: additions allowed: true
+2013-01-13 18:45:03,886 INFO  crawl.CrawlDb - CrawlDb update: URL normalizing: true
+2013-01-13 18:45:03,887 INFO  crawl.CrawlDb - CrawlDb update: URL filtering: true
+2013-01-13 18:45:03,887 INFO  crawl.CrawlDb - CrawlDb update: 404 purging: false
+2013-01-13 18:45:03,887 INFO  crawl.CrawlDb - CrawlDb update: Merging segment data into db.
+2013-01-13 18:45:04,559 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:45:07,637 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:45:10,497 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:45:13,511 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:45:13,511 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:45:13,511 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:45:17,183 INFO  crawl.CrawlDb - CrawlDb update: finished at 2013-01-13 18:45:17, elapsed: 00:00:13
+2013-01-13 18:45:17,199 INFO  crawl.Generator - Generator: starting at 2013-01-13 18:45:17
+2013-01-13 18:45:17,199 INFO  crawl.Generator - Generator: Selecting best-scoring urls due for fetch.
+2013-01-13 18:45:17,199 INFO  crawl.Generator - Generator: filtering: true
+2013-01-13 18:45:17,199 INFO  crawl.Generator - Generator: normalizing: true
+2013-01-13 18:45:17,199 INFO  crawl.Generator - Generator: topN: 50
+2013-01-13 18:45:17,200 INFO  crawl.Generator - Generator: jobtracker is 'local', generating exactly one partition.
+2013-01-13 18:45:17,358 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:45:17,358 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:45:17,358 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:45:17,359 DEBUG crawl.Generator - -shouldFetch rejected 'http://www.sina.com.cn/', fetchTime=1360665891756, curTime=1358073917183
+2013-01-13 18:45:42,484 INFO  crawl.Crawl - crawl started in: crawl
+2013-01-13 18:45:42,485 INFO  crawl.Crawl - rootUrlDir = urls
+2013-01-13 18:45:42,485 INFO  crawl.Crawl - threads = 10
+2013-01-13 18:45:42,485 INFO  crawl.Crawl - depth = 3
+2013-01-13 18:45:42,485 INFO  crawl.Crawl - solrUrl=http://localhost:8983/solr/
+2013-01-13 18:45:42,485 INFO  crawl.Crawl - topN = 50
+2013-01-13 18:45:42,505 INFO  crawl.Injector - Injector: starting at 2013-01-13 18:45:42
+2013-01-13 18:45:42,505 INFO  crawl.Injector - Injector: crawlDb: crawl/crawldb
+2013-01-13 18:45:42,505 INFO  crawl.Injector - Injector: urlDir: urls
+2013-01-13 18:45:42,535 INFO  crawl.Injector - Injector: Converting injected urls to crawl db entries.
+2013-01-13 18:45:42,668 WARN  util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2013-01-13 18:45:42,727 WARN  snappy.LoadSnappy - Snappy native library not loaded
+2013-01-13 18:45:43,137 INFO  plugin.PluginRepository - Plugins: looking in: C:\cygwin\home\Abner\stuff\apache-nutch-1.6-src\.\src\plugin
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - Plugin Auto-activation mode: [true]
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - Registered Plugins:
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	the nutch core extension points (nutch-extensionpoints)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	Basic URL Normalizer (urlnormalizer-basic)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	Html Parse Plug-in (parse-html)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	Basic Indexing Filter (index-basic)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	HTTP Framework (lib-http)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	Pass-through URL Normalizer (urlnormalizer-pass)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	Regex URL Filter (urlfilter-regex)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	Http Protocol Plug-in (protocol-http)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	Regex URL Normalizer (urlnormalizer-regex)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	Tika Parser Plug-in (parse-tika)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	OPIC Scoring Plug-in (scoring-opic)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	CyberNeko HTML Parser (lib-nekohtml)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	Anchor Indexing Filter (index-anchor)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	Regex URL Filter Framework (lib-regex-filter)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - Registered Extension-Points:
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	Nutch URL Normalizer (org.apache.nutch.net.URLNormalizer)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	Nutch Protocol (org.apache.nutch.protocol.Protocol)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	Nutch Segment Merge Filter (org.apache.nutch.segment.SegmentMergeFilter)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	Nutch URL Filter (org.apache.nutch.net.URLFilter)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	Nutch Indexing Filter (org.apache.nutch.indexer.IndexingFilter)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	HTML Parse Filter (org.apache.nutch.parse.HtmlParseFilter)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	Nutch Content Parser (org.apache.nutch.parse.Parser)
+2013-01-13 18:45:43,687 INFO  plugin.PluginRepository - 	Nutch Scoring (org.apache.nutch.scoring.ScoringFilter)
+2013-01-13 18:45:43,739 INFO  regex.RegexURLNormalizer - can't find rules for scope 'inject', using default
+2013-01-13 18:45:50,004 INFO  crawl.Injector - Injector: total number of urls rejected by filters: 0
+2013-01-13 18:45:50,004 INFO  crawl.Injector - Injector: total number of urls injected after normalization and filtering: 1
+2013-01-13 18:45:50,004 INFO  crawl.Injector - Injector: Merging injected urls into crawl db.
+2013-01-13 18:45:54,474 INFO  crawl.Injector - Injector: finished at 2013-01-13 18:45:54, elapsed: 00:00:11
+2013-01-13 18:45:54,490 INFO  crawl.Generator - Generator: starting at 2013-01-13 18:45:54
+2013-01-13 18:45:54,490 INFO  crawl.Generator - Generator: Selecting best-scoring urls due for fetch.
+2013-01-13 18:45:54,490 INFO  crawl.Generator - Generator: filtering: true
+2013-01-13 18:45:54,490 INFO  crawl.Generator - Generator: normalizing: true
+2013-01-13 18:45:54,490 INFO  crawl.Generator - Generator: topN: 50
+2013-01-13 18:45:54,491 INFO  crawl.Generator - Generator: jobtracker is 'local', generating exactly one partition.
+2013-01-13 18:45:54,829 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:45:54,829 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:45:54,829 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:45:54,837 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 18:45:57,825 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:45:57,825 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:45:57,825 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:45:57,829 INFO  regex.RegexURLNormalizer - can't find rules for scope 'generate_host_count', using default
+2013-01-13 18:45:58,715 INFO  crawl.Generator - Generator: Partitioning selected urls for politeness.
+2013-01-13 18:45:59,716 INFO  crawl.Generator - Generator: segment: crawl/segments/20130113184559
+2013-01-13 18:45:59,945 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 18:46:06,894 INFO  crawl.Generator - Generator: finished at 2013-01-13 18:46:06, elapsed: 00:00:12
+2013-01-13 18:46:06,894 WARN  fetcher.Fetcher - Fetcher: Your 'http.agent.name' value should be listed first in 'http.robots.agents' property.
+2013-01-13 18:46:06,895 INFO  fetcher.Fetcher - Fetcher: starting at 2013-01-13 18:46:06
+2013-01-13 18:46:06,895 INFO  fetcher.Fetcher - Fetcher: segment: crawl/segments/20130113184559
+2013-01-13 18:46:07,117 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:46:07,117 INFO  fetcher.Fetcher - Fetcher: threads: 10
+2013-01-13 18:46:07,117 INFO  fetcher.Fetcher - Fetcher: time-out divisor: 2
+2013-01-13 18:46:07,151 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:46:07,152 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:46:07,152 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:46:07,153 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:46:07,153 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:46:07,153 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:46:07,154 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:46:07,154 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:46:07,154 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:46:07,155 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:46:07,155 INFO  fetcher.Fetcher - Fetcher: throughput threshold: -1
+2013-01-13 18:46:07,155 INFO  fetcher.Fetcher - Fetcher: throughput threshold retries: 5
+2013-01-13 18:46:07,164 INFO  fetcher.Fetcher - QueueFeeder finished: total 1 records + hit by time limit :0
+2013-01-13 18:46:07,655 INFO  fetcher.Fetcher - fetching http://www.sina.com.cn/
+2013-01-13 18:46:07,657 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=9
+2013-01-13 18:46:07,657 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=8
+2013-01-13 18:46:07,658 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=7
+2013-01-13 18:46:07,658 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=6
+2013-01-13 18:46:07,660 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=5
+2013-01-13 18:46:07,661 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=4
+2013-01-13 18:46:07,661 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=3
+2013-01-13 18:46:07,662 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=2
+2013-01-13 18:46:07,662 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:46:07,722 INFO  mortbay.log - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2013-01-13 18:46:07,722 INFO  mortbay.log - Running http
+2013-01-13 18:46:07,722 INFO  http.Http - http.proxy.host = null
+2013-01-13 18:46:07,722 INFO  http.Http - http.proxy.port = 8080
+2013-01-13 18:46:07,722 INFO  http.Http - http.timeout = 10000
+2013-01-13 18:46:07,722 INFO  http.Http - http.content.limit = 65536
+2013-01-13 18:46:07,722 INFO  http.Http - http.agent = WeiboIndexProject/Nutch-1.6
+2013-01-13 18:46:07,722 INFO  http.Http - http.accept.language = en-us,en-gb,en;q=0.7,*;q=0.3
+2013-01-13 18:46:07,722 INFO  http.Http - http.accept = text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+2013-01-13 18:46:08,161 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:46:09,079 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=0
+2013-01-13 18:46:09,323 INFO  fetcher.Fetcher - -activeThreads=0, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:46:09,323 INFO  fetcher.Fetcher - -activeThreads=0
+2013-01-13 18:46:14,010 INFO  fetcher.Fetcher - Fetcher: finished at 2013-01-13 18:46:14, elapsed: 00:00:07
+2013-01-13 18:46:14,011 INFO  parse.ParseSegment - ParseSegment: starting at 2013-01-13 18:46:14
+2013-01-13 18:46:14,011 INFO  parse.ParseSegment - ParseSegment: segment: crawl/segments/20130113184559
+2013-01-13 18:46:14,502 WARN  parse.ParseUtil - Error parsing http://www.sina.com.cn/ with org.apache.nutch.parse.html.HtmlParser@74784bbb
+java.util.concurrent.ExecutionException: java.lang.ClassCastException: org.apache.nutch.parse.ParseResult cannot be cast to org.apache.nutch.parse.Parse
+	at java.util.concurrent.FutureTask$Sync.innerGet(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at org.apache.nutch.parse.ParseUtil.runParser(ParseUtil.java:162)
+	at org.apache.nutch.parse.ParseUtil.parse(ParseUtil.java:93)
+	at org.apache.nutch.parse.ParseSegment.map(ParseSegment.java:97)
+	at org.apache.nutch.parse.ParseSegment.map(ParseSegment.java:1)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:50)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:436)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:372)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:212)
+Caused by: java.lang.ClassCastException: org.apache.nutch.parse.ParseResult cannot be cast to org.apache.nutch.parse.Parse
+	at org.apache.nutch.parse.html.HtmlParser.getParse(HtmlParser.java:198)
+	at org.apache.nutch.parse.ParseCallable.call(ParseCallable.java:35)
+	at org.apache.nutch.parse.ParseCallable.call(ParseCallable.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2013-01-13 18:46:14,504 WARN  parse.ParseUtil - Unable to successfully parse content http://www.sina.com.cn/ of type application/xhtml+xml
+2013-01-13 18:46:14,507 WARN  parse.ParseSegment - Error parsing: http://www.sina.com.cn/: failed(2,200): org.apache.nutch.parse.ParseException: Unable to successfully parse content
+2013-01-13 18:46:14,509 INFO  crawl.SignatureFactory - Using Signature impl: org.apache.nutch.crawl.MD5Signature
+2013-01-13 18:46:14,520 INFO  parse.ParseSegment - Parsed (15ms):http://www.sina.com.cn/
+2013-01-13 18:46:29,193 INFO  crawl.Crawl - crawl started in: crawl
+2013-01-13 18:46:29,193 INFO  crawl.Crawl - rootUrlDir = urls
+2013-01-13 18:46:29,194 INFO  crawl.Crawl - threads = 10
+2013-01-13 18:46:29,194 INFO  crawl.Crawl - depth = 3
+2013-01-13 18:46:29,194 INFO  crawl.Crawl - solrUrl=http://localhost:8983/solr/
+2013-01-13 18:46:29,194 INFO  crawl.Crawl - topN = 50
+2013-01-13 18:46:29,216 INFO  crawl.Injector - Injector: starting at 2013-01-13 18:46:29
+2013-01-13 18:46:29,216 INFO  crawl.Injector - Injector: crawlDb: crawl/crawldb
+2013-01-13 18:46:29,216 INFO  crawl.Injector - Injector: urlDir: urls
+2013-01-13 18:46:29,307 INFO  crawl.Injector - Injector: Converting injected urls to crawl db entries.
+2013-01-13 18:46:29,599 WARN  util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2013-01-13 18:46:29,662 WARN  snappy.LoadSnappy - Snappy native library not loaded
+2013-01-13 18:46:30,053 INFO  plugin.PluginRepository - Plugins: looking in: C:\cygwin\home\Abner\stuff\apache-nutch-1.6-src\.\src\plugin
+2013-01-13 18:46:30,253 INFO  plugin.PluginRepository - Plugin Auto-activation mode: [true]
+2013-01-13 18:46:30,253 INFO  plugin.PluginRepository - Registered Plugins:
+2013-01-13 18:46:30,253 INFO  plugin.PluginRepository - 	the nutch core extension points (nutch-extensionpoints)
+2013-01-13 18:46:30,253 INFO  plugin.PluginRepository - 	Basic URL Normalizer (urlnormalizer-basic)
+2013-01-13 18:46:30,253 INFO  plugin.PluginRepository - 	Html Parse Plug-in (parse-html)
+2013-01-13 18:46:30,253 INFO  plugin.PluginRepository - 	Basic Indexing Filter (index-basic)
+2013-01-13 18:46:30,253 INFO  plugin.PluginRepository - 	HTTP Framework (lib-http)
+2013-01-13 18:46:30,253 INFO  plugin.PluginRepository - 	Pass-through URL Normalizer (urlnormalizer-pass)
+2013-01-13 18:46:30,253 INFO  plugin.PluginRepository - 	Regex URL Filter (urlfilter-regex)
+2013-01-13 18:46:30,253 INFO  plugin.PluginRepository - 	Http Protocol Plug-in (protocol-http)
+2013-01-13 18:46:30,253 INFO  plugin.PluginRepository - 	Regex URL Normalizer (urlnormalizer-regex)
+2013-01-13 18:46:30,254 INFO  plugin.PluginRepository - 	Tika Parser Plug-in (parse-tika)
+2013-01-13 18:46:30,254 INFO  plugin.PluginRepository - 	OPIC Scoring Plug-in (scoring-opic)
+2013-01-13 18:46:30,254 INFO  plugin.PluginRepository - 	CyberNeko HTML Parser (lib-nekohtml)
+2013-01-13 18:46:30,254 INFO  plugin.PluginRepository - 	Anchor Indexing Filter (index-anchor)
+2013-01-13 18:46:30,254 INFO  plugin.PluginRepository - 	Regex URL Filter Framework (lib-regex-filter)
+2013-01-13 18:46:30,254 INFO  plugin.PluginRepository - Registered Extension-Points:
+2013-01-13 18:46:30,254 INFO  plugin.PluginRepository - 	Nutch URL Normalizer (org.apache.nutch.net.URLNormalizer)
+2013-01-13 18:46:30,254 INFO  plugin.PluginRepository - 	Nutch Protocol (org.apache.nutch.protocol.Protocol)
+2013-01-13 18:46:30,254 INFO  plugin.PluginRepository - 	Nutch Segment Merge Filter (org.apache.nutch.segment.SegmentMergeFilter)
+2013-01-13 18:46:30,254 INFO  plugin.PluginRepository - 	Nutch URL Filter (org.apache.nutch.net.URLFilter)
+2013-01-13 18:46:30,254 INFO  plugin.PluginRepository - 	Nutch Indexing Filter (org.apache.nutch.indexer.IndexingFilter)
+2013-01-13 18:46:30,254 INFO  plugin.PluginRepository - 	HTML Parse Filter (org.apache.nutch.parse.HtmlParseFilter)
+2013-01-13 18:46:30,254 INFO  plugin.PluginRepository - 	Nutch Content Parser (org.apache.nutch.parse.Parser)
+2013-01-13 18:46:30,254 INFO  plugin.PluginRepository - 	Nutch Scoring (org.apache.nutch.scoring.ScoringFilter)
+2013-01-13 18:46:30,306 INFO  regex.RegexURLNormalizer - can't find rules for scope 'inject', using default
+2013-01-13 18:46:36,916 INFO  crawl.Injector - Injector: total number of urls rejected by filters: 0
+2013-01-13 18:46:36,917 INFO  crawl.Injector - Injector: total number of urls injected after normalization and filtering: 1
+2013-01-13 18:46:36,917 INFO  crawl.Injector - Injector: Merging injected urls into crawl db.
+2013-01-13 18:46:44,245 INFO  crawl.Injector - Injector: finished at 2013-01-13 18:46:44, elapsed: 00:00:15
+2013-01-13 18:46:44,253 INFO  crawl.Generator - Generator: starting at 2013-01-13 18:46:44
+2013-01-13 18:46:44,253 INFO  crawl.Generator - Generator: Selecting best-scoring urls due for fetch.
+2013-01-13 18:46:44,253 INFO  crawl.Generator - Generator: filtering: true
+2013-01-13 18:46:44,253 INFO  crawl.Generator - Generator: normalizing: true
+2013-01-13 18:46:44,253 INFO  crawl.Generator - Generator: topN: 50
+2013-01-13 18:46:44,254 INFO  crawl.Generator - Generator: jobtracker is 'local', generating exactly one partition.
+2013-01-13 18:46:44,725 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:46:44,726 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:46:44,726 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:46:44,736 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 18:46:47,705 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:46:47,705 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:46:47,705 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:46:47,711 INFO  regex.RegexURLNormalizer - can't find rules for scope 'generate_host_count', using default
+2013-01-13 18:46:51,635 INFO  crawl.Generator - Generator: Partitioning selected urls for politeness.
+2013-01-13 18:46:52,635 INFO  crawl.Generator - Generator: segment: crawl/segments/20130113184652
+2013-01-13 18:46:52,889 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 18:46:59,791 INFO  crawl.Generator - Generator: finished at 2013-01-13 18:46:59, elapsed: 00:00:15
+2013-01-13 18:46:59,791 WARN  fetcher.Fetcher - Fetcher: Your 'http.agent.name' value should be listed first in 'http.robots.agents' property.
+2013-01-13 18:46:59,791 INFO  fetcher.Fetcher - Fetcher: starting at 2013-01-13 18:46:59
+2013-01-13 18:46:59,791 INFO  fetcher.Fetcher - Fetcher: segment: crawl/segments/20130113184652
+2013-01-13 18:47:00,455 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:00,455 INFO  fetcher.Fetcher - Fetcher: threads: 10
+2013-01-13 18:47:00,455 INFO  fetcher.Fetcher - Fetcher: time-out divisor: 2
+2013-01-13 18:47:00,477 INFO  fetcher.Fetcher - QueueFeeder finished: total 1 records + hit by time limit :0
+2013-01-13 18:47:00,495 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:00,496 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:00,497 INFO  fetcher.Fetcher - fetching http://www.sina.com.cn/
+2013-01-13 18:47:00,498 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:00,498 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:00,499 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:00,499 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:00,499 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:00,500 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:00,500 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:00,501 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:00,501 INFO  fetcher.Fetcher - Fetcher: throughput threshold: -1
+2013-01-13 18:47:00,501 INFO  fetcher.Fetcher - Fetcher: throughput threshold retries: 5
+2013-01-13 18:47:00,503 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=2
+2013-01-13 18:47:00,503 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=2
+2013-01-13 18:47:00,504 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:47:00,504 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:47:00,505 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:47:00,505 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=2
+2013-01-13 18:47:00,505 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:47:00,505 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:47:00,503 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:47:00,566 INFO  mortbay.log - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2013-01-13 18:47:00,566 INFO  mortbay.log - Running http
+2013-01-13 18:47:00,566 INFO  http.Http - http.proxy.host = null
+2013-01-13 18:47:00,566 INFO  http.Http - http.proxy.port = 8080
+2013-01-13 18:47:00,566 INFO  http.Http - http.timeout = 10000
+2013-01-13 18:47:00,566 INFO  http.Http - http.content.limit = 65536
+2013-01-13 18:47:00,566 INFO  http.Http - http.agent = WeiboIndexProject/Nutch-1.6
+2013-01-13 18:47:00,566 INFO  http.Http - http.accept.language = en-us,en-gb,en;q=0.7,*;q=0.3
+2013-01-13 18:47:00,566 INFO  http.Http - http.accept = text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+2013-01-13 18:47:01,508 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:47:01,861 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=0
+2013-01-13 18:47:02,508 INFO  fetcher.Fetcher - -activeThreads=0, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:47:02,508 INFO  fetcher.Fetcher - -activeThreads=0
+2013-01-13 18:47:07,315 INFO  fetcher.Fetcher - Fetcher: finished at 2013-01-13 18:47:07, elapsed: 00:00:07
+2013-01-13 18:47:07,315 INFO  parse.ParseSegment - ParseSegment: starting at 2013-01-13 18:47:07
+2013-01-13 18:47:07,315 INFO  parse.ParseSegment - ParseSegment: segment: crawl/segments/20130113184652
+2013-01-13 18:47:08,090 WARN  parse.ParseUtil - Error parsing http://www.sina.com.cn/ with org.apache.nutch.parse.html.HtmlParser@30fcd103
+java.util.concurrent.ExecutionException: java.lang.ClassCastException: org.apache.nutch.parse.ParseResult cannot be cast to org.apache.nutch.parse.Parse
+	at java.util.concurrent.FutureTask$Sync.innerGet(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at org.apache.nutch.parse.ParseUtil.runParser(ParseUtil.java:162)
+	at org.apache.nutch.parse.ParseUtil.parse(ParseUtil.java:93)
+	at org.apache.nutch.parse.ParseSegment.map(ParseSegment.java:97)
+	at org.apache.nutch.parse.ParseSegment.map(ParseSegment.java:1)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:50)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:436)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:372)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:212)
+Caused by: java.lang.ClassCastException: org.apache.nutch.parse.ParseResult cannot be cast to org.apache.nutch.parse.Parse
+	at org.apache.nutch.parse.html.HtmlParser.getParse(HtmlParser.java:198)
+	at org.apache.nutch.parse.ParseCallable.call(ParseCallable.java:35)
+	at org.apache.nutch.parse.ParseCallable.call(ParseCallable.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2013-01-13 18:47:08,093 WARN  parse.ParseUtil - Unable to successfully parse content http://www.sina.com.cn/ of type application/xhtml+xml
+2013-01-13 18:47:08,096 WARN  parse.ParseSegment - Error parsing: http://www.sina.com.cn/: failed(2,200): org.apache.nutch.parse.ParseException: Unable to successfully parse content
+2013-01-13 18:47:08,099 INFO  crawl.SignatureFactory - Using Signature impl: org.apache.nutch.crawl.MD5Signature
+2013-01-13 18:47:08,109 INFO  parse.ParseSegment - Parsed (15ms):http://www.sina.com.cn/
+2013-01-13 18:47:14,456 INFO  parse.ParseSegment - ParseSegment: finished at 2013-01-13 18:47:14, elapsed: 00:00:07
+2013-01-13 18:47:14,481 INFO  crawl.CrawlDb - CrawlDb update: starting at 2013-01-13 18:47:14
+2013-01-13 18:47:14,481 INFO  crawl.CrawlDb - CrawlDb update: db: crawl/crawldb
+2013-01-13 18:47:14,481 INFO  crawl.CrawlDb - CrawlDb update: segments: [crawl/segments/20130113184652]
+2013-01-13 18:47:14,482 INFO  crawl.CrawlDb - CrawlDb update: additions allowed: true
+2013-01-13 18:47:14,482 INFO  crawl.CrawlDb - CrawlDb update: URL normalizing: true
+2013-01-13 18:47:14,482 INFO  crawl.CrawlDb - CrawlDb update: URL filtering: true
+2013-01-13 18:47:14,483 INFO  crawl.CrawlDb - CrawlDb update: 404 purging: false
+2013-01-13 18:47:14,484 INFO  crawl.CrawlDb - CrawlDb update: Merging segment data into db.
+2013-01-13 18:47:14,751 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:47:15,211 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:47:24,130 INFO  crawl.Crawl - crawl started in: crawl
+2013-01-13 18:47:24,130 INFO  crawl.Crawl - rootUrlDir = urls
+2013-01-13 18:47:24,130 INFO  crawl.Crawl - threads = 10
+2013-01-13 18:47:24,130 INFO  crawl.Crawl - depth = 3
+2013-01-13 18:47:24,130 INFO  crawl.Crawl - solrUrl=http://localhost:8983/solr/
+2013-01-13 18:47:24,130 INFO  crawl.Crawl - topN = 50
+2013-01-13 18:47:24,152 INFO  crawl.Injector - Injector: starting at 2013-01-13 18:47:24
+2013-01-13 18:47:24,152 INFO  crawl.Injector - Injector: crawlDb: crawl/crawldb
+2013-01-13 18:47:24,153 INFO  crawl.Injector - Injector: urlDir: urls
+2013-01-13 18:47:24,234 INFO  crawl.Injector - Injector: Converting injected urls to crawl db entries.
+2013-01-13 18:47:24,399 WARN  util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2013-01-13 18:47:24,472 WARN  snappy.LoadSnappy - Snappy native library not loaded
+2013-01-13 18:47:24,925 INFO  plugin.PluginRepository - Plugins: looking in: C:\cygwin\home\Abner\stuff\apache-nutch-1.6-src\.\src\plugin
+2013-01-13 18:47:25,556 INFO  plugin.PluginRepository - Plugin Auto-activation mode: [true]
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - Registered Plugins:
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	the nutch core extension points (nutch-extensionpoints)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	Basic URL Normalizer (urlnormalizer-basic)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	Html Parse Plug-in (parse-html)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	Basic Indexing Filter (index-basic)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	HTTP Framework (lib-http)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	Pass-through URL Normalizer (urlnormalizer-pass)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	Regex URL Filter (urlfilter-regex)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	Http Protocol Plug-in (protocol-http)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	Regex URL Normalizer (urlnormalizer-regex)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	Tika Parser Plug-in (parse-tika)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	OPIC Scoring Plug-in (scoring-opic)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	CyberNeko HTML Parser (lib-nekohtml)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	Anchor Indexing Filter (index-anchor)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	Regex URL Filter Framework (lib-regex-filter)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - Registered Extension-Points:
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	Nutch URL Normalizer (org.apache.nutch.net.URLNormalizer)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	Nutch Protocol (org.apache.nutch.protocol.Protocol)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	Nutch Segment Merge Filter (org.apache.nutch.segment.SegmentMergeFilter)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	Nutch URL Filter (org.apache.nutch.net.URLFilter)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	Nutch Indexing Filter (org.apache.nutch.indexer.IndexingFilter)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	HTML Parse Filter (org.apache.nutch.parse.HtmlParseFilter)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	Nutch Content Parser (org.apache.nutch.parse.Parser)
+2013-01-13 18:47:25,557 INFO  plugin.PluginRepository - 	Nutch Scoring (org.apache.nutch.scoring.ScoringFilter)
+2013-01-13 18:47:25,623 INFO  regex.RegexURLNormalizer - can't find rules for scope 'inject', using default
+2013-01-13 18:47:31,776 INFO  crawl.Injector - Injector: total number of urls rejected by filters: 0
+2013-01-13 18:47:31,776 INFO  crawl.Injector - Injector: total number of urls injected after normalization and filtering: 1
+2013-01-13 18:47:31,776 INFO  crawl.Injector - Injector: Merging injected urls into crawl db.
+2013-01-13 18:47:36,015 INFO  crawl.Injector - Injector: finished at 2013-01-13 18:47:36, elapsed: 00:00:11
+2013-01-13 18:47:36,022 INFO  crawl.Generator - Generator: starting at 2013-01-13 18:47:36
+2013-01-13 18:47:36,022 INFO  crawl.Generator - Generator: Selecting best-scoring urls due for fetch.
+2013-01-13 18:47:36,022 INFO  crawl.Generator - Generator: filtering: true
+2013-01-13 18:47:36,022 INFO  crawl.Generator - Generator: normalizing: true
+2013-01-13 18:47:36,022 INFO  crawl.Generator - Generator: topN: 50
+2013-01-13 18:47:36,023 INFO  crawl.Generator - Generator: jobtracker is 'local', generating exactly one partition.
+2013-01-13 18:47:36,413 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:47:36,413 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:47:36,413 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:47:36,423 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 18:47:39,373 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:47:39,373 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:47:39,373 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:47:39,376 INFO  regex.RegexURLNormalizer - can't find rules for scope 'generate_host_count', using default
+2013-01-13 18:47:43,312 INFO  crawl.Generator - Generator: Partitioning selected urls for politeness.
+2013-01-13 18:47:44,312 INFO  crawl.Generator - Generator: segment: crawl/segments/20130113184744
+2013-01-13 18:47:44,559 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 18:47:51,474 INFO  crawl.Generator - Generator: finished at 2013-01-13 18:47:51, elapsed: 00:00:15
+2013-01-13 18:47:51,474 WARN  fetcher.Fetcher - Fetcher: Your 'http.agent.name' value should be listed first in 'http.robots.agents' property.
+2013-01-13 18:47:51,475 INFO  fetcher.Fetcher - Fetcher: starting at 2013-01-13 18:47:51
+2013-01-13 18:47:51,475 INFO  fetcher.Fetcher - Fetcher: segment: crawl/segments/20130113184744
+2013-01-13 18:47:51,778 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:51,778 INFO  fetcher.Fetcher - Fetcher: threads: 10
+2013-01-13 18:47:51,778 INFO  fetcher.Fetcher - Fetcher: time-out divisor: 2
+2013-01-13 18:47:51,837 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:51,838 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:51,839 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:51,840 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:51,841 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:51,842 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:51,843 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:51,844 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:51,844 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:51,845 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:47:51,845 INFO  fetcher.Fetcher - Fetcher: throughput threshold: -1
+2013-01-13 18:47:51,845 INFO  fetcher.Fetcher - Fetcher: throughput threshold retries: 5
+2013-01-13 18:47:51,909 INFO  fetcher.Fetcher - QueueFeeder finished: total 1 records + hit by time limit :0
+2013-01-13 18:47:51,915 INFO  fetcher.Fetcher - fetching http://www.sina.com.cn/
+2013-01-13 18:47:51,920 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=9
+2013-01-13 18:47:51,920 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=8
+2013-01-13 18:47:51,922 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=7
+2013-01-13 18:47:51,923 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=6
+2013-01-13 18:47:51,924 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=5
+2013-01-13 18:47:51,924 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=4
+2013-01-13 18:47:51,925 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=3
+2013-01-13 18:47:52,054 INFO  mortbay.log - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2013-01-13 18:47:52,055 INFO  mortbay.log - Running http
+2013-01-13 18:47:52,055 INFO  http.Http - http.proxy.host = null
+2013-01-13 18:47:52,055 INFO  http.Http - http.proxy.port = 8080
+2013-01-13 18:47:52,055 INFO  http.Http - http.timeout = 10000
+2013-01-13 18:47:52,055 INFO  http.Http - http.content.limit = 65536
+2013-01-13 18:47:52,055 INFO  http.Http - http.agent = WeiboIndexProject/Nutch-1.6
+2013-01-13 18:47:52,055 INFO  http.Http - http.accept.language = en-us,en-gb,en;q=0.7,*;q=0.3
+2013-01-13 18:47:52,055 INFO  http.Http - http.accept = text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+2013-01-13 18:47:52,345 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=2
+2013-01-13 18:47:52,365 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:47:52,935 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:47:53,156 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=0
+2013-01-13 18:47:53,935 INFO  fetcher.Fetcher - -activeThreads=0, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:47:53,936 INFO  fetcher.Fetcher - -activeThreads=0
+2013-01-13 18:47:58,582 INFO  fetcher.Fetcher - Fetcher: finished at 2013-01-13 18:47:58, elapsed: 00:00:07
+2013-01-13 18:47:58,583 INFO  parse.ParseSegment - ParseSegment: starting at 2013-01-13 18:47:58
+2013-01-13 18:47:58,583 INFO  parse.ParseSegment - ParseSegment: segment: crawl/segments/20130113184744
+2013-01-13 18:48:10,694 WARN  parse.ParseUtil - Error parsing http://www.sina.com.cn/ with org.apache.nutch.parse.html.HtmlParser@3f2354e4
+java.util.concurrent.ExecutionException: java.lang.ClassCastException: org.apache.nutch.parse.ParseResult cannot be cast to org.apache.nutch.parse.Parse
+	at java.util.concurrent.FutureTask$Sync.innerGet(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at org.apache.nutch.parse.ParseUtil.runParser(ParseUtil.java:162)
+	at org.apache.nutch.parse.ParseUtil.parse(ParseUtil.java:93)
+	at org.apache.nutch.parse.ParseSegment.map(ParseSegment.java:97)
+	at org.apache.nutch.parse.ParseSegment.map(ParseSegment.java:1)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:50)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:436)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:372)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:212)
+Caused by: java.lang.ClassCastException: org.apache.nutch.parse.ParseResult cannot be cast to org.apache.nutch.parse.Parse
+	at org.apache.nutch.parse.html.HtmlParser.getParse(HtmlParser.java:198)
+	at org.apache.nutch.parse.ParseCallable.call(ParseCallable.java:35)
+	at org.apache.nutch.parse.ParseCallable.call(ParseCallable.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2013-01-13 18:48:10,712 WARN  parse.ParseUtil - Unable to successfully parse content http://www.sina.com.cn/ of type application/xhtml+xml
+2013-01-13 18:48:10,722 WARN  parse.ParseSegment - Error parsing: http://www.sina.com.cn/: failed(2,200): org.apache.nutch.parse.ParseException: Unable to successfully parse content
+2013-01-13 18:48:10,725 INFO  crawl.SignatureFactory - Using Signature impl: org.apache.nutch.crawl.MD5Signature
+2013-01-13 18:48:10,738 INFO  parse.ParseSegment - Parsed (22ms):http://www.sina.com.cn/
+2013-01-13 18:48:15,062 INFO  parse.ParseSegment - ParseSegment: finished at 2013-01-13 18:48:15, elapsed: 00:00:16
+2013-01-13 18:48:15,082 INFO  crawl.CrawlDb - CrawlDb update: starting at 2013-01-13 18:48:15
+2013-01-13 18:48:15,082 INFO  crawl.CrawlDb - CrawlDb update: db: crawl/crawldb
+2013-01-13 18:48:15,083 INFO  crawl.CrawlDb - CrawlDb update: segments: [crawl/segments/20130113184744]
+2013-01-13 18:48:15,083 INFO  crawl.CrawlDb - CrawlDb update: additions allowed: true
+2013-01-13 18:48:15,083 INFO  crawl.CrawlDb - CrawlDb update: URL normalizing: true
+2013-01-13 18:48:15,083 INFO  crawl.CrawlDb - CrawlDb update: URL filtering: true
+2013-01-13 18:48:15,083 INFO  crawl.CrawlDb - CrawlDb update: 404 purging: false
+2013-01-13 18:48:15,085 INFO  crawl.CrawlDb - CrawlDb update: Merging segment data into db.
+2013-01-13 18:48:15,350 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:48:15,782 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:48:46,534 INFO  crawl.Crawl - crawl started in: crawl
+2013-01-13 18:48:46,535 INFO  crawl.Crawl - rootUrlDir = urls
+2013-01-13 18:48:46,535 INFO  crawl.Crawl - threads = 10
+2013-01-13 18:48:46,535 INFO  crawl.Crawl - depth = 3
+2013-01-13 18:48:46,535 INFO  crawl.Crawl - solrUrl=http://localhost:8983/solr/
+2013-01-13 18:48:46,535 INFO  crawl.Crawl - topN = 50
+2013-01-13 18:48:46,567 INFO  crawl.Injector - Injector: starting at 2013-01-13 18:48:46
+2013-01-13 18:48:46,568 INFO  crawl.Injector - Injector: crawlDb: crawl/crawldb
+2013-01-13 18:48:46,568 INFO  crawl.Injector - Injector: urlDir: urls
+2013-01-13 18:48:46,734 INFO  crawl.Injector - Injector: Converting injected urls to crawl db entries.
+2013-01-13 18:48:47,031 WARN  util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2013-01-13 18:48:47,102 WARN  snappy.LoadSnappy - Snappy native library not loaded
+2013-01-13 18:48:47,770 INFO  plugin.PluginRepository - Plugins: looking in: C:\cygwin\home\Abner\stuff\apache-nutch-1.6-src\.\src\plugin
+2013-01-13 18:48:48,075 INFO  plugin.PluginRepository - Plugin Auto-activation mode: [true]
+2013-01-13 18:48:48,075 INFO  plugin.PluginRepository - Registered Plugins:
+2013-01-13 18:48:48,075 INFO  plugin.PluginRepository - 	the nutch core extension points (nutch-extensionpoints)
+2013-01-13 18:48:48,075 INFO  plugin.PluginRepository - 	Basic URL Normalizer (urlnormalizer-basic)
+2013-01-13 18:48:48,075 INFO  plugin.PluginRepository - 	Html Parse Plug-in (parse-html)
+2013-01-13 18:48:48,075 INFO  plugin.PluginRepository - 	Basic Indexing Filter (index-basic)
+2013-01-13 18:48:48,075 INFO  plugin.PluginRepository - 	HTTP Framework (lib-http)
+2013-01-13 18:48:48,075 INFO  plugin.PluginRepository - 	Pass-through URL Normalizer (urlnormalizer-pass)
+2013-01-13 18:48:48,075 INFO  plugin.PluginRepository - 	Regex URL Filter (urlfilter-regex)
+2013-01-13 18:48:48,076 INFO  plugin.PluginRepository - 	Http Protocol Plug-in (protocol-http)
+2013-01-13 18:48:48,076 INFO  plugin.PluginRepository - 	Regex URL Normalizer (urlnormalizer-regex)
+2013-01-13 18:48:48,076 INFO  plugin.PluginRepository - 	Tika Parser Plug-in (parse-tika)
+2013-01-13 18:48:48,076 INFO  plugin.PluginRepository - 	OPIC Scoring Plug-in (scoring-opic)
+2013-01-13 18:48:48,076 INFO  plugin.PluginRepository - 	CyberNeko HTML Parser (lib-nekohtml)
+2013-01-13 18:48:48,076 INFO  plugin.PluginRepository - 	Anchor Indexing Filter (index-anchor)
+2013-01-13 18:48:48,076 INFO  plugin.PluginRepository - 	Regex URL Filter Framework (lib-regex-filter)
+2013-01-13 18:48:48,076 INFO  plugin.PluginRepository - Registered Extension-Points:
+2013-01-13 18:48:48,076 INFO  plugin.PluginRepository - 	Nutch URL Normalizer (org.apache.nutch.net.URLNormalizer)
+2013-01-13 18:48:48,076 INFO  plugin.PluginRepository - 	Nutch Protocol (org.apache.nutch.protocol.Protocol)
+2013-01-13 18:48:48,076 INFO  plugin.PluginRepository - 	Nutch Segment Merge Filter (org.apache.nutch.segment.SegmentMergeFilter)
+2013-01-13 18:48:48,076 INFO  plugin.PluginRepository - 	Nutch URL Filter (org.apache.nutch.net.URLFilter)
+2013-01-13 18:48:48,076 INFO  plugin.PluginRepository - 	Nutch Indexing Filter (org.apache.nutch.indexer.IndexingFilter)
+2013-01-13 18:48:48,076 INFO  plugin.PluginRepository - 	HTML Parse Filter (org.apache.nutch.parse.HtmlParseFilter)
+2013-01-13 18:48:48,076 INFO  plugin.PluginRepository - 	Nutch Content Parser (org.apache.nutch.parse.Parser)
+2013-01-13 18:48:48,076 INFO  plugin.PluginRepository - 	Nutch Scoring (org.apache.nutch.scoring.ScoringFilter)
+2013-01-13 18:48:48,167 INFO  regex.RegexURLNormalizer - can't find rules for scope 'inject', using default
+2013-01-13 18:48:54,445 INFO  crawl.Injector - Injector: total number of urls rejected by filters: 0
+2013-01-13 18:48:54,446 INFO  crawl.Injector - Injector: total number of urls injected after normalization and filtering: 1
+2013-01-13 18:48:54,446 INFO  crawl.Injector - Injector: Merging injected urls into crawl db.
+2013-01-13 18:49:01,713 INFO  crawl.Injector - Injector: finished at 2013-01-13 18:49:01, elapsed: 00:00:15
+2013-01-13 18:49:01,720 INFO  crawl.Generator - Generator: starting at 2013-01-13 18:49:01
+2013-01-13 18:49:01,721 INFO  crawl.Generator - Generator: Selecting best-scoring urls due for fetch.
+2013-01-13 18:49:01,721 INFO  crawl.Generator - Generator: filtering: true
+2013-01-13 18:49:01,721 INFO  crawl.Generator - Generator: normalizing: true
+2013-01-13 18:49:01,721 INFO  crawl.Generator - Generator: topN: 50
+2013-01-13 18:49:01,721 INFO  crawl.Generator - Generator: jobtracker is 'local', generating exactly one partition.
+2013-01-13 18:49:02,161 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:49:02,162 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:49:02,162 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:49:02,171 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 18:49:05,123 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:49:05,123 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:49:05,123 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:49:05,126 INFO  regex.RegexURLNormalizer - can't find rules for scope 'generate_host_count', using default
+2013-01-13 18:49:09,034 INFO  crawl.Generator - Generator: Partitioning selected urls for politeness.
+2013-01-13 18:49:10,034 INFO  crawl.Generator - Generator: segment: crawl/segments/20130113184910
+2013-01-13 18:49:10,296 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 18:49:17,350 INFO  crawl.Generator - Generator: finished at 2013-01-13 18:49:17, elapsed: 00:00:15
+2013-01-13 18:49:17,350 WARN  fetcher.Fetcher - Fetcher: Your 'http.agent.name' value should be listed first in 'http.robots.agents' property.
+2013-01-13 18:49:17,350 INFO  fetcher.Fetcher - Fetcher: starting at 2013-01-13 18:49:17
+2013-01-13 18:49:17,350 INFO  fetcher.Fetcher - Fetcher: segment: crawl/segments/20130113184910
+2013-01-13 18:49:17,616 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:49:17,617 INFO  fetcher.Fetcher - Fetcher: threads: 10
+2013-01-13 18:49:17,617 INFO  fetcher.Fetcher - Fetcher: time-out divisor: 2
+2013-01-13 18:49:17,673 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:49:17,674 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:49:17,674 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:49:17,675 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:49:17,675 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:49:17,675 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:49:17,676 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:49:17,676 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:49:17,677 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:49:17,677 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:49:17,677 INFO  fetcher.Fetcher - Fetcher: throughput threshold: -1
+2013-01-13 18:49:17,677 INFO  fetcher.Fetcher - Fetcher: throughput threshold retries: 5
+2013-01-13 18:49:17,831 INFO  fetcher.Fetcher - QueueFeeder finished: total 1 records + hit by time limit :0
+2013-01-13 18:49:18,178 INFO  fetcher.Fetcher - fetching http://www.sina.com.cn/
+2013-01-13 18:49:18,196 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=9
+2013-01-13 18:49:18,203 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=8
+2013-01-13 18:49:18,204 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=7
+2013-01-13 18:49:18,204 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=6
+2013-01-13 18:49:18,232 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=5
+2013-01-13 18:49:18,233 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=4
+2013-01-13 18:49:18,233 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=3
+2013-01-13 18:49:18,233 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=2
+2013-01-13 18:49:18,233 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:49:18,264 INFO  mortbay.log - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2013-01-13 18:49:18,264 INFO  mortbay.log - Running http
+2013-01-13 18:49:18,265 INFO  http.Http - http.proxy.host = null
+2013-01-13 18:49:18,265 INFO  http.Http - http.proxy.port = 8080
+2013-01-13 18:49:18,265 INFO  http.Http - http.timeout = 10000
+2013-01-13 18:49:18,265 INFO  http.Http - http.content.limit = 65536
+2013-01-13 18:49:18,265 INFO  http.Http - http.agent = WeiboIndexProject/Nutch-1.6
+2013-01-13 18:49:18,265 INFO  http.Http - http.accept.language = en-us,en-gb,en;q=0.7,*;q=0.3
+2013-01-13 18:49:18,265 INFO  http.Http - http.accept = text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+2013-01-13 18:49:18,679 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:49:19,679 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:49:20,679 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:49:21,679 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:49:22,679 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:49:23,679 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:49:24,758 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=0
+2013-01-13 18:49:24,758 INFO  fetcher.Fetcher - -activeThreads=0, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:49:24,758 INFO  fetcher.Fetcher - -activeThreads=0
+2013-01-13 18:49:30,471 INFO  fetcher.Fetcher - Fetcher: finished at 2013-01-13 18:49:30, elapsed: 00:00:13
+2013-01-13 18:49:30,471 INFO  parse.ParseSegment - ParseSegment: starting at 2013-01-13 18:49:30
+2013-01-13 18:49:30,472 INFO  parse.ParseSegment - ParseSegment: segment: crawl/segments/20130113184910
+2013-01-13 18:49:47,538 INFO  crawl.SignatureFactory - Using Signature impl: org.apache.nutch.crawl.MD5Signature
+2013-01-13 18:49:47,564 INFO  parse.ParseSegment - Parsed (41ms):http://www.sina.com.cn/
+2013-01-13 18:49:48,877 INFO  regex.RegexURLNormalizer - can't find rules for scope 'outlink', using default
+2013-01-13 18:49:52,639 INFO  parse.ParseSegment - ParseSegment: finished at 2013-01-13 18:49:52, elapsed: 00:00:22
+2013-01-13 18:49:52,645 INFO  crawl.CrawlDb - CrawlDb update: starting at 2013-01-13 18:49:52
+2013-01-13 18:49:52,646 INFO  crawl.CrawlDb - CrawlDb update: db: crawl/crawldb
+2013-01-13 18:49:52,646 INFO  crawl.CrawlDb - CrawlDb update: segments: [crawl/segments/20130113184910]
+2013-01-13 18:49:52,646 INFO  crawl.CrawlDb - CrawlDb update: additions allowed: true
+2013-01-13 18:49:52,646 INFO  crawl.CrawlDb - CrawlDb update: URL normalizing: true
+2013-01-13 18:49:52,646 INFO  crawl.CrawlDb - CrawlDb update: URL filtering: true
+2013-01-13 18:49:52,646 INFO  crawl.CrawlDb - CrawlDb update: 404 purging: false
+2013-01-13 18:49:52,646 INFO  crawl.CrawlDb - CrawlDb update: Merging segment data into db.
+2013-01-13 18:49:53,063 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:49:56,182 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:49:59,061 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:50:02,048 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:50:02,048 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:50:02,048 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:50:05,929 INFO  crawl.CrawlDb - CrawlDb update: finished at 2013-01-13 18:50:05, elapsed: 00:00:13
+2013-01-13 18:50:05,939 INFO  crawl.Generator - Generator: starting at 2013-01-13 18:50:05
+2013-01-13 18:50:05,939 INFO  crawl.Generator - Generator: Selecting best-scoring urls due for fetch.
+2013-01-13 18:50:05,939 INFO  crawl.Generator - Generator: filtering: true
+2013-01-13 18:50:05,939 INFO  crawl.Generator - Generator: normalizing: true
+2013-01-13 18:50:05,939 INFO  crawl.Generator - Generator: topN: 50
+2013-01-13 18:50:05,940 INFO  crawl.Generator - Generator: jobtracker is 'local', generating exactly one partition.
+2013-01-13 18:50:06,149 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:50:06,149 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:50:06,149 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:50:06,151 DEBUG crawl.Generator - -shouldFetch rejected 'http://www.sina.com.cn/', fetchTime=1360666164756, curTime=1358074205929
+2013-01-13 18:50:09,112 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:50:09,113 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:50:09,113 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:50:13,018 WARN  crawl.Generator - Generator: 0 records selected for fetching, exiting ...
+2013-01-13 18:50:13,030 INFO  crawl.Crawl - Stopping at depth=1 - no more URLs to fetch.
+2013-01-13 18:50:13,060 INFO  crawl.LinkDb - LinkDb: starting at 2013-01-13 18:50:13
+2013-01-13 18:50:13,060 INFO  crawl.LinkDb - LinkDb: linkdb: crawl/linkdb
+2013-01-13 18:50:13,060 INFO  crawl.LinkDb - LinkDb: URL normalize: true
+2013-01-13 18:50:13,060 INFO  crawl.LinkDb - LinkDb: URL filter: true
+2013-01-13 18:50:13,060 INFO  crawl.LinkDb - LinkDb: internal links will be ignored.
+2013-01-13 18:50:13,060 INFO  crawl.LinkDb - LinkDb: adding segment: file:/C:/cygwin/home/Abner/stuff/apache-nutch-1.6-src/crawl/segments/20130113184910
+2013-01-13 18:50:13,212 INFO  regex.RegexURLNormalizer - can't find rules for scope 'linkdb', using default
+2013-01-13 18:50:20,147 INFO  crawl.LinkDb - LinkDb: finished at 2013-01-13 18:50:20, elapsed: 00:00:07
+2013-01-13 18:50:20,158 INFO  solr.SolrIndexer - SolrIndexer: starting at 2013-01-13 18:50:20
+2013-01-13 18:50:20,158 INFO  solr.SolrIndexer - SolrIndexer: deleting gone documents: false
+2013-01-13 18:50:20,158 INFO  solr.SolrIndexer - SolrIndexer: URL filtering: false
+2013-01-13 18:50:20,159 INFO  solr.SolrIndexer - SolrIndexer: URL normalizing: false
+2013-01-13 18:50:20,161 INFO  indexer.IndexerMapReduce - IndexerMapReduce: crawldb: crawl/crawldb
+2013-01-13 18:50:20,161 INFO  indexer.IndexerMapReduce - IndexerMapReduce: linkdb: crawl/linkdb
+2013-01-13 18:50:20,161 INFO  indexer.IndexerMapReduce - IndexerMapReduces: adding segment: file:/C:/cygwin/home/Abner/stuff/apache-nutch-1.6-src/crawl/segments/20130113184910
+2013-01-13 18:50:20,392 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:50:20,394 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:50:20,394 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:50:23,385 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:50:23,386 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:50:23,386 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:50:26,436 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:50:26,436 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:50:26,436 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:50:29,556 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:50:29,556 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:50:29,556 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:50:32,471 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:50:32,471 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:50:32,471 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:50:35,463 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:50:35,464 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:50:35,465 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:50:38,488 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:50:38,488 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:50:38,488 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:50:38,819 INFO  solr.SolrMappingReader - source: content dest: content
+2013-01-13 18:50:38,819 INFO  solr.SolrMappingReader - source: title dest: title
+2013-01-13 18:50:38,819 INFO  solr.SolrMappingReader - source: host dest: host
+2013-01-13 18:50:38,819 INFO  solr.SolrMappingReader - source: segment dest: segment
+2013-01-13 18:50:38,819 INFO  solr.SolrMappingReader - source: boost dest: boost
+2013-01-13 18:50:38,819 INFO  solr.SolrMappingReader - source: digest dest: digest
+2013-01-13 18:50:38,819 INFO  solr.SolrMappingReader - source: tstamp dest: tstamp
+2013-01-13 18:50:38,819 INFO  solr.SolrMappingReader - source: url dest: id
+2013-01-13 18:50:38,820 INFO  solr.SolrMappingReader - source: url dest: url
+2013-01-13 18:50:38,914 INFO  solr.SolrWriter - Indexing 1 documents
+2013-01-13 18:50:42,789 INFO  solr.SolrIndexer - SolrIndexer: finished at 2013-01-13 18:50:42, elapsed: 00:00:22
+2013-01-13 18:50:42,857 INFO  solr.SolrDeleteDuplicates - SolrDeleteDuplicates: starting at 2013-01-13 18:50:42
+2013-01-13 18:50:42,857 INFO  solr.SolrDeleteDuplicates - SolrDeleteDuplicates: Solr url: http://localhost:8983/solr/
+2013-01-13 18:50:49,075 WARN  mapred.FileOutputCommitter - Output path is null in cleanup
+2013-01-13 18:50:50,029 INFO  solr.SolrDeleteDuplicates - SolrDeleteDuplicates: finished at 2013-01-13 18:50:50, elapsed: 00:00:07
+2013-01-13 18:50:50,029 INFO  crawl.Crawl - crawl finished: crawl
+2013-01-13 18:54:58,743 INFO  crawl.Crawl - crawl started in: crawl
+2013-01-13 18:54:58,744 INFO  crawl.Crawl - rootUrlDir = urls
+2013-01-13 18:54:58,744 INFO  crawl.Crawl - threads = 10
+2013-01-13 18:54:58,744 INFO  crawl.Crawl - depth = 3
+2013-01-13 18:54:58,744 INFO  crawl.Crawl - solrUrl=http://localhost:8983/solr/
+2013-01-13 18:54:58,744 INFO  crawl.Crawl - topN = 50
+2013-01-13 18:54:58,771 INFO  crawl.Injector - Injector: starting at 2013-01-13 18:54:58
+2013-01-13 18:54:58,771 INFO  crawl.Injector - Injector: crawlDb: crawl/crawldb
+2013-01-13 18:54:58,771 INFO  crawl.Injector - Injector: urlDir: urls
+2013-01-13 18:54:58,871 INFO  crawl.Injector - Injector: Converting injected urls to crawl db entries.
+2013-01-13 18:54:59,014 WARN  util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2013-01-13 18:54:59,272 WARN  snappy.LoadSnappy - Snappy native library not loaded
+2013-01-13 18:54:59,831 INFO  plugin.PluginRepository - Plugins: looking in: C:\cygwin\home\Abner\stuff\apache-nutch-1.6-src\.\src\plugin
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - Plugin Auto-activation mode: [true]
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - Registered Plugins:
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	the nutch core extension points (nutch-extensionpoints)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	Basic URL Normalizer (urlnormalizer-basic)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	Html Parse Plug-in (parse-html)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	Basic Indexing Filter (index-basic)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	HTTP Framework (lib-http)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	Pass-through URL Normalizer (urlnormalizer-pass)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	Regex URL Filter (urlfilter-regex)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	Http Protocol Plug-in (protocol-http)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	Regex URL Normalizer (urlnormalizer-regex)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	Tika Parser Plug-in (parse-tika)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	OPIC Scoring Plug-in (scoring-opic)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	CyberNeko HTML Parser (lib-nekohtml)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	Anchor Indexing Filter (index-anchor)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	Regex URL Filter Framework (lib-regex-filter)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - Registered Extension-Points:
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	Nutch URL Normalizer (org.apache.nutch.net.URLNormalizer)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	Nutch Protocol (org.apache.nutch.protocol.Protocol)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	Nutch Segment Merge Filter (org.apache.nutch.segment.SegmentMergeFilter)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	Nutch URL Filter (org.apache.nutch.net.URLFilter)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	Nutch Indexing Filter (org.apache.nutch.indexer.IndexingFilter)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	HTML Parse Filter (org.apache.nutch.parse.HtmlParseFilter)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	Nutch Content Parser (org.apache.nutch.parse.Parser)
+2013-01-13 18:55:00,149 INFO  plugin.PluginRepository - 	Nutch Scoring (org.apache.nutch.scoring.ScoringFilter)
+2013-01-13 18:55:00,235 INFO  regex.RegexURLNormalizer - can't find rules for scope 'inject', using default
+2013-01-13 18:55:06,734 INFO  crawl.Injector - Injector: total number of urls rejected by filters: 0
+2013-01-13 18:55:06,734 INFO  crawl.Injector - Injector: total number of urls injected after normalization and filtering: 1
+2013-01-13 18:55:06,734 INFO  crawl.Injector - Injector: Merging injected urls into crawl db.
+2013-01-13 18:55:14,163 INFO  crawl.Injector - Injector: finished at 2013-01-13 18:55:14, elapsed: 00:00:15
+2013-01-13 18:55:14,171 INFO  crawl.Generator - Generator: starting at 2013-01-13 18:55:14
+2013-01-13 18:55:14,171 INFO  crawl.Generator - Generator: Selecting best-scoring urls due for fetch.
+2013-01-13 18:55:14,171 INFO  crawl.Generator - Generator: filtering: true
+2013-01-13 18:55:14,171 INFO  crawl.Generator - Generator: normalizing: true
+2013-01-13 18:55:14,171 INFO  crawl.Generator - Generator: topN: 50
+2013-01-13 18:55:14,172 INFO  crawl.Generator - Generator: jobtracker is 'local', generating exactly one partition.
+2013-01-13 18:55:15,160 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:55:15,160 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:55:15,160 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:55:15,170 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 18:55:18,092 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:55:18,092 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:55:18,092 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:55:18,095 INFO  regex.RegexURLNormalizer - can't find rules for scope 'generate_host_count', using default
+2013-01-13 18:55:19,074 INFO  crawl.Generator - Generator: Partitioning selected urls for politeness.
+2013-01-13 18:55:20,081 INFO  crawl.Generator - Generator: segment: crawl/segments/20130113185520
+2013-01-13 18:55:20,425 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 18:55:27,368 INFO  crawl.Generator - Generator: finished at 2013-01-13 18:55:27, elapsed: 00:00:13
+2013-01-13 18:55:27,368 WARN  fetcher.Fetcher - Fetcher: Your 'http.agent.name' value should be listed first in 'http.robots.agents' property.
+2013-01-13 18:55:27,368 INFO  fetcher.Fetcher - Fetcher: starting at 2013-01-13 18:55:27
+2013-01-13 18:55:27,368 INFO  fetcher.Fetcher - Fetcher: segment: crawl/segments/20130113185520
+2013-01-13 18:55:27,804 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:55:27,804 INFO  fetcher.Fetcher - Fetcher: threads: 10
+2013-01-13 18:55:27,805 INFO  fetcher.Fetcher - Fetcher: time-out divisor: 2
+2013-01-13 18:55:27,854 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:55:27,854 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:55:27,855 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:55:27,855 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:55:27,856 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:55:27,857 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:55:27,857 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:55:27,857 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:55:27,858 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:55:27,859 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 18:55:27,859 INFO  fetcher.Fetcher - Fetcher: throughput threshold: -1
+2013-01-13 18:55:27,859 INFO  fetcher.Fetcher - Fetcher: throughput threshold retries: 5
+2013-01-13 18:55:27,984 INFO  fetcher.Fetcher - QueueFeeder finished: total 1 records + hit by time limit :0
+2013-01-13 18:55:28,359 INFO  fetcher.Fetcher - fetching http://www.sina.com.cn/
+2013-01-13 18:55:28,395 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=9
+2013-01-13 18:55:28,396 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=8
+2013-01-13 18:55:28,396 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=7
+2013-01-13 18:55:28,398 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=6
+2013-01-13 18:55:28,398 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=5
+2013-01-13 18:55:28,398 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=4
+2013-01-13 18:55:28,406 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=3
+2013-01-13 18:55:28,410 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=2
+2013-01-13 18:55:28,410 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 18:55:28,429 INFO  mortbay.log - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2013-01-13 18:55:28,429 INFO  mortbay.log - Running http
+2013-01-13 18:55:28,429 INFO  http.Http - http.proxy.host = null
+2013-01-13 18:55:28,429 INFO  http.Http - http.proxy.port = 8080
+2013-01-13 18:55:28,429 INFO  http.Http - http.timeout = 10000
+2013-01-13 18:55:28,430 INFO  http.Http - http.content.limit = 65536
+2013-01-13 18:55:28,430 INFO  http.Http - http.agent = WeiboIndexProject/Nutch-1.6
+2013-01-13 18:55:28,430 INFO  http.Http - http.accept.language = en-us,en-gb,en;q=0.7,*;q=0.3
+2013-01-13 18:55:28,430 INFO  http.Http - http.accept = text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+2013-01-13 18:55:28,861 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:55:29,444 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=0
+2013-01-13 18:55:29,871 INFO  fetcher.Fetcher - -activeThreads=0, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 18:55:29,872 INFO  fetcher.Fetcher - -activeThreads=0
+2013-01-13 18:55:33,722 INFO  fetcher.Fetcher - Fetcher: finished at 2013-01-13 18:55:33, elapsed: 00:00:06
+2013-01-13 18:55:33,722 INFO  parse.ParseSegment - ParseSegment: starting at 2013-01-13 18:55:33
+2013-01-13 18:55:33,722 INFO  parse.ParseSegment - ParseSegment: segment: crawl/segments/20130113185520
+2013-01-13 18:56:04,085 WARN  parse.ParseUtil - Error parsing http://www.sina.com.cn/ with org.apache.nutch.parse.html.HtmlParser@357eb194
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask$Sync.innerGet(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at org.apache.nutch.parse.ParseUtil.runParser(ParseUtil.java:162)
+	at org.apache.nutch.parse.ParseUtil.parse(ParseUtil.java:93)
+	at org.apache.nutch.parse.ParseSegment.map(ParseSegment.java:97)
+	at org.apache.nutch.parse.ParseSegment.map(ParseSegment.java:1)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:50)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:436)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:372)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:212)
+2013-01-13 18:56:04,093 WARN  parse.ParseUtil - Unable to successfully parse content http://www.sina.com.cn/ of type application/xhtml+xml
+2013-01-13 18:56:04,108 WARN  parse.ParseSegment - Error parsing: http://www.sina.com.cn/: failed(2,200): org.apache.nutch.parse.ParseException: Unable to successfully parse content
+2013-01-13 18:56:04,117 INFO  crawl.SignatureFactory - Using Signature impl: org.apache.nutch.crawl.MD5Signature
+2013-01-13 18:56:04,132 INFO  parse.ParseSegment - Parsed (31ms):http://www.sina.com.cn/
+2013-01-13 18:56:10,997 INFO  parse.ParseSegment - ParseSegment: finished at 2013-01-13 18:56:10, elapsed: 00:00:37
+2013-01-13 18:56:11,007 INFO  crawl.CrawlDb - CrawlDb update: starting at 2013-01-13 18:56:11
+2013-01-13 18:56:11,007 INFO  crawl.CrawlDb - CrawlDb update: db: crawl/crawldb
+2013-01-13 18:56:11,007 INFO  crawl.CrawlDb - CrawlDb update: segments: [crawl/segments/20130113185520]
+2013-01-13 18:56:11,008 INFO  crawl.CrawlDb - CrawlDb update: additions allowed: true
+2013-01-13 18:56:11,008 INFO  crawl.CrawlDb - CrawlDb update: URL normalizing: true
+2013-01-13 18:56:11,008 INFO  crawl.CrawlDb - CrawlDb update: URL filtering: true
+2013-01-13 18:56:11,008 INFO  crawl.CrawlDb - CrawlDb update: 404 purging: false
+2013-01-13 18:56:11,008 INFO  crawl.CrawlDb - CrawlDb update: Merging segment data into db.
+2013-01-13 18:56:11,367 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:56:11,941 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:56:14,865 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 18:56:17,878 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:56:17,878 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:56:17,878 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:56:21,184 INFO  crawl.CrawlDb - CrawlDb update: finished at 2013-01-13 18:56:21, elapsed: 00:00:10
+2013-01-13 18:56:21,192 INFO  crawl.Generator - Generator: starting at 2013-01-13 18:56:21
+2013-01-13 18:56:21,192 INFO  crawl.Generator - Generator: Selecting best-scoring urls due for fetch.
+2013-01-13 18:56:21,192 INFO  crawl.Generator - Generator: filtering: true
+2013-01-13 18:56:21,192 INFO  crawl.Generator - Generator: normalizing: true
+2013-01-13 18:56:21,192 INFO  crawl.Generator - Generator: topN: 50
+2013-01-13 18:56:21,193 INFO  crawl.Generator - Generator: jobtracker is 'local', generating exactly one partition.
+2013-01-13 18:56:21,333 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:56:21,333 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:56:21,333 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:56:21,335 DEBUG crawl.Generator - -shouldFetch rejected 'http://www.sina.com.cn/', fetchTime=1360666529443, curTime=1358074581184
+2013-01-13 18:56:24,311 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:56:24,311 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:56:24,311 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:56:28,265 WARN  crawl.Generator - Generator: 0 records selected for fetching, exiting ...
+2013-01-13 18:56:28,270 INFO  crawl.Crawl - Stopping at depth=1 - no more URLs to fetch.
+2013-01-13 18:56:28,281 INFO  crawl.LinkDb - LinkDb: starting at 2013-01-13 18:56:28
+2013-01-13 18:56:28,281 INFO  crawl.LinkDb - LinkDb: linkdb: crawl/linkdb
+2013-01-13 18:56:28,281 INFO  crawl.LinkDb - LinkDb: URL normalize: true
+2013-01-13 18:56:28,282 INFO  crawl.LinkDb - LinkDb: URL filter: true
+2013-01-13 18:56:28,282 INFO  crawl.LinkDb - LinkDb: internal links will be ignored.
+2013-01-13 18:56:28,282 INFO  crawl.LinkDb - LinkDb: adding segment: file:/C:/cygwin/home/Abner/stuff/apache-nutch-1.6-src/crawl/segments/20130113185520
+2013-01-13 18:56:28,473 INFO  regex.RegexURLNormalizer - can't find rules for scope 'linkdb', using default
+2013-01-13 18:56:35,396 INFO  crawl.LinkDb - LinkDb: finished at 2013-01-13 18:56:35, elapsed: 00:00:07
+2013-01-13 18:56:35,414 INFO  solr.SolrIndexer - SolrIndexer: starting at 2013-01-13 18:56:35
+2013-01-13 18:56:35,414 INFO  solr.SolrIndexer - SolrIndexer: deleting gone documents: false
+2013-01-13 18:56:35,415 INFO  solr.SolrIndexer - SolrIndexer: URL filtering: false
+2013-01-13 18:56:35,415 INFO  solr.SolrIndexer - SolrIndexer: URL normalizing: false
+2013-01-13 18:56:35,418 INFO  indexer.IndexerMapReduce - IndexerMapReduce: crawldb: crawl/crawldb
+2013-01-13 18:56:35,418 INFO  indexer.IndexerMapReduce - IndexerMapReduce: linkdb: crawl/linkdb
+2013-01-13 18:56:35,418 INFO  indexer.IndexerMapReduce - IndexerMapReduces: adding segment: file:/C:/cygwin/home/Abner/stuff/apache-nutch-1.6-src/crawl/segments/20130113185520
+2013-01-13 18:56:35,625 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:56:35,627 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:56:35,627 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:56:38,639 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:56:38,640 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:56:38,641 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:56:41,679 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:56:41,679 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:56:41,679 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:56:44,834 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:56:44,835 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:56:44,835 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:56:47,752 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:56:47,752 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:56:47,752 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:56:50,727 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.basic.BasicIndexingFilter
+2013-01-13 18:56:50,728 INFO  anchor.AnchorIndexingFilter - Anchor deduplication is: off
+2013-01-13 18:56:50,728 INFO  indexer.IndexingFilters - Adding org.apache.nutch.indexer.anchor.AnchorIndexingFilter
+2013-01-13 18:59:31,279 INFO  crawl.Crawl - crawl started in: crawl
+2013-01-13 18:59:31,279 INFO  crawl.Crawl - rootUrlDir = urls
+2013-01-13 18:59:31,279 INFO  crawl.Crawl - threads = 10
+2013-01-13 18:59:31,279 INFO  crawl.Crawl - depth = 3
+2013-01-13 18:59:31,280 INFO  crawl.Crawl - solrUrl=http://localhost:8983/solr/
+2013-01-13 18:59:31,280 INFO  crawl.Crawl - topN = 50
+2013-01-13 18:59:31,301 INFO  crawl.Injector - Injector: starting at 2013-01-13 18:59:31
+2013-01-13 18:59:31,301 INFO  crawl.Injector - Injector: crawlDb: crawl/crawldb
+2013-01-13 18:59:31,302 INFO  crawl.Injector - Injector: urlDir: urls
+2013-01-13 18:59:31,362 INFO  crawl.Injector - Injector: Converting injected urls to crawl db entries.
+2013-01-13 18:59:31,437 WARN  util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2013-01-13 18:59:31,660 WARN  snappy.LoadSnappy - Snappy native library not loaded
+2013-01-13 18:59:32,498 INFO  plugin.PluginRepository - Plugins: looking in: C:\cygwin\home\Abner\stuff\apache-nutch-1.6-src\.\src\plugin
+2013-01-13 18:59:32,689 INFO  plugin.PluginRepository - Plugin Auto-activation mode: [true]
+2013-01-13 18:59:32,689 INFO  plugin.PluginRepository - Registered Plugins:
+2013-01-13 18:59:32,689 INFO  plugin.PluginRepository - 	the nutch core extension points (nutch-extensionpoints)
+2013-01-13 18:59:32,689 INFO  plugin.PluginRepository - 	Basic URL Normalizer (urlnormalizer-basic)
+2013-01-13 18:59:32,689 INFO  plugin.PluginRepository - 	Html Parse Plug-in (parse-html)
+2013-01-13 18:59:32,689 INFO  plugin.PluginRepository - 	Basic Indexing Filter (index-basic)
+2013-01-13 18:59:32,689 INFO  plugin.PluginRepository - 	HTTP Framework (lib-http)
+2013-01-13 18:59:32,689 INFO  plugin.PluginRepository - 	Pass-through URL Normalizer (urlnormalizer-pass)
+2013-01-13 18:59:32,689 INFO  plugin.PluginRepository - 	Regex URL Filter (urlfilter-regex)
+2013-01-13 18:59:32,689 INFO  plugin.PluginRepository - 	Http Protocol Plug-in (protocol-http)
+2013-01-13 18:59:32,690 INFO  plugin.PluginRepository - 	Regex URL Normalizer (urlnormalizer-regex)
+2013-01-13 18:59:32,690 INFO  plugin.PluginRepository - 	Tika Parser Plug-in (parse-tika)
+2013-01-13 18:59:32,690 INFO  plugin.PluginRepository - 	OPIC Scoring Plug-in (scoring-opic)
+2013-01-13 18:59:32,690 INFO  plugin.PluginRepository - 	CyberNeko HTML Parser (lib-nekohtml)
+2013-01-13 18:59:32,690 INFO  plugin.PluginRepository - 	Anchor Indexing Filter (index-anchor)
+2013-01-13 18:59:32,690 INFO  plugin.PluginRepository - 	Regex URL Filter Framework (lib-regex-filter)
+2013-01-13 18:59:32,690 INFO  plugin.PluginRepository - Registered Extension-Points:
+2013-01-13 18:59:32,690 INFO  plugin.PluginRepository - 	Nutch URL Normalizer (org.apache.nutch.net.URLNormalizer)
+2013-01-13 18:59:32,690 INFO  plugin.PluginRepository - 	Nutch Protocol (org.apache.nutch.protocol.Protocol)
+2013-01-13 18:59:32,690 INFO  plugin.PluginRepository - 	Nutch Segment Merge Filter (org.apache.nutch.segment.SegmentMergeFilter)
+2013-01-13 18:59:32,690 INFO  plugin.PluginRepository - 	Nutch URL Filter (org.apache.nutch.net.URLFilter)
+2013-01-13 18:59:32,690 INFO  plugin.PluginRepository - 	Nutch Indexing Filter (org.apache.nutch.indexer.IndexingFilter)
+2013-01-13 18:59:32,690 INFO  plugin.PluginRepository - 	HTML Parse Filter (org.apache.nutch.parse.HtmlParseFilter)
+2013-01-13 18:59:32,690 INFO  plugin.PluginRepository - 	Nutch Content Parser (org.apache.nutch.parse.Parser)
+2013-01-13 18:59:32,690 INFO  plugin.PluginRepository - 	Nutch Scoring (org.apache.nutch.scoring.ScoringFilter)
+2013-01-13 18:59:32,760 INFO  regex.RegexURLNormalizer - can't find rules for scope 'inject', using default
+2013-01-13 18:59:38,981 INFO  crawl.Injector - Injector: total number of urls rejected by filters: 0
+2013-01-13 18:59:38,981 INFO  crawl.Injector - Injector: total number of urls injected after normalization and filtering: 1
+2013-01-13 18:59:38,981 INFO  crawl.Injector - Injector: Merging injected urls into crawl db.
+2013-01-13 18:59:49,579 INFO  crawl.Injector - Injector: finished at 2013-01-13 18:59:49, elapsed: 00:00:18
+2013-01-13 18:59:49,586 INFO  crawl.Generator - Generator: starting at 2013-01-13 18:59:49
+2013-01-13 18:59:49,586 INFO  crawl.Generator - Generator: Selecting best-scoring urls due for fetch.
+2013-01-13 18:59:49,586 INFO  crawl.Generator - Generator: filtering: true
+2013-01-13 18:59:49,586 INFO  crawl.Generator - Generator: normalizing: true
+2013-01-13 18:59:49,586 INFO  crawl.Generator - Generator: topN: 50
+2013-01-13 18:59:49,586 INFO  crawl.Generator - Generator: jobtracker is 'local', generating exactly one partition.
+2013-01-13 18:59:49,865 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:59:49,865 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:59:49,865 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:59:49,871 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 18:59:49,873 DEBUG crawl.Generator - -shouldFetch rejected 'http://www.sina.com.cn/', fetchTime=1360666529443, curTime=1358074789579
+2013-01-13 18:59:52,810 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 18:59:52,810 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 18:59:52,810 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 18:59:52,813 INFO  regex.RegexURLNormalizer - can't find rules for scope 'generate_host_count', using default
+2013-01-13 18:59:56,722 INFO  crawl.Generator - Generator: Partitioning selected urls for politeness.
+2013-01-13 18:59:57,722 INFO  crawl.Generator - Generator: segment: crawl/segments/20130113185957
+2013-01-13 18:59:57,904 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 19:00:04,856 INFO  crawl.Generator - Generator: finished at 2013-01-13 19:00:04, elapsed: 00:00:15
+2013-01-13 19:00:04,857 WARN  fetcher.Fetcher - Fetcher: Your 'http.agent.name' value should be listed first in 'http.robots.agents' property.
+2013-01-13 19:00:04,857 INFO  fetcher.Fetcher - Fetcher: starting at 2013-01-13 19:00:04
+2013-01-13 19:00:04,858 INFO  fetcher.Fetcher - Fetcher: segment: crawl/segments/20130113185957
+2013-01-13 19:00:05,445 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:05,445 INFO  fetcher.Fetcher - Fetcher: threads: 10
+2013-01-13 19:00:05,446 INFO  fetcher.Fetcher - Fetcher: time-out divisor: 2
+2013-01-13 19:00:05,473 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:05,474 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:05,474 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:05,475 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:05,475 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:05,475 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:05,476 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:05,476 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:05,476 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:05,477 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:05,477 INFO  fetcher.Fetcher - Fetcher: throughput threshold: -1
+2013-01-13 19:00:05,477 INFO  fetcher.Fetcher - Fetcher: throughput threshold retries: 5
+2013-01-13 19:00:05,595 INFO  fetcher.Fetcher - QueueFeeder finished: total 1 records + hit by time limit :0
+2013-01-13 19:00:05,595 INFO  fetcher.Fetcher - fetching http://www.apache.org/
+2013-01-13 19:00:05,612 INFO  mortbay.log - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2013-01-13 19:00:05,612 INFO  mortbay.log - Running http
+2013-01-13 19:00:05,612 INFO  http.Http - http.proxy.host = null
+2013-01-13 19:00:05,612 INFO  http.Http - http.proxy.port = 8080
+2013-01-13 19:00:05,612 INFO  http.Http - http.timeout = 10000
+2013-01-13 19:00:05,612 INFO  http.Http - http.content.limit = 65536
+2013-01-13 19:00:05,612 INFO  http.Http - http.agent = WeiboIndexProject/Nutch-1.6
+2013-01-13 19:00:05,612 INFO  http.Http - http.accept.language = en-us,en-gb,en;q=0.7,*;q=0.3
+2013-01-13 19:00:05,612 INFO  http.Http - http.accept = text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+2013-01-13 19:00:05,978 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=9
+2013-01-13 19:00:06,003 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=8
+2013-01-13 19:00:06,091 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=6
+2013-01-13 19:00:06,091 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=5
+2013-01-13 19:00:06,091 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=6
+2013-01-13 19:00:06,091 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=3
+2013-01-13 19:00:06,091 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=4
+2013-01-13 19:00:06,091 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=2
+2013-01-13 19:00:06,091 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 19:00:06,484 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 19:00:07,484 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 19:00:07,613 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=0
+2013-01-13 19:00:08,484 INFO  fetcher.Fetcher - -activeThreads=0, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 19:00:08,484 INFO  fetcher.Fetcher - -activeThreads=0
+2013-01-13 19:00:15,312 INFO  fetcher.Fetcher - Fetcher: finished at 2013-01-13 19:00:15, elapsed: 00:00:10
+2013-01-13 19:00:15,313 INFO  parse.ParseSegment - ParseSegment: starting at 2013-01-13 19:00:15
+2013-01-13 19:00:15,313 INFO  parse.ParseSegment - ParseSegment: segment: crawl/segments/20130113185957
+2013-01-13 19:00:16,412 INFO  crawl.SignatureFactory - Using Signature impl: org.apache.nutch.crawl.MD5Signature
+2013-01-13 19:00:16,418 INFO  parse.ParseSegment - Parsed (11ms):http://www.apache.org/
+2013-01-13 19:00:21,762 INFO  regex.RegexURLNormalizer - can't find rules for scope 'outlink', using default
+2013-01-13 19:00:22,466 INFO  parse.ParseSegment - ParseSegment: finished at 2013-01-13 19:00:22, elapsed: 00:00:07
+2013-01-13 19:00:22,496 INFO  crawl.CrawlDb - CrawlDb update: starting at 2013-01-13 19:00:22
+2013-01-13 19:00:22,496 INFO  crawl.CrawlDb - CrawlDb update: db: crawl/crawldb
+2013-01-13 19:00:22,496 INFO  crawl.CrawlDb - CrawlDb update: segments: [crawl/segments/20130113185957]
+2013-01-13 19:00:22,496 INFO  crawl.CrawlDb - CrawlDb update: additions allowed: true
+2013-01-13 19:00:22,496 INFO  crawl.CrawlDb - CrawlDb update: URL normalizing: true
+2013-01-13 19:00:22,496 INFO  crawl.CrawlDb - CrawlDb update: URL filtering: true
+2013-01-13 19:00:22,497 INFO  crawl.CrawlDb - CrawlDb update: 404 purging: false
+2013-01-13 19:00:22,497 INFO  crawl.CrawlDb - CrawlDb update: Merging segment data into db.
+2013-01-13 19:00:22,807 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 19:00:22,982 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 19:00:26,085 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 19:00:29,064 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 19:00:29,064 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 19:00:29,064 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 19:00:32,773 INFO  crawl.CrawlDb - CrawlDb update: finished at 2013-01-13 19:00:32, elapsed: 00:00:10
+2013-01-13 19:00:32,783 INFO  crawl.Generator - Generator: starting at 2013-01-13 19:00:32
+2013-01-13 19:00:32,784 INFO  crawl.Generator - Generator: Selecting best-scoring urls due for fetch.
+2013-01-13 19:00:32,784 INFO  crawl.Generator - Generator: filtering: true
+2013-01-13 19:00:32,784 INFO  crawl.Generator - Generator: normalizing: true
+2013-01-13 19:00:32,784 INFO  crawl.Generator - Generator: topN: 50
+2013-01-13 19:00:32,784 INFO  crawl.Generator - Generator: jobtracker is 'local', generating exactly one partition.
+2013-01-13 19:00:32,913 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 19:00:32,913 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 19:00:32,913 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 19:00:32,914 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 19:00:32,964 DEBUG crawl.Generator - -shouldFetch rejected 'http://www.apache.org/', fetchTime=1360666807612, curTime=1358074832774
+2013-01-13 19:00:32,968 DEBUG crawl.Generator - -shouldFetch rejected 'http://www.sina.com.cn/', fetchTime=1360666529443, curTime=1358074832774
+2013-01-13 19:00:35,880 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 19:00:35,880 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 19:00:35,880 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 19:00:35,881 INFO  regex.RegexURLNormalizer - can't find rules for scope 'generate_host_count', using default
+2013-01-13 19:00:39,857 INFO  crawl.Generator - Generator: Partitioning selected urls for politeness.
+2013-01-13 19:00:40,858 INFO  crawl.Generator - Generator: segment: crawl/segments/20130113190040
+2013-01-13 19:00:41,022 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 19:00:47,956 INFO  crawl.Generator - Generator: finished at 2013-01-13 19:00:47, elapsed: 00:00:15
+2013-01-13 19:00:47,957 WARN  fetcher.Fetcher - Fetcher: Your 'http.agent.name' value should be listed first in 'http.robots.agents' property.
+2013-01-13 19:00:47,957 INFO  fetcher.Fetcher - Fetcher: starting at 2013-01-13 19:00:47
+2013-01-13 19:00:47,957 INFO  fetcher.Fetcher - Fetcher: segment: crawl/segments/20130113190040
+2013-01-13 19:00:48,162 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:48,162 INFO  fetcher.Fetcher - Fetcher: threads: 10
+2013-01-13 19:00:48,162 INFO  fetcher.Fetcher - Fetcher: time-out divisor: 2
+2013-01-13 19:00:48,169 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:48,170 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:48,171 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:48,171 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:48,171 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:48,171 INFO  fetcher.Fetcher - QueueFeeder finished: total 50 records + hit by time limit :0
+2013-01-13 19:00:48,172 INFO  fetcher.Fetcher - fetching http://hama.apache.org/
+2013-01-13 19:00:48,172 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:48,172 INFO  mortbay.log - Running http
+2013-01-13 19:00:48,172 INFO  http.Http - http.proxy.host = null
+2013-01-13 19:00:48,172 INFO  http.Http - http.proxy.port = 8080
+2013-01-13 19:00:48,173 INFO  http.Http - http.timeout = 10000
+2013-01-13 19:00:48,173 INFO  http.Http - http.content.limit = 65536
+2013-01-13 19:00:48,173 INFO  http.Http - http.agent = WeiboIndexProject/Nutch-1.6
+2013-01-13 19:00:48,173 INFO  http.Http - http.accept.language = en-us,en-gb,en;q=0.7,*;q=0.3
+2013-01-13 19:00:48,173 INFO  http.Http - http.accept = text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+2013-01-13 19:00:48,173 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:48,174 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:48,174 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:48,174 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:00:48,175 INFO  fetcher.Fetcher - Fetcher: throughput threshold: -1
+2013-01-13 19:00:48,175 INFO  fetcher.Fetcher - fetching http://empire-db.apache.org/
+2013-01-13 19:00:48,175 INFO  fetcher.Fetcher - Fetcher: throughput threshold retries: 5
+2013-01-13 19:00:48,176 INFO  fetcher.Fetcher - fetching http://gora.apache.org/
+2013-01-13 19:00:48,177 INFO  fetcher.Fetcher - fetching http://geronimo.apache.org/
+2013-01-13 19:00:48,177 INFO  fetcher.Fetcher - fetching http://db.apache.org/
+2013-01-13 19:00:48,178 INFO  fetcher.Fetcher - fetching http://forrest.apache.org/
+2013-01-13 19:00:48,178 INFO  fetcher.Fetcher - fetching http://hadoop.apache.org/
+2013-01-13 19:00:48,180 INFO  fetcher.Fetcher - fetching http://cassandra.apache.org/
+2013-01-13 19:00:48,181 INFO  fetcher.Fetcher - fetching http://buildr.apache.org/
+2013-01-13 19:00:48,182 INFO  fetcher.Fetcher - fetching http://axis.apache.org/
+2013-01-13 19:00:49,177 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=40
+2013-01-13 19:00:50,177 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=40
+2013-01-13 19:00:50,405 INFO  fetcher.Fetcher - fetching http://creadur.apache.org/
+2013-01-13 19:00:50,407 INFO  fetcher.Fetcher - fetching http://commons.apache.org/email/download_email.cgi
+2013-01-13 19:00:50,408 INFO  fetcher.Fetcher - fetching http://hive.apache.org/
+2013-01-13 19:00:50,578 INFO  fetcher.Fetcher - fetching http://httpd.apache.org/
+2013-01-13 19:00:50,579 INFO  fetcher.Fetcher - fetching http://felix.apache.org/
+2013-01-13 19:00:50,583 INFO  fetcher.Fetcher - fetching http://flume.apache.org/
+2013-01-13 19:00:50,584 INFO  fetcher.Fetcher - fetching http://xalan.apache.org/xalan-j/
+2013-01-13 19:00:50,630 INFO  fetcher.Fetcher - fetching http://airavata.apache.org/
+2013-01-13 19:00:51,131 INFO  fetcher.Fetcher - fetching http://bval.apache.org/
+2013-01-13 19:00:51,177 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=31
+2013-01-13 19:00:52,177 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=31
+2013-01-13 19:00:53,177 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=31
+2013-01-13 19:00:54,178 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=31
+2013-01-13 19:00:54,862 INFO  fetcher.Fetcher - fetching http://people.apache.org/committer-index.html
+2013-01-13 19:00:54,867 INFO  fetcher.Fetcher - fetching http://hc.apache.org/
+2013-01-13 19:00:54,869 INFO  fetcher.Fetcher - fetching http://incubator.apache.org/jspwiki/
+2013-01-13 19:00:55,090 INFO  fetcher.Fetcher - fetching http://ace.apache.org/
+2013-01-13 19:00:55,121 INFO  fetcher.Fetcher - fetching http://deltacloud.apache.org/
+2013-01-13 19:00:55,122 INFO  fetcher.Fetcher - fetching http://cocoon.apache.org/
+2013-01-13 19:00:55,179 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=25
+2013-01-13 19:00:55,247 INFO  fetcher.Fetcher - fetching http://blogs.apache.org/foundation/
+2013-01-13 19:00:56,179 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=24
+2013-01-13 19:00:57,113 INFO  fetcher.Fetcher - fetching http://ant.apache.org/
+2013-01-13 19:00:57,179 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=23
+2013-01-13 19:00:57,321 INFO  fetcher.Fetcher - fetching http://activemq.apache.org/
+2013-01-13 19:00:57,336 INFO  fetcher.Fetcher - fetching http://camel.apache.org/
+2013-01-13 19:00:58,179 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=21
+2013-01-13 19:00:58,791 INFO  api.RobotRulesParser - Couldn't get robots.txt for http://hadoop.apache.org/: java.net.SocketTimeoutException: Read timed out
+2013-01-13 19:00:59,180 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=21
+2013-01-13 19:00:59,383 INFO  fetcher.Fetcher - fetching http://gump.apache.org/
+2013-01-13 19:00:59,385 INFO  fetcher.Fetcher - fetching http://aries.apache.org/
+2013-01-13 19:00:59,401 INFO  fetcher.Fetcher - fetching http://click.apache.org/
+2013-01-13 19:00:59,559 INFO  fetcher.Fetcher - fetching http://esme.apache.org/
+2013-01-13 19:00:59,764 INFO  fetcher.Fetcher - fetching http://continuum.apache.org/
+2013-01-13 19:01:00,090 INFO  fetcher.Fetcher - fetching http://apr.apache.org/
+2013-01-13 19:01:00,180 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=15
+2013-01-13 19:01:00,544 INFO  fetcher.Fetcher - fetching http://cxf.apache.org/
+2013-01-13 19:01:01,180 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=14
+2013-01-13 19:01:01,221 INFO  fetcher.Fetcher - fetching http://couchdb.apache.org/
+2013-01-13 19:01:01,270 INFO  fetcher.Fetcher - fetching http://chemistry.apache.org/
+2013-01-13 19:01:01,516 INFO  fetcher.Fetcher - fetching http://flex.apache.org/
+2013-01-13 19:01:01,543 INFO  fetcher.Fetcher - fetching http://accumulo.apache.org/
+2013-01-13 19:01:01,549 INFO  fetcher.Fetcher - fetching http://avro.apache.org/
+2013-01-13 19:01:01,715 INFO  fetcher.Fetcher - fetching http://archiva.apache.org/
+2013-01-13 19:01:02,180 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=8
+2013-01-13 19:01:02,701 INFO  fetcher.Fetcher - fetching https://issues.apache.org/jira/browse/JAMES-1468
+2013-01-13 19:01:02,702 INFO  fetcher.Fetcher - fetch of https://issues.apache.org/jira/browse/JAMES-1468 failed with: org.apache.nutch.protocol.ProtocolNotFound: protocol not found for url=https
+	at org.apache.nutch.protocol.ProtocolFactory.getProtocol(ProtocolFactory.java:80)
+	at org.apache.nutch.fetcher.Fetcher$FetcherThread.run(Fetcher.java:670)
+
+2013-01-13 19:01:02,703 INFO  fetcher.Fetcher - fetching http://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+2013-01-13 19:01:02,704 INFO  fetcher.Fetcher - fetching http://hbase.apache.org/
+2013-01-13 19:01:02,745 INFO  fetcher.Fetcher - fetching http://cayenne.apache.org/
+2013-01-13 19:01:02,992 INFO  fetcher.Fetcher - fetching http://directory.apache.org/
+2013-01-13 19:01:02,993 INFO  fetcher.Fetcher - fetching http://james.apache.org/
+2013-01-13 19:01:03,183 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=2
+2013-01-13 19:01:03,185 INFO  fetcher.Fetcher - * queue: http://commons.apache.org
+2013-01-13 19:01:03,186 INFO  fetcher.Fetcher -   maxThreads    = 1
+2013-01-13 19:01:03,186 INFO  fetcher.Fetcher -   inProgress    = 0
+2013-01-13 19:01:03,186 INFO  fetcher.Fetcher -   crawlDelay    = 5000
+2013-01-13 19:01:03,186 INFO  fetcher.Fetcher -   minCrawlDelay = 0
+2013-01-13 19:01:03,186 INFO  fetcher.Fetcher -   nextFetchTime = 1358074864557
+2013-01-13 19:01:03,187 INFO  fetcher.Fetcher -   now           = 1358074863187
+2013-01-13 19:01:03,187 INFO  fetcher.Fetcher -   0. http://commons.apache.org/
+2013-01-13 19:01:03,187 INFO  fetcher.Fetcher - * queue: http://abdera.apache.org
+2013-01-13 19:01:03,187 INFO  fetcher.Fetcher -   maxThreads    = 1
+2013-01-13 19:01:03,187 INFO  fetcher.Fetcher -   inProgress    = 0
+2013-01-13 19:01:03,188 INFO  fetcher.Fetcher -   crawlDelay    = 5000
+2013-01-13 19:01:03,188 INFO  fetcher.Fetcher -   minCrawlDelay = 0
+2013-01-13 19:01:03,188 INFO  fetcher.Fetcher -   nextFetchTime = 1358074848166
+2013-01-13 19:01:03,188 INFO  fetcher.Fetcher -   now           = 1358074863188
+2013-01-13 19:01:03,189 INFO  fetcher.Fetcher -   0. http://abdera.apache.org/
+2013-01-13 19:01:03,871 INFO  regex.RegexURLNormalizer - can't find rules for scope 'fetcher', using default
+2013-01-13 19:01:04,076 INFO  fetcher.Fetcher - fetching http://abdera.apache.org/
+2013-01-13 19:01:04,189 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=3, fetchQueues.totalSize=1
+2013-01-13 19:01:04,189 INFO  fetcher.Fetcher - * queue: http://commons.apache.org
+2013-01-13 19:01:04,189 INFO  fetcher.Fetcher -   maxThreads    = 1
+2013-01-13 19:01:04,189 INFO  fetcher.Fetcher -   inProgress    = 0
+2013-01-13 19:01:04,189 INFO  fetcher.Fetcher -   crawlDelay    = 5000
+2013-01-13 19:01:04,189 INFO  fetcher.Fetcher -   minCrawlDelay = 0
+2013-01-13 19:01:04,189 INFO  fetcher.Fetcher -   nextFetchTime = 1358074864557
+2013-01-13 19:01:04,189 INFO  fetcher.Fetcher -   now           = 1358074864189
+2013-01-13 19:01:04,189 INFO  fetcher.Fetcher -   0. http://commons.apache.org/
+2013-01-13 19:01:04,625 INFO  fetcher.Fetcher - fetching http://commons.apache.org/
+2013-01-13 19:01:04,627 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=9
+2013-01-13 19:01:04,649 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=8
+2013-01-13 19:01:04,858 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=7
+2013-01-13 19:01:04,956 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=6
+2013-01-13 19:01:04,956 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=5
+2013-01-13 19:01:05,189 INFO  fetcher.Fetcher - -activeThreads=5, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 19:01:05,446 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=4
+2013-01-13 19:01:05,644 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=3
+2013-01-13 19:01:05,829 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=2
+2013-01-13 19:01:06,029 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 19:01:06,189 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 19:01:07,195 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 19:01:08,195 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 19:01:08,283 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=0
+2013-01-13 19:03:11,371 INFO  crawl.Crawl - crawl started in: crawl
+2013-01-13 19:03:11,371 INFO  crawl.Crawl - rootUrlDir = urls
+2013-01-13 19:03:11,371 INFO  crawl.Crawl - threads = 10
+2013-01-13 19:03:11,372 INFO  crawl.Crawl - depth = 3
+2013-01-13 19:03:11,372 INFO  crawl.Crawl - solrUrl=http://localhost:8983/solr/
+2013-01-13 19:03:11,372 INFO  crawl.Crawl - topN = 50
+2013-01-13 19:03:11,398 INFO  crawl.Injector - Injector: starting at 2013-01-13 19:03:11
+2013-01-13 19:03:11,398 INFO  crawl.Injector - Injector: crawlDb: crawl/crawldb
+2013-01-13 19:03:11,398 INFO  crawl.Injector - Injector: urlDir: urls
+2013-01-13 19:03:11,424 INFO  crawl.Crawl - crawl started in: crawl
+2013-01-13 19:03:11,425 INFO  crawl.Crawl - rootUrlDir = urls
+2013-01-13 19:03:11,425 INFO  crawl.Crawl - threads = 10
+2013-01-13 19:03:11,425 INFO  crawl.Crawl - depth = 3
+2013-01-13 19:03:11,425 INFO  crawl.Crawl - solrUrl=http://localhost:8983/solr/
+2013-01-13 19:03:11,425 INFO  crawl.Crawl - topN = 50
+2013-01-13 19:03:11,466 INFO  crawl.Injector - Injector: Converting injected urls to crawl db entries.
+2013-01-13 19:03:11,584 WARN  util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2013-01-13 19:03:11,612 INFO  crawl.Injector - Injector: starting at 2013-01-13 19:03:11
+2013-01-13 19:03:11,612 INFO  crawl.Injector - Injector: crawlDb: crawl/crawldb
+2013-01-13 19:03:11,613 INFO  crawl.Injector - Injector: urlDir: urls
+2013-01-13 19:03:11,723 INFO  crawl.Injector - Injector: Converting injected urls to crawl db entries.
+2013-01-13 19:03:11,772 WARN  snappy.LoadSnappy - Snappy native library not loaded
+2013-01-13 19:03:11,870 WARN  util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2013-01-13 19:03:11,927 WARN  snappy.LoadSnappy - Snappy native library not loaded
+2013-01-13 19:03:12,679 INFO  plugin.PluginRepository - Plugins: looking in: C:\cygwin\home\Abner\stuff\apache-nutch-1.6-src\.\src\plugin
+2013-01-13 19:03:12,729 INFO  plugin.PluginRepository - Plugins: looking in: C:\cygwin\home\Abner\stuff\apache-nutch-1.6-src\.\src\plugin
+2013-01-13 19:03:13,257 INFO  plugin.PluginRepository - Plugin Auto-activation mode: [true]
+2013-01-13 19:03:13,257 INFO  plugin.PluginRepository - Registered Plugins:
+2013-01-13 19:03:13,257 INFO  plugin.PluginRepository - 	the nutch core extension points (nutch-extensionpoints)
+2013-01-13 19:03:13,257 INFO  plugin.PluginRepository - 	Basic URL Normalizer (urlnormalizer-basic)
+2013-01-13 19:03:13,257 INFO  plugin.PluginRepository - 	Html Parse Plug-in (parse-html)
+2013-01-13 19:03:13,257 INFO  plugin.PluginRepository - 	Basic Indexing Filter (index-basic)
+2013-01-13 19:03:13,257 INFO  plugin.PluginRepository - 	HTTP Framework (lib-http)
+2013-01-13 19:03:13,257 INFO  plugin.PluginRepository - 	Pass-through URL Normalizer (urlnormalizer-pass)
+2013-01-13 19:03:13,257 INFO  plugin.PluginRepository - 	Regex URL Filter (urlfilter-regex)
+2013-01-13 19:03:13,257 INFO  plugin.PluginRepository - 	Http Protocol Plug-in (protocol-http)
+2013-01-13 19:03:13,257 INFO  plugin.PluginRepository - 	Regex URL Normalizer (urlnormalizer-regex)
+2013-01-13 19:03:13,257 INFO  plugin.PluginRepository - 	Tika Parser Plug-in (parse-tika)
+2013-01-13 19:03:13,257 INFO  plugin.PluginRepository - 	OPIC Scoring Plug-in (scoring-opic)
+2013-01-13 19:03:13,257 INFO  plugin.PluginRepository - 	CyberNeko HTML Parser (lib-nekohtml)
+2013-01-13 19:03:13,257 INFO  plugin.PluginRepository - 	Anchor Indexing Filter (index-anchor)
+2013-01-13 19:03:13,257 INFO  plugin.PluginRepository - 	Regex URL Filter Framework (lib-regex-filter)
+2013-01-13 19:03:13,257 INFO  plugin.PluginRepository - Registered Extension-Points:
+2013-01-13 19:03:13,257 INFO  plugin.PluginRepository - 	Nutch URL Normalizer (org.apache.nutch.net.URLNormalizer)
+2013-01-13 19:03:13,258 INFO  plugin.PluginRepository - 	Nutch Protocol (org.apache.nutch.protocol.Protocol)
+2013-01-13 19:03:13,258 INFO  plugin.PluginRepository - 	Nutch Segment Merge Filter (org.apache.nutch.segment.SegmentMergeFilter)
+2013-01-13 19:03:13,258 INFO  plugin.PluginRepository - 	Nutch URL Filter (org.apache.nutch.net.URLFilter)
+2013-01-13 19:03:13,258 INFO  plugin.PluginRepository - 	Nutch Indexing Filter (org.apache.nutch.indexer.IndexingFilter)
+2013-01-13 19:03:13,258 INFO  plugin.PluginRepository - 	HTML Parse Filter (org.apache.nutch.parse.HtmlParseFilter)
+2013-01-13 19:03:13,258 INFO  plugin.PluginRepository - 	Nutch Content Parser (org.apache.nutch.parse.Parser)
+2013-01-13 19:03:13,258 INFO  plugin.PluginRepository - 	Nutch Scoring (org.apache.nutch.scoring.ScoringFilter)
+2013-01-13 19:03:13,336 INFO  regex.RegexURLNormalizer - can't find rules for scope 'inject', using default
+2013-01-13 19:03:13,434 INFO  plugin.PluginRepository - Plugin Auto-activation mode: [true]
+2013-01-13 19:03:13,434 INFO  plugin.PluginRepository - Registered Plugins:
+2013-01-13 19:03:13,434 INFO  plugin.PluginRepository - 	the nutch core extension points (nutch-extensionpoints)
+2013-01-13 19:03:13,434 INFO  plugin.PluginRepository - 	Basic URL Normalizer (urlnormalizer-basic)
+2013-01-13 19:03:13,434 INFO  plugin.PluginRepository - 	Html Parse Plug-in (parse-html)
+2013-01-13 19:03:13,434 INFO  plugin.PluginRepository - 	Basic Indexing Filter (index-basic)
+2013-01-13 19:03:13,434 INFO  plugin.PluginRepository - 	HTTP Framework (lib-http)
+2013-01-13 19:03:13,434 INFO  plugin.PluginRepository - 	Pass-through URL Normalizer (urlnormalizer-pass)
+2013-01-13 19:03:13,434 INFO  plugin.PluginRepository - 	Regex URL Filter (urlfilter-regex)
+2013-01-13 19:03:13,434 INFO  plugin.PluginRepository - 	Http Protocol Plug-in (protocol-http)
+2013-01-13 19:03:13,435 INFO  plugin.PluginRepository - 	Regex URL Normalizer (urlnormalizer-regex)
+2013-01-13 19:03:13,435 INFO  plugin.PluginRepository - 	Tika Parser Plug-in (parse-tika)
+2013-01-13 19:03:13,435 INFO  plugin.PluginRepository - 	OPIC Scoring Plug-in (scoring-opic)
+2013-01-13 19:03:13,435 INFO  plugin.PluginRepository - 	CyberNeko HTML Parser (lib-nekohtml)
+2013-01-13 19:03:13,435 INFO  plugin.PluginRepository - 	Anchor Indexing Filter (index-anchor)
+2013-01-13 19:03:13,435 INFO  plugin.PluginRepository - 	Regex URL Filter Framework (lib-regex-filter)
+2013-01-13 19:03:13,435 INFO  plugin.PluginRepository - Registered Extension-Points:
+2013-01-13 19:03:13,435 INFO  plugin.PluginRepository - 	Nutch URL Normalizer (org.apache.nutch.net.URLNormalizer)
+2013-01-13 19:03:13,435 INFO  plugin.PluginRepository - 	Nutch Protocol (org.apache.nutch.protocol.Protocol)
+2013-01-13 19:03:13,435 INFO  plugin.PluginRepository - 	Nutch Segment Merge Filter (org.apache.nutch.segment.SegmentMergeFilter)
+2013-01-13 19:03:13,435 INFO  plugin.PluginRepository - 	Nutch URL Filter (org.apache.nutch.net.URLFilter)
+2013-01-13 19:03:13,435 INFO  plugin.PluginRepository - 	Nutch Indexing Filter (org.apache.nutch.indexer.IndexingFilter)
+2013-01-13 19:03:13,435 INFO  plugin.PluginRepository - 	HTML Parse Filter (org.apache.nutch.parse.HtmlParseFilter)
+2013-01-13 19:03:13,435 INFO  plugin.PluginRepository - 	Nutch Content Parser (org.apache.nutch.parse.Parser)
+2013-01-13 19:03:13,435 INFO  plugin.PluginRepository - 	Nutch Scoring (org.apache.nutch.scoring.ScoringFilter)
+2013-01-13 19:03:13,503 INFO  regex.RegexURLNormalizer - can't find rules for scope 'inject', using default
+2013-01-13 19:03:15,638 WARN  mapred.Task - Could not find output size 
+org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find output/file.out in any of the configured local directories
+	at org.apache.hadoop.fs.LocalDirAllocator$AllocatorPerContext.getLocalPathToRead(LocalDirAllocator.java:429)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathToRead(LocalDirAllocator.java:160)
+	at org.apache.hadoop.mapred.MapOutputFile.getOutputFile(MapOutputFile.java:56)
+	at org.apache.hadoop.mapred.Task.calculateOutputSize(Task.java:944)
+	at org.apache.hadoop.mapred.Task.sendLastUpdate(Task.java:924)
+	at org.apache.hadoop.mapred.Task.done(Task.java:875)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:374)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:212)
+2013-01-13 19:03:15,649 WARN  mapred.LocalJobRunner - job_local_0001
+org.apache.hadoop.util.DiskChecker$DiskErrorException: Could not find output/file.out in any of the configured local directories
+	at org.apache.hadoop.fs.LocalDirAllocator$AllocatorPerContext.getLocalPathToRead(LocalDirAllocator.java:429)
+	at org.apache.hadoop.fs.LocalDirAllocator.getLocalPathToRead(LocalDirAllocator.java:160)
+	at org.apache.hadoop.mapred.MapOutputFile.getOutputFile(MapOutputFile.java:56)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:236)
+2013-01-13 19:03:18,710 INFO  crawl.Injector - Injector: total number of urls rejected by filters: 0
+2013-01-13 19:03:18,710 INFO  crawl.Injector - Injector: total number of urls injected after normalization and filtering: 1
+2013-01-13 19:03:18,710 INFO  crawl.Injector - Injector: Merging injected urls into crawl db.
+2013-01-13 19:03:29,339 INFO  crawl.Injector - Injector: finished at 2013-01-13 19:03:29, elapsed: 00:00:17
+2013-01-13 19:03:29,349 INFO  crawl.Generator - Generator: starting at 2013-01-13 19:03:29
+2013-01-13 19:03:29,349 INFO  crawl.Generator - Generator: Selecting best-scoring urls due for fetch.
+2013-01-13 19:03:29,349 INFO  crawl.Generator - Generator: filtering: true
+2013-01-13 19:03:29,349 INFO  crawl.Generator - Generator: normalizing: true
+2013-01-13 19:03:29,349 INFO  crawl.Generator - Generator: topN: 50
+2013-01-13 19:03:29,350 INFO  crawl.Generator - Generator: jobtracker is 'local', generating exactly one partition.
+2013-01-13 19:03:29,935 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 19:03:29,936 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 19:03:29,936 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 19:03:29,940 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 19:03:30,015 DEBUG crawl.Generator - -shouldFetch rejected 'http://www.apache.org/', fetchTime=1360666807612, curTime=1358075009340
+2013-01-13 19:03:30,023 DEBUG crawl.Generator - -shouldFetch rejected 'http://www.sina.com.cn/', fetchTime=1360666529443, curTime=1358075009340
+2013-01-13 19:03:32,875 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 19:03:32,876 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 19:03:32,876 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 19:03:32,878 INFO  regex.RegexURLNormalizer - can't find rules for scope 'generate_host_count', using default
+2013-01-13 19:03:36,523 INFO  crawl.Generator - Generator: Partitioning selected urls for politeness.
+2013-01-13 19:03:37,523 INFO  crawl.Generator - Generator: segment: crawl/segments/20130113190337
+2013-01-13 19:03:37,696 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 19:03:44,637 INFO  crawl.Generator - Generator: finished at 2013-01-13 19:03:44, elapsed: 00:00:15
+2013-01-13 19:03:44,637 WARN  fetcher.Fetcher - Fetcher: Your 'http.agent.name' value should be listed first in 'http.robots.agents' property.
+2013-01-13 19:03:44,637 INFO  fetcher.Fetcher - Fetcher: starting at 2013-01-13 19:03:44
+2013-01-13 19:03:44,637 INFO  fetcher.Fetcher - Fetcher: segment: crawl/segments/20130113190337
+2013-01-13 19:03:44,853 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:03:44,853 INFO  fetcher.Fetcher - Fetcher: threads: 10
+2013-01-13 19:03:44,853 INFO  fetcher.Fetcher - Fetcher: time-out divisor: 2
+2013-01-13 19:03:44,886 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:03:44,886 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:03:44,887 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:03:44,887 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:03:44,887 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:03:44,888 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:03:44,888 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:03:44,888 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:03:44,889 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:03:44,889 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:03:44,889 INFO  fetcher.Fetcher - Fetcher: throughput threshold: -1
+2013-01-13 19:03:44,889 INFO  fetcher.Fetcher - Fetcher: throughput threshold retries: 5
+2013-01-13 19:03:44,909 INFO  fetcher.Fetcher - QueueFeeder finished: total 50 records + hit by time limit :0
+2013-01-13 19:03:44,952 INFO  fetcher.Fetcher - fetching http://hama.apache.org/
+2013-01-13 19:03:44,972 INFO  mortbay.log - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2013-01-13 19:03:44,972 INFO  mortbay.log - Running http
+2013-01-13 19:03:44,973 INFO  http.Http - http.proxy.host = null
+2013-01-13 19:03:44,973 INFO  http.Http - http.proxy.port = 8080
+2013-01-13 19:03:44,973 INFO  http.Http - http.timeout = 10000
+2013-01-13 19:03:44,973 INFO  http.Http - http.content.limit = 65536
+2013-01-13 19:03:44,973 INFO  http.Http - http.agent = WeiboIndexProject/Nutch-1.6
+2013-01-13 19:03:44,973 INFO  http.Http - http.accept.language = en-us,en-gb,en;q=0.7,*;q=0.3
+2013-01-13 19:03:44,973 INFO  http.Http - http.accept = text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+2013-01-13 19:03:44,983 INFO  fetcher.Fetcher - fetching http://empire-db.apache.org/
+2013-01-13 19:03:44,984 INFO  fetcher.Fetcher - fetching http://gora.apache.org/
+2013-01-13 19:03:45,389 INFO  fetcher.Fetcher - fetching http://geronimo.apache.org/
+2013-01-13 19:03:45,393 INFO  fetcher.Fetcher - fetching http://forrest.apache.org/
+2013-01-13 19:03:45,395 INFO  fetcher.Fetcher - fetching http://db.apache.org/
+2013-01-13 19:03:45,396 INFO  fetcher.Fetcher - fetching http://hadoop.apache.org/
+2013-01-13 19:03:45,398 INFO  fetcher.Fetcher - fetching http://cassandra.apache.org/
+2013-01-13 19:03:45,398 INFO  fetcher.Fetcher - fetching http://buildr.apache.org/
+2013-01-13 19:03:45,399 INFO  fetcher.Fetcher - fetching http://axis.apache.org/
+2013-01-13 19:03:45,894 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=40
+2013-01-13 19:03:46,551 INFO  fetcher.Fetcher - fetching http://creadur.apache.org/
+2013-01-13 19:03:46,747 INFO  fetcher.Fetcher - fetching http://commons.apache.org/email/download_email.cgi
+2013-01-13 19:03:46,861 INFO  fetcher.Fetcher - fetching http://hive.apache.org/
+2013-01-13 19:03:46,888 INFO  fetcher.Fetcher - fetching http://felix.apache.org/
+2013-01-13 19:03:46,889 INFO  fetcher.Fetcher - fetching http://flume.apache.org/
+2013-01-13 19:03:46,895 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=35
+2013-01-13 19:03:47,114 INFO  fetcher.Fetcher - fetching http://xalan.apache.org/xalan-j/
+2013-01-13 19:03:47,118 INFO  fetcher.Fetcher - fetching http://airavata.apache.org/
+2013-01-13 19:03:47,160 INFO  fetcher.Fetcher - fetching http://bval.apache.org/
+2013-01-13 19:03:47,161 INFO  fetcher.Fetcher - fetching http://people.apache.org/committer-index.html
+2013-01-13 19:03:47,518 INFO  fetcher.Fetcher - fetching http://hc.apache.org/
+2013-01-13 19:03:47,895 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=30
+2013-01-13 19:03:48,208 INFO  fetcher.Fetcher - fetching http://incubator.apache.org/jspwiki/
+2013-01-13 19:03:48,218 INFO  fetcher.Fetcher - fetching http://ace.apache.org/
+2013-01-13 19:03:48,245 INFO  fetcher.Fetcher - fetching http://deltacloud.apache.org/
+2013-01-13 19:03:48,410 INFO  fetcher.Fetcher - fetching http://cocoon.apache.org/
+2013-01-13 19:03:48,892 INFO  fetcher.Fetcher - fetching http://blogs.apache.org/foundation/
+2013-01-13 19:03:48,893 INFO  fetcher.Fetcher - fetching http://ant.apache.org/
+2013-01-13 19:03:48,896 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=24
+2013-01-13 19:03:49,308 INFO  fetcher.Fetcher - fetching http://activemq.apache.org/
+2013-01-13 19:03:49,309 INFO  fetcher.Fetcher - fetching http://camel.apache.org/
+2013-01-13 19:03:49,334 INFO  fetcher.Fetcher - fetching http://gump.apache.org/
+2013-01-13 19:03:49,618 INFO  fetcher.Fetcher - fetching http://aries.apache.org/
+2013-01-13 19:03:49,686 INFO  fetcher.Fetcher - fetching http://click.apache.org/
+2013-01-13 19:03:49,897 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=19
+2013-01-13 19:03:50,070 INFO  fetcher.Fetcher - fetching http://esme.apache.org/
+2013-01-13 19:03:50,102 INFO  fetcher.Fetcher - fetching http://continuum.apache.org/
+2013-01-13 19:03:50,467 INFO  fetcher.Fetcher - fetching http://apr.apache.org/
+2013-01-13 19:03:50,764 INFO  fetcher.Fetcher - fetching http://cxf.apache.org/
+2013-01-13 19:03:50,773 INFO  fetcher.Fetcher - fetching http://couchdb.apache.org/
+2013-01-13 19:03:50,775 INFO  fetcher.Fetcher - fetching http://chemistry.apache.org/
+2013-01-13 19:03:50,848 INFO  fetcher.Fetcher - fetching http://flex.apache.org/
+2013-01-13 19:03:50,898 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=12
+2013-01-13 19:03:51,349 INFO  fetcher.Fetcher - fetching http://accumulo.apache.org/
+2013-01-13 19:03:51,882 INFO  fetcher.Fetcher - fetching http://avro.apache.org/
+2013-01-13 19:03:51,889 INFO  fetcher.Fetcher - fetching http://archiva.apache.org/
+2013-01-13 19:03:51,899 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=9
+2013-01-13 19:03:52,196 INFO  fetcher.Fetcher - fetching https://issues.apache.org/jira/browse/JAMES-1468
+2013-01-13 19:03:52,198 INFO  fetcher.Fetcher - fetch of https://issues.apache.org/jira/browse/JAMES-1468 failed with: org.apache.nutch.protocol.ProtocolNotFound: protocol not found for url=https
+	at org.apache.nutch.protocol.ProtocolFactory.getProtocol(ProtocolFactory.java:80)
+	at org.apache.nutch.fetcher.Fetcher$FetcherThread.run(Fetcher.java:670)
+
+2013-01-13 19:03:52,199 INFO  fetcher.Fetcher - fetching http://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+2013-01-13 19:03:52,326 INFO  fetcher.Fetcher - fetching http://hbase.apache.org/
+2013-01-13 19:03:52,329 INFO  fetcher.Fetcher - fetching http://cayenne.apache.org/
+2013-01-13 19:03:52,718 INFO  fetcher.Fetcher - fetching http://directory.apache.org/
+2013-01-13 19:03:52,899 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=4
+2013-01-13 19:03:52,899 INFO  fetcher.Fetcher - * queue: http://commons.apache.org
+2013-01-13 19:03:52,899 INFO  fetcher.Fetcher -   maxThreads    = 1
+2013-01-13 19:03:52,899 INFO  fetcher.Fetcher -   inProgress    = 0
+2013-01-13 19:03:52,899 INFO  fetcher.Fetcher -   crawlDelay    = 5000
+2013-01-13 19:03:52,899 INFO  fetcher.Fetcher -   minCrawlDelay = 0
+2013-01-13 19:03:52,899 INFO  fetcher.Fetcher -   nextFetchTime = 1358075033244
+2013-01-13 19:03:52,899 INFO  fetcher.Fetcher -   now           = 1358075032899
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   0. http://commons.apache.org/
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher - * queue: http://james.apache.org
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   maxThreads    = 1
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   inProgress    = 0
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   crawlDelay    = 5000
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   minCrawlDelay = 0
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   nextFetchTime = 1358075024903
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   now           = 1358075032900
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   0. http://james.apache.org/
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher - * queue: http://abdera.apache.org
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   maxThreads    = 1
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   inProgress    = 0
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   crawlDelay    = 5000
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   minCrawlDelay = 0
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   nextFetchTime = 1358075024905
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   now           = 1358075032900
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   0. http://abdera.apache.org/
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher - * queue: http://www.weibo.com
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   maxThreads    = 1
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   inProgress    = 0
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   crawlDelay    = 5000
+2013-01-13 19:03:52,900 INFO  fetcher.Fetcher -   minCrawlDelay = 0
+2013-01-13 19:03:52,901 INFO  fetcher.Fetcher -   nextFetchTime = 1358075024905
+2013-01-13 19:03:52,901 INFO  fetcher.Fetcher -   now           = 1358075032901
+2013-01-13 19:03:52,901 INFO  fetcher.Fetcher -   0. http://www.weibo.com/
+2013-01-13 19:03:53,308 INFO  fetcher.Fetcher - fetching http://commons.apache.org/
+2013-01-13 19:03:53,543 INFO  fetcher.Fetcher - fetching http://james.apache.org/
+2013-01-13 19:03:53,557 INFO  fetcher.Fetcher - fetching http://abdera.apache.org/
+2013-01-13 19:03:53,812 INFO  fetcher.Fetcher - fetching http://www.weibo.com/
+2013-01-13 19:03:53,867 INFO  regex.RegexURLNormalizer - can't find rules for scope 'fetcher', using default
+2013-01-13 19:03:53,901 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 19:03:53,961 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=9
+2013-01-13 19:03:54,188 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=8
+2013-01-13 19:03:54,192 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=7
+2013-01-13 19:03:54,582 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=6
+2013-01-13 19:03:54,796 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=5
+2013-01-13 19:03:54,901 INFO  fetcher.Fetcher - -activeThreads=5, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 19:03:54,969 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=4
+2013-01-13 19:03:55,159 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=3
+2013-01-13 19:03:55,194 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=2
+2013-01-13 19:03:55,355 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 19:03:55,901 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 19:03:56,901 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 19:03:57,901 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 19:03:58,902 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 19:03:59,902 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 19:04:00,902 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 19:04:10,054 INFO  crawl.Crawl - crawl started in: crawl
+2013-01-13 19:04:10,054 INFO  crawl.Crawl - rootUrlDir = urls
+2013-01-13 19:04:10,054 INFO  crawl.Crawl - threads = 10
+2013-01-13 19:04:10,055 INFO  crawl.Crawl - depth = 3
+2013-01-13 19:04:10,055 INFO  crawl.Crawl - solrUrl=http://localhost:8983/solr/
+2013-01-13 19:04:10,055 INFO  crawl.Crawl - topN = 50
+2013-01-13 19:04:10,085 INFO  crawl.Injector - Injector: starting at 2013-01-13 19:04:10
+2013-01-13 19:04:10,085 INFO  crawl.Injector - Injector: crawlDb: crawl/crawldb
+2013-01-13 19:04:10,085 INFO  crawl.Injector - Injector: urlDir: urls
+2013-01-13 19:04:10,240 INFO  crawl.Injector - Injector: Converting injected urls to crawl db entries.
+2013-01-13 19:04:10,383 WARN  util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2013-01-13 19:04:10,481 WARN  snappy.LoadSnappy - Snappy native library not loaded
+2013-01-13 19:04:10,859 INFO  plugin.PluginRepository - Plugins: looking in: C:\cygwin\home\Abner\stuff\apache-nutch-1.6-src\.\src\plugin
+2013-01-13 19:04:11,058 INFO  plugin.PluginRepository - Plugin Auto-activation mode: [true]
+2013-01-13 19:04:11,058 INFO  plugin.PluginRepository - Registered Plugins:
+2013-01-13 19:04:11,058 INFO  plugin.PluginRepository - 	the nutch core extension points (nutch-extensionpoints)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	Basic URL Normalizer (urlnormalizer-basic)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	Html Parse Plug-in (parse-html)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	Basic Indexing Filter (index-basic)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	HTTP Framework (lib-http)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	Pass-through URL Normalizer (urlnormalizer-pass)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	Regex URL Filter (urlfilter-regex)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	Http Protocol Plug-in (protocol-http)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	Regex URL Normalizer (urlnormalizer-regex)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	Tika Parser Plug-in (parse-tika)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	OPIC Scoring Plug-in (scoring-opic)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	CyberNeko HTML Parser (lib-nekohtml)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	Anchor Indexing Filter (index-anchor)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	Regex URL Filter Framework (lib-regex-filter)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - Registered Extension-Points:
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	Nutch URL Normalizer (org.apache.nutch.net.URLNormalizer)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	Nutch Protocol (org.apache.nutch.protocol.Protocol)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	Nutch Segment Merge Filter (org.apache.nutch.segment.SegmentMergeFilter)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	Nutch URL Filter (org.apache.nutch.net.URLFilter)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	Nutch Indexing Filter (org.apache.nutch.indexer.IndexingFilter)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	HTML Parse Filter (org.apache.nutch.parse.HtmlParseFilter)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	Nutch Content Parser (org.apache.nutch.parse.Parser)
+2013-01-13 19:04:11,059 INFO  plugin.PluginRepository - 	Nutch Scoring (org.apache.nutch.scoring.ScoringFilter)
+2013-01-13 19:04:11,104 INFO  regex.RegexURLNormalizer - can't find rules for scope 'inject', using default
+2013-01-13 19:04:17,725 INFO  crawl.Injector - Injector: total number of urls rejected by filters: 0
+2013-01-13 19:04:17,726 INFO  crawl.Injector - Injector: total number of urls injected after normalization and filtering: 1
+2013-01-13 19:04:17,726 INFO  crawl.Injector - Injector: Merging injected urls into crawl db.
+2013-01-13 19:04:25,372 INFO  crawl.Injector - Injector: finished at 2013-01-13 19:04:25, elapsed: 00:00:15
+2013-01-13 19:04:25,382 INFO  crawl.Generator - Generator: starting at 2013-01-13 19:04:25
+2013-01-13 19:04:25,382 INFO  crawl.Generator - Generator: Selecting best-scoring urls due for fetch.
+2013-01-13 19:04:25,382 INFO  crawl.Generator - Generator: filtering: true
+2013-01-13 19:04:25,382 INFO  crawl.Generator - Generator: normalizing: true
+2013-01-13 19:04:25,382 INFO  crawl.Generator - Generator: topN: 50
+2013-01-13 19:04:25,383 INFO  crawl.Generator - Generator: jobtracker is 'local', generating exactly one partition.
+2013-01-13 19:04:25,871 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 19:04:25,872 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 19:04:25,872 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 19:04:25,880 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 19:04:28,846 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 19:04:28,847 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 19:04:28,847 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 19:04:28,850 INFO  regex.RegexURLNormalizer - can't find rules for scope 'generate_host_count', using default
+2013-01-13 19:04:32,755 INFO  crawl.Generator - Generator: Partitioning selected urls for politeness.
+2013-01-13 19:04:33,755 INFO  crawl.Generator - Generator: segment: crawl/segments/20130113190433
+2013-01-13 19:04:33,949 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 19:04:40,870 INFO  crawl.Generator - Generator: finished at 2013-01-13 19:04:40, elapsed: 00:00:15
+2013-01-13 19:04:40,870 WARN  fetcher.Fetcher - Fetcher: Your 'http.agent.name' value should be listed first in 'http.robots.agents' property.
+2013-01-13 19:04:40,871 INFO  fetcher.Fetcher - Fetcher: starting at 2013-01-13 19:04:40
+2013-01-13 19:04:40,871 INFO  fetcher.Fetcher - Fetcher: segment: crawl/segments/20130113190433
+2013-01-13 19:04:41,241 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:04:41,241 INFO  fetcher.Fetcher - Fetcher: threads: 10
+2013-01-13 19:04:41,241 INFO  fetcher.Fetcher - Fetcher: time-out divisor: 2
+2013-01-13 19:04:41,272 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:04:41,273 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:04:41,274 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:04:41,274 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:04:41,274 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:04:41,275 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:04:41,275 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:04:41,275 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:04:41,276 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:04:41,276 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:04:41,276 INFO  fetcher.Fetcher - Fetcher: throughput threshold: -1
+2013-01-13 19:04:41,276 INFO  fetcher.Fetcher - Fetcher: throughput threshold retries: 5
+2013-01-13 19:04:41,283 INFO  fetcher.Fetcher - QueueFeeder finished: total 1 records + hit by time limit :0
+2013-01-13 19:04:41,284 INFO  fetcher.Fetcher - fetching http://www.weibo.com/
+2013-01-13 19:04:41,302 INFO  mortbay.log - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2013-01-13 19:04:41,302 INFO  mortbay.log - Running http
+2013-01-13 19:04:41,302 INFO  http.Http - http.proxy.host = null
+2013-01-13 19:04:41,303 INFO  http.Http - http.proxy.port = 8080
+2013-01-13 19:04:41,303 INFO  http.Http - http.timeout = 10000
+2013-01-13 19:04:41,303 INFO  http.Http - http.content.limit = 65536
+2013-01-13 19:04:41,303 INFO  http.Http - http.agent = WeiboIndexProject/Nutch-1.6
+2013-01-13 19:04:41,303 INFO  http.Http - http.accept.language = en-us,en-gb,en;q=0.7,*;q=0.3
+2013-01-13 19:04:41,303 INFO  http.Http - http.accept = text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+2013-01-13 19:04:41,313 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=8
+2013-01-13 19:04:41,314 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=8
+2013-01-13 19:04:41,777 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=7
+2013-01-13 19:04:41,778 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=6
+2013-01-13 19:04:41,778 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=5
+2013-01-13 19:04:41,778 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=4
+2013-01-13 19:04:41,778 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=3
+2013-01-13 19:04:41,778 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=2
+2013-01-13 19:04:41,779 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 19:04:42,279 INFO  fetcher.Fetcher - -activeThreads=1, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 19:04:42,740 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=0
+2013-01-13 19:04:43,284 INFO  fetcher.Fetcher - -activeThreads=0, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 19:04:43,284 INFO  fetcher.Fetcher - -activeThreads=0
+2013-01-13 19:04:48,114 INFO  fetcher.Fetcher - Fetcher: finished at 2013-01-13 19:04:48, elapsed: 00:00:07
+2013-01-13 19:04:48,115 INFO  parse.ParseSegment - ParseSegment: starting at 2013-01-13 19:04:48
+2013-01-13 19:04:48,115 INFO  parse.ParseSegment - ParseSegment: segment: crawl/segments/20130113190433
+2013-01-13 19:04:48,609 INFO  crawl.SignatureFactory - Using Signature impl: org.apache.nutch.crawl.MD5Signature
+2013-01-13 19:04:48,611 INFO  parse.ParseSegment - Parsed (7ms):http://www.weibo.com/
+2013-01-13 19:04:51,359 INFO  regex.RegexURLNormalizer - can't find rules for scope 'outlink', using default
+2013-01-13 19:04:55,297 INFO  parse.ParseSegment - ParseSegment: finished at 2013-01-13 19:04:55, elapsed: 00:00:07
+2013-01-13 19:04:55,359 INFO  crawl.CrawlDb - CrawlDb update: starting at 2013-01-13 19:04:55
+2013-01-13 19:04:55,359 INFO  crawl.CrawlDb - CrawlDb update: db: crawl/crawldb
+2013-01-13 19:04:55,359 INFO  crawl.CrawlDb - CrawlDb update: segments: [crawl/segments/20130113190433]
+2013-01-13 19:04:55,359 INFO  crawl.CrawlDb - CrawlDb update: additions allowed: true
+2013-01-13 19:04:55,359 INFO  crawl.CrawlDb - CrawlDb update: URL normalizing: true
+2013-01-13 19:04:55,359 INFO  crawl.CrawlDb - CrawlDb update: URL filtering: true
+2013-01-13 19:04:55,359 INFO  crawl.CrawlDb - CrawlDb update: 404 purging: false
+2013-01-13 19:04:55,360 INFO  crawl.CrawlDb - CrawlDb update: Merging segment data into db.
+2013-01-13 19:04:55,622 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 19:04:58,818 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 19:05:01,678 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 19:05:04,645 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 19:05:04,645 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 19:05:04,645 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 19:05:08,473 INFO  crawl.CrawlDb - CrawlDb update: finished at 2013-01-13 19:05:08, elapsed: 00:00:13
+2013-01-13 19:05:08,479 INFO  crawl.Generator - Generator: starting at 2013-01-13 19:05:08
+2013-01-13 19:05:08,479 INFO  crawl.Generator - Generator: Selecting best-scoring urls due for fetch.
+2013-01-13 19:05:08,479 INFO  crawl.Generator - Generator: filtering: true
+2013-01-13 19:05:08,479 INFO  crawl.Generator - Generator: normalizing: true
+2013-01-13 19:05:08,479 INFO  crawl.Generator - Generator: topN: 50
+2013-01-13 19:05:08,479 INFO  crawl.Generator - Generator: jobtracker is 'local', generating exactly one partition.
+2013-01-13 19:05:08,845 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 19:05:08,845 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 19:05:08,845 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 19:05:08,846 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 19:05:08,862 DEBUG crawl.Generator - -shouldFetch rejected 'http://www.weibo.com/', fetchTime=1360667082739, curTime=1358075108473
+2013-01-13 19:05:11,900 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 19:05:11,900 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 19:05:11,901 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000
+2013-01-13 19:05:11,901 INFO  regex.RegexURLNormalizer - can't find rules for scope 'generate_host_count', using default
+2013-01-13 19:05:15,735 INFO  crawl.Generator - Generator: Partitioning selected urls for politeness.
+2013-01-13 19:05:16,738 INFO  crawl.Generator - Generator: segment: crawl/segments/20130113190516
+2013-01-13 19:05:17,003 INFO  regex.RegexURLNormalizer - can't find rules for scope 'partition', using default
+2013-01-13 19:05:23,874 INFO  crawl.Generator - Generator: finished at 2013-01-13 19:05:23, elapsed: 00:00:15
+2013-01-13 19:05:23,874 WARN  fetcher.Fetcher - Fetcher: Your 'http.agent.name' value should be listed first in 'http.robots.agents' property.
+2013-01-13 19:05:23,874 INFO  fetcher.Fetcher - Fetcher: starting at 2013-01-13 19:05:23
+2013-01-13 19:05:23,874 INFO  fetcher.Fetcher - Fetcher: segment: crawl/segments/20130113190516
+2013-01-13 19:05:24,014 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:05:24,014 INFO  fetcher.Fetcher - Fetcher: threads: 10
+2013-01-13 19:05:24,014 INFO  fetcher.Fetcher - Fetcher: time-out divisor: 2
+2013-01-13 19:05:24,021 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:05:24,022 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:05:24,023 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:05:24,024 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:05:24,024 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:05:24,027 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:05:24,028 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:05:24,029 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:05:24,029 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:05:24,029 INFO  fetcher.Fetcher - Using queue mode : byHost
+2013-01-13 19:05:24,029 INFO  fetcher.Fetcher - Fetcher: throughput threshold: -1
+2013-01-13 19:05:24,029 INFO  fetcher.Fetcher - Fetcher: throughput threshold retries: 5
+2013-01-13 19:05:24,038 INFO  fetcher.Fetcher - fetching http://news.sina.com.cn/c/2012-12-29/051425921660.shtml
+2013-01-13 19:05:24,038 INFO  mortbay.log - Running http
+2013-01-13 19:05:24,038 INFO  http.Http - http.proxy.host = null
+2013-01-13 19:05:24,038 INFO  http.Http - http.proxy.port = 8080
+2013-01-13 19:05:24,038 INFO  http.Http - http.timeout = 10000
+2013-01-13 19:05:24,038 INFO  http.Http - http.content.limit = 65536
+2013-01-13 19:05:24,038 INFO  fetcher.Fetcher - fetching http://weibo.com/k/weijianyi
+2013-01-13 19:05:24,038 INFO  http.Http - http.agent = WeiboIndexProject/Nutch-1.6
+2013-01-13 19:05:24,038 INFO  http.Http - http.accept.language = en-us,en-gb,en;q=0.7,*;q=0.3
+2013-01-13 19:05:24,038 INFO  http.Http - http.accept = text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+2013-01-13 19:05:24,038 INFO  fetcher.Fetcher - fetching http://hr.weibo.com/
+2013-01-13 19:05:24,041 INFO  fetcher.Fetcher - QueueFeeder finished: total 7 records + hit by time limit :0
+2013-01-13 19:05:24,387 INFO  regex.RegexURLNormalizer - can't find rules for scope 'fetcher', using default
+2013-01-13 19:05:24,454 INFO  fetcher.Fetcher - fetching http://verified.weibo.com/verify
+2013-01-13 19:05:24,539 INFO  fetcher.Fetcher - fetching http://open.weibo.com/
+2013-01-13 19:05:25,029 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=7, fetchQueues.totalSize=2
+2013-01-13 19:05:25,029 INFO  fetcher.Fetcher - * queue: http://news.sina.com.cn
+2013-01-13 19:05:25,029 INFO  fetcher.Fetcher -   maxThreads    = 1
+2013-01-13 19:05:25,029 INFO  fetcher.Fetcher -   inProgress    = 0
+2013-01-13 19:05:25,029 INFO  fetcher.Fetcher -   crawlDelay    = 5000
+2013-01-13 19:05:25,029 INFO  fetcher.Fetcher -   minCrawlDelay = 0
+2013-01-13 19:05:25,029 INFO  fetcher.Fetcher -   nextFetchTime = 1358075129827
+2013-01-13 19:05:25,029 INFO  fetcher.Fetcher -   now           = 1358075125029
+2013-01-13 19:05:25,030 INFO  fetcher.Fetcher -   0. http://news.sina.com.cn/guide/
+2013-01-13 19:05:25,030 INFO  fetcher.Fetcher - * queue: http://weibo.com
+2013-01-13 19:05:25,030 INFO  fetcher.Fetcher -   maxThreads    = 1
+2013-01-13 19:05:25,030 INFO  fetcher.Fetcher -   inProgress    = 0
+2013-01-13 19:05:25,030 INFO  fetcher.Fetcher -   crawlDelay    = 5000
+2013-01-13 19:05:25,030 INFO  fetcher.Fetcher -   minCrawlDelay = 0
+2013-01-13 19:05:25,030 INFO  fetcher.Fetcher -   nextFetchTime = 1358075129385
+2013-01-13 19:05:25,030 INFO  fetcher.Fetcher -   now           = 1358075125030
+2013-01-13 19:05:25,030 INFO  fetcher.Fetcher -   0. http://weibo.com/signup/signup.php
+2013-01-13 19:05:26,030 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=7, fetchQueues.totalSize=2
+2013-01-13 19:05:26,030 INFO  fetcher.Fetcher - * queue: http://news.sina.com.cn
+2013-01-13 19:05:26,030 INFO  fetcher.Fetcher -   maxThreads    = 1
+2013-01-13 19:05:26,030 INFO  fetcher.Fetcher -   inProgress    = 0
+2013-01-13 19:05:26,030 INFO  fetcher.Fetcher -   crawlDelay    = 5000
+2013-01-13 19:05:26,030 INFO  fetcher.Fetcher -   minCrawlDelay = 0
+2013-01-13 19:05:26,030 INFO  fetcher.Fetcher -   nextFetchTime = 1358075129827
+2013-01-13 19:05:26,030 INFO  fetcher.Fetcher -   now           = 1358075126030
+2013-01-13 19:05:26,030 INFO  fetcher.Fetcher -   0. http://news.sina.com.cn/guide/
+2013-01-13 19:05:26,030 INFO  fetcher.Fetcher - * queue: http://weibo.com
+2013-01-13 19:05:26,030 INFO  fetcher.Fetcher -   maxThreads    = 1
+2013-01-13 19:05:26,030 INFO  fetcher.Fetcher -   inProgress    = 0
+2013-01-13 19:05:26,030 INFO  fetcher.Fetcher -   crawlDelay    = 5000
+2013-01-13 19:05:26,030 INFO  fetcher.Fetcher -   minCrawlDelay = 0
+2013-01-13 19:05:26,030 INFO  fetcher.Fetcher -   nextFetchTime = 1358075129385
+2013-01-13 19:05:26,030 INFO  fetcher.Fetcher -   now           = 1358075126030
+2013-01-13 19:05:26,030 INFO  fetcher.Fetcher -   0. http://weibo.com/signup/signup.php
+2013-01-13 19:05:27,030 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=9, fetchQueues.totalSize=2
+2013-01-13 19:05:27,030 INFO  fetcher.Fetcher - * queue: http://news.sina.com.cn
+2013-01-13 19:05:27,030 INFO  fetcher.Fetcher -   maxThreads    = 1
+2013-01-13 19:05:27,030 INFO  fetcher.Fetcher -   inProgress    = 0
+2013-01-13 19:05:27,030 INFO  fetcher.Fetcher -   crawlDelay    = 5000
+2013-01-13 19:05:27,030 INFO  fetcher.Fetcher -   minCrawlDelay = 0
+2013-01-13 19:05:27,030 INFO  fetcher.Fetcher -   nextFetchTime = 1358075129827
+2013-01-13 19:05:27,030 INFO  fetcher.Fetcher -   now           = 1358075127030
+2013-01-13 19:05:27,030 INFO  fetcher.Fetcher -   0. http://news.sina.com.cn/guide/
+2013-01-13 19:05:27,030 INFO  fetcher.Fetcher - * queue: http://weibo.com
+2013-01-13 19:05:27,030 INFO  fetcher.Fetcher -   maxThreads    = 1
+2013-01-13 19:05:27,030 INFO  fetcher.Fetcher -   inProgress    = 0
+2013-01-13 19:05:27,030 INFO  fetcher.Fetcher -   crawlDelay    = 5000
+2013-01-13 19:05:27,030 INFO  fetcher.Fetcher -   minCrawlDelay = 0
+2013-01-13 19:05:27,030 INFO  fetcher.Fetcher -   nextFetchTime = 1358075129385
+2013-01-13 19:05:27,030 INFO  fetcher.Fetcher -   now           = 1358075127030
+2013-01-13 19:05:27,031 INFO  fetcher.Fetcher -   0. http://weibo.com/signup/signup.php
+2013-01-13 19:05:28,031 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=9, fetchQueues.totalSize=2
+2013-01-13 19:05:28,031 INFO  fetcher.Fetcher - * queue: http://news.sina.com.cn
+2013-01-13 19:05:28,031 INFO  fetcher.Fetcher -   maxThreads    = 1
+2013-01-13 19:05:28,031 INFO  fetcher.Fetcher -   inProgress    = 0
+2013-01-13 19:05:28,031 INFO  fetcher.Fetcher -   crawlDelay    = 5000
+2013-01-13 19:05:28,031 INFO  fetcher.Fetcher -   minCrawlDelay = 0
+2013-01-13 19:05:28,031 INFO  fetcher.Fetcher -   nextFetchTime = 1358075129827
+2013-01-13 19:05:28,031 INFO  fetcher.Fetcher -   now           = 1358075128031
+2013-01-13 19:05:28,031 INFO  fetcher.Fetcher -   0. http://news.sina.com.cn/guide/
+2013-01-13 19:05:28,031 INFO  fetcher.Fetcher - * queue: http://weibo.com
+2013-01-13 19:05:28,031 INFO  fetcher.Fetcher -   maxThreads    = 1
+2013-01-13 19:05:28,031 INFO  fetcher.Fetcher -   inProgress    = 0
+2013-01-13 19:05:28,031 INFO  fetcher.Fetcher -   crawlDelay    = 5000
+2013-01-13 19:05:28,031 INFO  fetcher.Fetcher -   minCrawlDelay = 0
+2013-01-13 19:05:28,031 INFO  fetcher.Fetcher -   nextFetchTime = 1358075129385
+2013-01-13 19:05:28,031 INFO  fetcher.Fetcher -   now           = 1358075128031
+2013-01-13 19:05:28,032 INFO  fetcher.Fetcher -   0. http://weibo.com/signup/signup.php
+2013-01-13 19:05:29,032 INFO  fetcher.Fetcher - -activeThreads=10, spinWaiting=10, fetchQueues.totalSize=2
+2013-01-13 19:05:29,032 INFO  fetcher.Fetcher - * queue: http://news.sina.com.cn
+2013-01-13 19:05:29,032 INFO  fetcher.Fetcher -   maxThreads    = 1
+2013-01-13 19:05:29,032 INFO  fetcher.Fetcher -   inProgress    = 0
+2013-01-13 19:05:29,032 INFO  fetcher.Fetcher -   crawlDelay    = 5000
+2013-01-13 19:05:29,032 INFO  fetcher.Fetcher -   minCrawlDelay = 0
+2013-01-13 19:05:29,032 INFO  fetcher.Fetcher -   nextFetchTime = 1358075129827
+2013-01-13 19:05:29,032 INFO  fetcher.Fetcher -   now           = 1358075129032
+2013-01-13 19:05:29,032 INFO  fetcher.Fetcher -   0. http://news.sina.com.cn/guide/
+2013-01-13 19:05:29,032 INFO  fetcher.Fetcher - * queue: http://weibo.com
+2013-01-13 19:05:29,032 INFO  fetcher.Fetcher -   maxThreads    = 1
+2013-01-13 19:05:29,032 INFO  fetcher.Fetcher -   inProgress    = 0
+2013-01-13 19:05:29,032 INFO  fetcher.Fetcher -   crawlDelay    = 5000
+2013-01-13 19:05:29,032 INFO  fetcher.Fetcher -   minCrawlDelay = 0
+2013-01-13 19:05:29,032 INFO  fetcher.Fetcher -   nextFetchTime = 1358075129385
+2013-01-13 19:05:29,033 INFO  fetcher.Fetcher -   now           = 1358075129033
+2013-01-13 19:05:29,033 INFO  fetcher.Fetcher -   0. http://weibo.com/signup/signup.php
+2013-01-13 19:05:29,541 INFO  fetcher.Fetcher - fetching http://weibo.com/signup/signup.php
+2013-01-13 19:05:29,833 INFO  fetcher.Fetcher - fetching http://news.sina.com.cn/guide/
+2013-01-13 19:05:29,870 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=9
+2013-01-13 19:05:30,034 INFO  fetcher.Fetcher - -activeThreads=9, spinWaiting=8, fetchQueues.totalSize=0
+2013-01-13 19:05:30,041 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=8
+2013-01-13 19:05:30,041 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=7
+2013-01-13 19:05:30,041 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=6
+2013-01-13 19:05:30,043 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=5
+2013-01-13 19:05:30,043 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=4
+2013-01-13 19:05:30,061 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=3
+2013-01-13 19:05:30,179 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=2
+2013-01-13 19:05:30,246 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=1
+2013-01-13 19:05:30,295 INFO  fetcher.Fetcher - -finishing thread FetcherThread, activeThreads=0
+2013-01-13 19:05:31,034 INFO  fetcher.Fetcher - -activeThreads=0, spinWaiting=0, fetchQueues.totalSize=0
+2013-01-13 19:05:31,034 INFO  fetcher.Fetcher - -activeThreads=0
+2013-01-13 19:05:36,967 INFO  fetcher.Fetcher - Fetcher: finished at 2013-01-13 19:05:36, elapsed: 00:00:13
+2013-01-13 19:05:36,967 INFO  parse.ParseSegment - ParseSegment: starting at 2013-01-13 19:05:36
+2013-01-13 19:05:36,967 INFO  parse.ParseSegment - ParseSegment: segment: crawl/segments/20130113190516
+2013-01-13 19:05:37,188 INFO  crawl.SignatureFactory - Using Signature impl: org.apache.nutch.crawl.MD5Signature
+2013-01-13 19:05:37,188 INFO  parse.ParseSegment - Parsed (0ms):http://hr.weibo.com/
+2013-01-13 19:05:37,553 INFO  parse.ParseSegment - Parsed (13ms):http://news.sina.com.cn/c/2012-12-29/051425921660.shtml
+2013-01-13 19:05:37,914 INFO  parse.ParseSegment - Parsed (5ms):http://news.sina.com.cn/guide/
+2013-01-13 19:05:38,017 INFO  parse.ParseSegment - Parsed (2ms):http://open.weibo.com/
+2013-01-13 19:05:38,091 INFO  parse.ParseSegment - Parsed (1ms):http://verified.weibo.com/verify
+2013-01-13 19:05:38,138 INFO  parse.ParseSegment - Parsed (1ms):http://weibo.com/signup/signup.php
+2013-01-13 19:05:40,156 INFO  regex.RegexURLNormalizer - can't find rules for scope 'outlink', using default
+2013-01-13 19:05:44,046 INFO  parse.ParseSegment - ParseSegment: finished at 2013-01-13 19:05:44, elapsed: 00:00:07
+2013-01-13 19:05:44,052 INFO  crawl.CrawlDb - CrawlDb update: starting at 2013-01-13 19:05:44
+2013-01-13 19:05:44,052 INFO  crawl.CrawlDb - CrawlDb update: db: crawl/crawldb
+2013-01-13 19:05:44,052 INFO  crawl.CrawlDb - CrawlDb update: segments: [crawl/segments/20130113190516]
+2013-01-13 19:05:44,052 INFO  crawl.CrawlDb - CrawlDb update: additions allowed: true
+2013-01-13 19:05:44,052 INFO  crawl.CrawlDb - CrawlDb update: URL normalizing: true
+2013-01-13 19:05:44,052 INFO  crawl.CrawlDb - CrawlDb update: URL filtering: true
+2013-01-13 19:05:44,052 INFO  crawl.CrawlDb - CrawlDb update: 404 purging: false
+2013-01-13 19:05:44,053 INFO  crawl.CrawlDb - CrawlDb update: Merging segment data into db.
+2013-01-13 19:05:44,363 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 19:05:47,238 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 19:05:50,254 INFO  regex.RegexURLNormalizer - can't find rules for scope 'crawldb', using default
+2013-01-13 19:05:53,241 INFO  crawl.FetchScheduleFactory - Using FetchSchedule impl: org.apache.nutch.crawl.DefaultFetchSchedule
+2013-01-13 19:05:53,241 INFO  crawl.AbstractFetchSchedule - defaultInterval=2592000
+2013-01-13 19:05:53,241 INFO  crawl.AbstractFetchSchedule - maxInterval=7776000

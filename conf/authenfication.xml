@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<configuration>　　 
+	<authenfications>
+		<authenfication>
+			<url>www.baidu.com</url>
+			<class></class>
+			
+		</authenfication>
+	</authenfications> 
+</configuration> 
