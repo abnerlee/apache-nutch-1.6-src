@@ -34,6 +34,9 @@ import org.slf4j.LoggerFactory;
 // Hadoop imports
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configurable;
+import org.apache.nutch.protocol.httpclient.HttpAuthentication;
+import org.apache.nutch.protocol.httpclient.HttpAuthenticationException;
+import org.apache.nutch.protocol.httpclient.HttpBasicAuthentication;
 
 
 /**

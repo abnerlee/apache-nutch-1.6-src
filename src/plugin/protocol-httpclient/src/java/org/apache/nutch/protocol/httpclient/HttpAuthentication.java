@@ -18,6 +18,8 @@ package org.apache.nutch.protocol.httpclient;
  
 import java.util.List;
 
+import org.apache.nutch.protocol.httpclient.HttpAuthenticationFactory;
+
 /**
  *  The base level of services required for Http Authentication
  *

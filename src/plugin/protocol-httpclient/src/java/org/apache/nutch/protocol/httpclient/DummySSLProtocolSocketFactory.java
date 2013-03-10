@@ -35,6 +35,8 @@ import org.apache.commons.httpclient.HttpClientError;
 import org.apache.commons.httpclient.params.HttpConnectionParams;
 import org.apache.commons.httpclient.protocol.ControllerThreadSocketFactory;
 import org.apache.commons.httpclient.protocol.SecureProtocolSocketFactory;
+import org.apache.nutch.protocol.httpclient.DummySSLProtocolSocketFactory;
+import org.apache.nutch.protocol.httpclient.DummyX509TrustManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

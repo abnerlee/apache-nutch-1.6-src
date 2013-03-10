@@ -56,4 +56,7 @@
       id="org.apache.nutch.segment.SegmentMergeFilter"
       name="Nutch Segment Merge Filter"/>
 
+
+
+
 </plugin>

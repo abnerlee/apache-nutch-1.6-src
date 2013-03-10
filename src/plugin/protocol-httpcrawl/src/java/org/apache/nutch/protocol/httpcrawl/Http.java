@@ -14,13 +14,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.nutch.protocol.httpclient;
+package org.apache.nutch.protocol.httpcrawl;
 
 // JDK imports
-import java.io.InputStream;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+//import java.net.CookieStore;
+import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.ArrayList;
+/*
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
@@ -28,12 +34,13 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
-
+*/
 // Slf4j Logging imports
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 // HTTP Client imports
+/*
 import org.apache.commons.httpclient.Header;
 import org.apache.commons.httpclient.HostConfiguration;
 import org.apache.commons.httpclient.HttpClient;
@@ -42,17 +49,31 @@ import org.apache.commons.httpclient.NTCredentials;
 import org.apache.commons.httpclient.auth.AuthScope;
 import org.apache.commons.httpclient.params.HttpConnectionManagerParams;
 import org.apache.commons.httpclient.protocol.Protocol;
+*/
+
+import org.apache.http.HttpException;
+import org.apache.http.client.CookieStore;
+import org.apache.http.client.HttpClient;
+import org.apache.http.impl.client.BasicCookieStore;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.DefaultRedirectStrategy;
+import org.apache.http.impl.conn.PoolingClientConnectionManager;
 
 // Nutch imports
 import org.apache.nutch.crawl.CrawlDatum;
 import org.apache.nutch.net.protocols.Response;
 import org.apache.nutch.protocol.ProtocolException;
+import org.apache.nutch.protocol.ProtocolOutput;
+import org.apache.nutch.protocol.RobotRules;
 import org.apache.nutch.protocol.http.api.HttpBase;
-import org.apache.nutch.protocol.httpclient.DummySSLProtocolSocketFactory;
-import org.apache.nutch.protocol.httpclient.Http;
-import org.apache.nutch.protocol.httpclient.HttpResponse;
+import org.apache.nutch.protocol.http.api.RobotRulesParser.RobotRuleSet;
+import org.apache.nutch.protocol.httpcrawl.DummySSLProtocolSocketFactory;
+import org.apache.nutch.protocol.httpcrawl.Http;
+import org.apache.nutch.protocol.httpcrawl.HttpResponse;
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.io.Text;
 import org.apache.nutch.util.NutchConfiguration;
+
 
 /**
  * This class is a protocol plugin that configures an HTTP client for
@@ -66,12 +87,20 @@ public class Http extends HttpBase {
 
   public static final Logger LOG = LoggerFactory.getLogger(Http.class);
 
-  private static MultiThreadedHttpConnectionManager connectionManager =
-          new MultiThreadedHttpConnectionManager();
+  /*SchemeRegistry schemeRegistry = new SchemeRegistry();
+  schemeRegistry.register(
+           new Scheme("http", 80, PlainSocketFactory.getSocketFactory()));
+  schemeRegistry.register(
+           new Scheme("https", 443, SSLSocketFactory.getSocketFactory()));
+ */
+  private static PoolingClientConnectionManager connectionManager = new PoolingClientConnectionManager(/*schemeRegistry*/);
+  /*private static Pool connectionManager =
+          new MultiThreadedHttpConnectionManager();*/
 
   // Since the Configuration has not yet been set,
   // then an unconfigured client is returned.
-  private static HttpClient client = new HttpClient(connectionManager);
+  private static DefaultHttpClient client = new DefaultHttpClient(connectionManager);
+  
   private static String defaultUsername;
   private static String defaultPassword;
   private static String defaultRealm;
@@ -80,20 +109,20 @@ public class Http extends HttpBase {
   private static String agentHost;
   private static boolean authRulesRead = false;
   private static Configuration conf;
-
-  int maxThreadsTotal = 10;
-
   private String proxyUsername;
   private String proxyPassword;
   private String proxyRealm;
-
+  
+  static CookieManagement cookieStore = null;
+  static CommonAuthFactory authFactory = null;
+  int maxThreadsTotal = 10;
 
   /**
    * Returns the configured HTTP client.
    *
    * @return HTTP client
    */
-  static synchronized HttpClient getClient() {
+  public static synchronized DefaultHttpClient getClient() {
     return client;
   }
 
@@ -119,9 +148,14 @@ public class Http extends HttpBase {
     this.proxyRealm = conf.get("http.proxy.realm", "");
     agentHost = conf.get("http.agent.host", "");
     authFile = conf.get("http.auth.file", "");
+    
+    authFactory = new CommonAuthFactory(conf);
     configureClient();
     try {
-      setCredentials();
+      //CommonAuthFactory.am.processLogin(this,null);
+      //do login
+      //setCredentials();
+    	
     } catch (Exception ex) {
       if (LOG.isErrorEnabled()) {
         LOG.error("Could not read " + authFile + " : " + ex.getMessage());
@@ -151,47 +185,88 @@ public class Http extends HttpBase {
    */
   protected Response getResponse(URL url, CrawlDatum datum, boolean redirect)
     throws ProtocolException, IOException {
-    resolveCredentials(url);
-    return new HttpResponse(this, url, datum, redirect);
+    //resolveCredentials(url);
+    try {
+		return new HttpResponse(this, url, datum, redirect);
+	} catch (HttpException e) {
+		ProtocolException ee = new ProtocolException(e.getMessage());
+		ee.setStackTrace(e.getStackTrace());
+		throw ee;
+	} catch (URISyntaxException e) {
+		ProtocolException ee = new ProtocolException(e.getMessage());
+		ee.setStackTrace(e.getStackTrace());
+		throw ee;
+	}
   }
 
   /**
    * Configures the HTTP client
    */
   private void configureClient() {
+	  
+	/*handle https  
+	 * Once you have JSSE correctly installed, secure HTTP communication over SSL should be as simple as plain HTTP communication.
+	X509TrustManager easyTrustManager = new X509TrustManager() {
+	      public void checkClientTrusted(java.security.cert.X509Certificate[] x509Certificates, String s) throws java.security.cert.CertificateException {
+	          //To change body of implemented methods use File | Settings | File Templates.
+	      }
+	
+	      public void checkServerTrusted(java.security.cert.X509Certificate[] x509Certificates, String s) throws java.security.cert.CertificateException {
+	          //To change body of implemented methods use File | Settings | File Templates.
+	      }
+	
+	      public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+	          return new java.security.cert.X509Certificate[0];  //To change body of implemented methods use File | Settings | File Templates.
+	      }
+	};
+	SSLContext sslcontext = SSLContext.getInstance("TLS");
+	sslcontext.init(null, new TrustManager[]{easyTrustManager}, null);
+	SSLSocketFactory sf = new SSLSocketFactory(sslcontext);
+    Scheme sch = new Scheme("https", 443, (SchemeSocketFactory) sf);
+
+    httpClient.getConnectionManager().getSchemeRegistry().register(sch);
 
     // Set up an HTTPS socket factory that accepts self-signed certs.
     Protocol https = new Protocol("https",
         new DummySSLProtocolSocketFactory(), 443);
     Protocol.registerProtocol("https", https);
-
+    */
+	this.cookieStore = new CookieManagement();  
+	client.setCookieStore(cookieStore);  
+    client.setRedirectStrategy(new NutchRedirectStrategy());
+    client.getParams().setParameter("http.socket.timeout",timeout);
+    client.getParams().setParameter("http.connection.timeout",timeout);
+ 
+    //httpclient.getParams().setParameter("http.connection-manager.timeout",100000000L);
+    /*
     HttpConnectionManagerParams params = connectionManager.getParams();
     params.setConnectionTimeout(timeout);
     params.setSoTimeout(timeout);
     params.setSendBufferSize(BUFFER_SIZE);
     params.setReceiveBufferSize(BUFFER_SIZE);
     params.setMaxTotalConnections(maxThreadsTotal);
+    */
 
     // executeMethod(HttpMethod) seems to ignore the connection timeout on the connection manager.
     // set it explicitly on the HttpClient.
-    client.getParams().setConnectionManagerTimeout(timeout);
-
-    HostConfiguration hostConf = client.getHostConfiguration();
-    ArrayList headers = new ArrayList();
+    
+    //HostConfiguration hostConf = client.getHostConfiguration();
+    //ArrayList headers = new ArrayList();
     // Set the User Agent in the header
-    headers.add(new Header("User-Agent", userAgent));
+    //headers.add(new Header("User-Agent", userAgent));
     // prefer English
-    headers.add(new Header("Accept-Language", acceptLanguage));
+    //headers.add(new Header("Accept-Language", acceptLanguage));
     // prefer UTF-8
-    headers.add(new Header("Accept-Charset", "utf-8,ISO-8859-1;q=0.7,*;q=0.7"));
+    //headers.add(new Header("Accept-Charset", "utf-8,ISO-8859-1;q=0.7,*;q=0.7"));
     // prefer understandable formats
-    headers.add(new Header("Accept",
-            "text/html,application/xml;q=0.9,application/xhtml+xml,text/xml;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5"));
+    //headers.add(new Header("Accept",
+    //        "text/html,application/xml;q=0.9,application/xhtml+xml,text/xml;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5"));
     // accept gzipped content
-    headers.add(new Header("Accept-Encoding", "x-gzip, gzip, deflate"));
-    hostConf.getParams().setParameter("http.default-headers", headers);
+    //headers.add(new Header("Accept-Encoding", "x-gzip, gzip, deflate"));
+    //client.getParams().setParameter("http.default-headers", headers);
 
     // HTTP proxy server details
+    /*
     if (useProxy) {
       hostConf.setProxy(proxyHost, proxyPort);
 
@@ -208,6 +283,7 @@ public class Http extends HttpBase {
             proxyAuthScope, proxyCredentials);
       }
     }
+    */
 
   }
 
@@ -221,7 +297,7 @@ public class Http extends HttpBase {
    *                                       be created.
    * @throws SAXException                  If any parsing error occurs.
    * @throws IOException                   If any I/O error occurs.
-   */
+   *
   private static synchronized void setCredentials() throws 
       ParserConfigurationException, SAXException, IOException {
 
@@ -338,7 +414,7 @@ public class Http extends HttpBase {
    * client.
    *
    * @param url URL to be fetched
-   */
+   *
   private void resolveCredentials(URL url) {
 
     if (defaultUsername != null && defaultUsername.length() > 0) {
@@ -389,7 +465,7 @@ public class Http extends HttpBase {
    * @param port    Port number.
    * @param realm   Authentication realm.
    * @param scheme  Authentication scheme.
-   */
+   *
   private static AuthScope getAuthScope(String host, int port,
       String realm, String scheme) {
     
@@ -415,11 +491,56 @@ public class Http extends HttpBase {
    * @param host    Host name or address.
    * @param port    Port number.
    * @param realm   Authentication realm.
-   */
+   *
   private static AuthScope getAuthScope(String host, int port,
       String realm) {
 
       return getAuthScope(host, port, realm, "");
   }
+  */
+  
+  
+  /**
+   * modified by L
+   * override robots policy
+   */
+  	public RobotRules getRobotRules(Text url, CrawlDatum datum) {
+  		return new RobotRuleSet();
+	    //return super.getRobotRules(url, datum);
+  	}
+  	
+  	
+  	/**
+  	 * modified by L
+  	 * override getProtocolOutput
+  	 * check if the crawler is logged in.
+  	 */
+  	
+  	public ProtocolOutput getProtocolOutput(Text url, CrawlDatum datum)
+  	{
+  		//check if login
+  		//append cookie if not logged in
+  		CommonAuthManagement am = authFactory.getAuthManagment(url.toString());
+  		
+  		ProtocolOutput httpResponse = super.getProtocolOutput(url, datum);
+  		try {
+			String result = new String(httpResponse.getContent().getContent(),"UTF-8");
+			System.out.print(result);
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+		}
+  		//todo: use factory to generate am
+  		//delay fetch thread to wait authManagement
+  		return am.loginCheckAndProcessLogin(this, httpResponse);
+  		
+  	}
+  	
+  	
+  	public CookieManagement getCookieStore()
+  	{
+  		return this.cookieStore;
+  	}
+  	
 }
 

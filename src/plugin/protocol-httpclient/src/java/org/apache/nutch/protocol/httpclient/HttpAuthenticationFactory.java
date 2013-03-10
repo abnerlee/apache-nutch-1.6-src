@@ -33,6 +33,11 @@ import org.apache.hadoop.conf.Configurable;
 
 // Nutch imports
 import org.apache.nutch.metadata.Metadata;
+import org.apache.nutch.protocol.httpclient.Http;
+import org.apache.nutch.protocol.httpclient.HttpAuthentication;
+import org.apache.nutch.protocol.httpclient.HttpAuthenticationFactory;
+import org.apache.nutch.protocol.httpclient.HttpBasicAuthentication;
+import org.apache.nutch.protocol.httpclient.HttpResponse;
 
 
 /**

@@ -17,14 +17,8 @@
 
 	<property>
 	  <name>plugin.includes</name>
-	  <value>protocol-httpclient|urlfilter-regex|parse-(html|tika)|index-(basic|anchor)|scoring-opic|urlnormalizer-(pass|regex|basic)</value>
-	  <description>Regular expression naming plugin directory names to
-	  include.  Any plugin not matching this expression is excluded.
-	  In any case you need at least include the nutch-extensionpoints plugin. By
-	  default Nutch includes crawling just HTML and plain text via HTTP,
-	  and basic indexing and search plugins. In order to use HTTPS please enable 
-	  protocol-httpclient, but be aware of possible intermittent problems with the 
-	  underlying commons-httpclient library.
+	  <value>protocol-httpcrawl|weibo-kit|parse-(html|tika)|index-(basic|anchor)|scoring-opic|urlnormalizer-(pass|regex|basic)</value>
+	  <description>disabled urlfilter-regex
 	  </description>
 	</property>
 
@@ -45,6 +39,32 @@
 	  <description>Directories where nutch plugins are located.  Each
 	  element may be a relative or absolute path.  If absolute, it is used
 	  as is.  If relative, it is searched for on the classpath.</description>
+	</property>
+
+	<property>
+	  <name>parse.filter.urls</name>
+	  <value>false</value>
+	  <description>Whether the parser will filter URLs (with the configured URL filters).</description>
+	</property>
+	
+	<property>
+	  <name>db.ignore.external.links</name>
+	  <value>true</value>
+	  <description>If true, outlinks leading from a page to external hosts
+	  will be ignored. This is an effective way to limit the crawl to include
+	  only initially injected hosts, without creating complex URLFilters.
+	  </description>
+	</property>
+
+	<property>
+	  <name>fetcher.threads.fetch</name>
+	  <value>1</value>
+	  <description>The number of FetcherThreads the fetcher should use.
+	  This is also determines the maximum number of requests that are
+	  made at once (each FetcherThread handles one connection). The total
+	  number of threads running in distributed mode will be the number of
+	  fetcher threads * number of nodes as fetcher has one map task per node.
+	  </description>
 	</property>
 
 </configuration>

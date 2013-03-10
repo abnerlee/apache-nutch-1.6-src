@@ -14,30 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.nutch.protocol.httpclient;
+package org.apache.nutch.protocol.httpcrawl;
 
 // JDK imports
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URISyntaxException;
 import java.net.URL;
 
 // HTTP Client imports
+/*
 import org.apache.commons.httpclient.Header;
 import org.apache.commons.httpclient.HttpVersion;
 import org.apache.commons.httpclient.cookie.CookiePolicy;
 import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.params.HttpMethodParams;
 import org.apache.commons.httpclient.HttpException;
+*/
 
 // Nutch imports
+import org.apache.http.HttpException;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.Header;
 import org.apache.nutch.crawl.CrawlDatum;
 import org.apache.nutch.metadata.Metadata;
 import org.apache.nutch.metadata.SpellCheckedMetadata;
 import org.apache.nutch.net.protocols.HttpDateFormat;
 import org.apache.nutch.net.protocols.Response;
 import org.apache.nutch.protocol.http.api.HttpBase;
-import org.apache.nutch.protocol.httpclient.Http;
+import org.apache.nutch.protocol.httpcrawl.Http;
 
 /**
  * An HTTP response.
@@ -62,21 +68,38 @@ public class HttpResponse implements Response {
    *                            redirect if and only if this is true
    * @return                    HTTP response
    * @throws IOException        When an error occurs
+   * @throws HttpException 
+   * @throws URISyntaxException 
    */
   HttpResponse(Http http, URL url, CrawlDatum datum,
-      boolean followRedirects) throws IOException {
+      boolean followRedirects) throws IOException, HttpException, URISyntaxException {
 
     // Prepare GET method for HTTP request
     this.url = url;
-    GetMethod get = new GetMethod(url.toString());
-    get.setFollowRedirects(followRedirects);
-    get.setDoAuthentication(true);
+    HttpGet get =new HttpGet(url.toURI());
+    //GetMethod get = new GetMethod(url.toString());
+    //get.setFollowRedirects(followRedirects);
+    //get.setDoAuthentication(true);
+    
+    //set header
+    get.setHeader("User-Agent", http.getUserAgent());
+    // prefer English
+    get.setHeader("Accept-Language", http.getAcceptLanguage());
+    // prefer UTF-8
+    get.setHeader("Accept-Charset", "utf-8,ISO-8859-1;q=0.7,*;q=0.7");
+    // prefer understandable formats
+    get.setHeader("Accept",
+            "text/html,application/xml;q=0.9,application/xhtml+xml,text/xml;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5");
+    // accept gzipped content
+    get.setHeader("Accept-Encoding", "x-gzip, gzip, deflate");
+    
     if (datum.getModifiedTime() > 0) {
-      get.setRequestHeader("If-Modified-Since",
+      get.setHeader("If-Modified-Since",
           HttpDateFormat.toString(datum.getModifiedTime()));
-    }
-
+   }
+    
     // Set HTTP parameters
+    /*
     HttpMethodParams params = get.getParams();
     if (http.getUseHttp11()) {
       params.setVersion(HttpVersion.HTTP_1_1);
@@ -87,15 +110,17 @@ public class HttpResponse implements Response {
     params.setContentCharset("UTF-8");
     params.setCookiePolicy(CookiePolicy.BROWSER_COMPATIBILITY);
     params.setBooleanParameter(HttpMethodParams.SINGLE_COOKIE_HEADER, true);
+    */
     // XXX (ab) not sure about this... the default is to retry 3 times; if
     // XXX the request body was sent the method is not retried, so there is
     // XXX little danger in retrying...
     // params.setParameter(HttpMethodParams.RETRY_HANDLER, null);
     try {
-      code = Http.getClient().executeMethod(get);
-
-      Header[] heads = get.getResponseHeaders();
-
+      org.apache.http.HttpResponse response = Http.getClient().execute(get);
+      response.getEntity().getContent();
+      Header[] heads = response.getAllHeaders();
+    	//Header[] heads = get.getAllHeaders();
+      this.code = response.getStatusLine().getStatusCode();
       for (int i = 0; i < heads.length; i++) {
         headers.set(heads[i].getName(), heads[i].getValue());
       }
@@ -118,7 +143,8 @@ public class HttpResponse implements Response {
 
       // always read content. Sometimes content is useful to find a cause
       // for error.
-      InputStream in = get.getResponseBodyAsStream();
+      InputStream in = response.getEntity().getContent();
+      
       try {
         byte[] buffer = new byte[HttpBase.BUFFER_SIZE];
         int bufferFilled = 0;

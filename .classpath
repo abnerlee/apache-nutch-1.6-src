@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="conf"/>
+	<classpathentry kind="src" path="src/plugin/weibo-kit/src/java"/>
+	<classpathentry kind="src" path="src/plugin/protocol-httpcrawl/src/java"/>
 	<classpathentry kind="src" path="src/java"/>
 	<classpathentry kind="src" path="src/plugin/protocol-http/src/java"/>
 	<classpathentry kind="src" path="src/plugin/creativecommons/src/java"/>
@@ -65,7 +67,6 @@
 	<classpathentry kind="src" path="src/plugin/urlnormalizer-regex/src/java"/>
 	<classpathentry kind="src" path="src/plugin/urlnormalizer-regex/src/test"/>
 	<classpathentry kind="src" path="src/test"/>
-	<classpathentry kind="src" path="src/plugin/protocol-httpclient/src/java"/>
 	<classpathentry kind="lib" path="src/plugin/parse-swf/lib/javaswf.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/activation-1.1.jar"/>
@@ -124,5 +125,9 @@
 	<classpathentry kind="lib" path="lib/rome-0.9.jar"/>
 	<classpathentry kind="lib" path="lib/tagsoup-1.2.1.jar"/>
 	<classpathentry kind="lib" path="lib/nekohtml.jar"/>
+	<classpathentry kind="lib" path="lib/httpclient-4.2.3.jar"/>
+	<classpathentry kind="lib" path="lib/httpcore-4.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/httpmime-4.2.3.jar"/>
+	<classpathentry kind="lib" path="lib/jsoup-1.7.1.jar"/>
 	<classpathentry kind="output" path="conf"/>
 </classpath>
